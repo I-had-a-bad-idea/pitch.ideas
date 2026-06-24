@@ -27,9 +27,11 @@ body{
 
 /* NAVBAR */
 
-.navbar{
-    background:white;
-    border-bottom:1px solid var(--border);
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
 }
 
 .navbar .container{
@@ -43,17 +45,21 @@ body{
     height:80px;
 }
 
-.btn{
-    border:none;
-    cursor:pointer;
-    padding:12px 20px;
-    border-radius:10px;
-    font-weight:600;
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.btn-primary{
-    background:var(--accent);
-    color:white;
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary);
 }
 
 /* HERO */
