@@ -6,5 +6,5 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-
-app.run(host="localhost", port=4000)
+if __name__ == "__main__":
+    app.run(host="localhost", port=4000)
