@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Pitch</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+
+        <a href="/">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Pitch Ideas" class="logo">
+        </a>
+
+    </div>
+</nav>
+
+<section class="hero small-hero">
+    <div class="container">
+        <h1>Create a New Pitch</h1>
+        <p>Share your startup idea with the community.</p>
+    </div>
+</section>
+
+<section class="upload-section">
+    <div class="container">
+
+        <form action="/create-pitch" method="PUT" class="pitch-form">
+
+            <label for="title">Pitch Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="e.g. AI Meeting Assistant"
+                required
+            >
+
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+                <option value="">Select a topic</option>
+                <option>AI</option>
+                <option>FinTech</option>
+                <option>HealthTech</option>
+                <option>EdTech</option>
+                <option>SaaS</option>
+                <option>E-Commerce</option>
+                <option>Cybersecurity</option>
+                <option>Other</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea
+                id="description"
+                name="description"
+                rows="8"
+                placeholder="Describe your startup idea..."
+                required
+            ></textarea>
+
+            <button type="create" class="btn btn-primary">
+                Create Pitch
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <div class="disclaimer">
+        This is a student project. Content is fictional and for demonstration purposes only.
+        No real investment, funding or user data handling is implied.
+    </div>
+    © 2026 Pitch Ideas
+</footer>
+
+<script src="{{ url_for('static', filename='js/create-pitch.js') }}"></script>
+
+</body>
+</html>
