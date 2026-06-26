@@ -208,6 +208,41 @@ def create_pitch():
     db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=0) # set 0 for now, as no real users exist
     return {}, 200
 
+@app.route("/pitches", methods=["GET"])
+def get_pitches():
+    pitches = db.get_all_ideas(limit=20)
+    return jsonify({"pitches": pitches}), 200
+
+def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
+    id = db.create_idea(title=title, topic=topic, description=description, user_id=0) # set 0 for now, as no real users exist
+    if id is None: 
+        raise RuntimeError()
+    
+    db.update_votes(id, amount=vote_amount)
+
+def add_test_pitches():
+    add_test_pitch(
+        title="AI Meeting Assistant",
+        topic="AI",
+        description="AI that joins meetings, creates summaries, and automatically generates tasks.",
+        vote_amount=421
+    )
+
+    add_test_pitch(
+        title="BudgetFlow",
+        topic="FinTech",
+        description="Modern financial planning platform built for freelancers and creators.",
+        vote_amount=312
+    )
+
+    add_test_pitch(
+        title="MedTrack",
+        topic="HealthTech",
+        description="Patient monitoring system that helps clinics reduce administrative work.",
+        vote_amount=198
+    )
+
 if __name__ == "__main__":
     db.init_db()
+    add_test_pitches()
     app.run(host="localhost", port=4000)

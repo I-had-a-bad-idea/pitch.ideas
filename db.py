@@ -17,6 +17,7 @@ class Idea:
     user_id: int
     created_at: datetime
     votes: int
+    comment_count: int
 
 @dataclass
 class Comment:
@@ -105,7 +106,8 @@ def get_user(username: str) -> User:
 
 
 
-def create_idea(title: str, topic: str, description: str, user_id: int):
+def create_idea(title: str, topic: str, description: str, user_id: int) -> int | None:
+    """Creates a pitch, returns id"""
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -114,8 +116,11 @@ def create_idea(title: str, topic: str, description: str, user_id: int):
         VALUES (?, ?, ?, ?)
     """, (title, topic, description, user_id))
 
+    id = cursor.lastrowid
+
     conn.commit()
     conn.close()
+    return id
 
 def row_to_idea(row: sqlite3.Row) -> Idea:
     return Idea(
@@ -126,10 +131,10 @@ def row_to_idea(row: sqlite3.Row) -> Idea:
         user_id=row["user_id"],
         created_at=datetime.fromisoformat(row["created_at"]),
         votes=row["votes"],
+        comment_count=get_comment_count(row["id"])
     )
 
 def get_all_ideas(limit: int = 20) -> list[Idea]:
-    """Currently no limit"""
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -196,6 +201,19 @@ def row_to_comment(row: sqlite3.Row) -> Comment:
         content=row["content"],
         votes=row["votes"],
     )
+
+def get_comment_count(idea_id: int) -> int:
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT COUNT(*) as count FROM comments
+        WHERE idea_id = ?
+    """, (idea_id,))
+
+    count = cursor.fetchone()["count"]
+    conn.close()
+    return count
 
 def get_comments(idea_id: int, limit: int = 50) -> list[Comment]:
     conn = get_connection()
