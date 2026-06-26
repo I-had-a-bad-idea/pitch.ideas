@@ -1,8 +1,21 @@
 import sqlite3
+from dataclasses import dataclass
 
+@dataclass
+class User:
+    id: int
+    username: str
+    password_hash: str
+
+DB_NAME = "pitch-ideas.db"
+
+def get_connection():
+    conn = sqlite3.connect(DB_NAME)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 def init_db():
-    conn = sqlite3.connect("pitch-ideas.db")
+    conn = get_connection()
     cursor = conn.cursor()
 
     cursor.execute("""
@@ -43,3 +56,29 @@ def init_db():
     conn.close()
 
     print("Database and tables created!")
+
+def create_user(username: str, password_hash: str):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT INTO users (username, password_hash) VALUES (?, ?)",
+        (username, password_hash)
+    )
+
+    conn.commit()
+    conn.close()
+
+
+def get_user(username: str) -> User:
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT * FROM users WHERE username = ?",
+        (username,)
+    )
+
+    user = cursor.fetchone()
+    conn.close()
+    return User(id=user["id"], username=user["username"], password_hash=user["password_hash"])
