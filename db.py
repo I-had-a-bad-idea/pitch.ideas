@@ -18,6 +18,15 @@ class Idea:
     created_at: datetime
     votes: int
 
+@dataclass
+class Comment:
+    id: int
+    idea_id: int
+    user_id: int
+    created_at: datetime
+    content: str
+    votes: int
+
 DB_NAME = "pitch-ideas.db"
 
 def get_connection():
@@ -165,3 +174,56 @@ def update_votes(idea_id: int, amount: int):
 
     conn.commit()
     conn.close()
+
+def create_comment(idea_id: int, user_id: int, content: str):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT INTO comments (idea_id, user_id, content)
+        VALUES (?, ?, ?)
+    """, (idea_id, user_id, content))
+
+    conn.commit()
+    conn.close()
+
+def row_to_comment(row: sqlite3.Row) -> Comment:
+    return Comment(
+        id=row["id"],
+        idea_id=row["idea_id"],
+        user_id=row["user_id"],
+        created_at=datetime.fromisoformat(row["created_at"]),
+        content=row["content"],
+        votes=row["votes"],
+    )
+
+def get_comments(idea_id: int, limit: int = 50) -> list[Comment]:
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT * FROM comments
+        WHERE idea_id = ?
+        ORDER BY created_at ASC
+        LIMIT ?
+    """, (idea_id, limit))
+
+    rows = cursor.fetchall()
+    conn.close()
+    return [row_to_comment(row) for row in rows]
+
+
+def update_comment_votes(comment_id: int, amount: int):
+    """Amount gets added to current comment votes"""
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        UPDATE comments
+        SET votes = votes + ?
+        WHERE id = ?
+    """, (amount, comment_id))
+
+    conn.commit()
+    conn.close()
+
