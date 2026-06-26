@@ -11,6 +11,8 @@ import db
 
 app = Flask(__name__)
 CORS(app) # Enable CORS for all routes
+# Init the DB
+db.init_db()
 
 def get_logging_level(config_logging_level: str="INFO"):
     """
@@ -242,7 +244,8 @@ def add_test_pitches():
         vote_amount=198
     )
 
+# Add some test data
+add_test_pitches()
+
 if __name__ == "__main__":
-    db.init_db()
-    add_test_pitches()
     app.run(host="localhost", port=4000)
