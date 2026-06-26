@@ -1,11 +1,22 @@
 import sqlite3
 from dataclasses import dataclass
+from datetime import datetime
 
 @dataclass
 class User:
     id: int
     username: str
     password_hash: str
+
+@dataclass
+class Idea:
+    id: int
+    title: str
+    topic: str
+    description: str
+    user_id: int
+    created_at: datetime
+    votes: int
 
 DB_NAME = "pitch-ideas.db"
 
@@ -82,3 +93,75 @@ def get_user(username: str) -> User:
     user = cursor.fetchone()
     conn.close()
     return User(id=user["id"], username=user["username"], password_hash=user["password_hash"])
+
+
+
+def create_idea(title: str, topic: str, description: str, user_id: int):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT INTO ideas (title, topic, description, user_id)
+        VALUES (?, ?, ?, ?)
+    """, (title, topic, description, user_id))
+
+    conn.commit()
+    conn.close()
+
+def row_to_idea(row: sqlite3.Row) -> Idea:
+    return Idea(
+        id=row["id"],
+        title=row["title"],
+        topic=row["topic"],
+        description=row["description"],
+        user_id=row["user_id"],
+        created_at=datetime.fromisoformat(row["created_at"]),
+        votes=row["votes"],
+    )
+
+def get_all_ideas(limit: int = 20) -> list[Idea]:
+    """Currently no limit"""
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT * FROM ideas
+        ORDER BY created_at DESC
+        LIMIT ?
+    """, (limit,))
+
+    rows = cursor.fetchall()
+    conn.close()
+    return [row_to_idea(row) for row in rows]
+
+
+def get_idea(idea_id: int) -> Idea | None:
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT * FROM ideas WHERE id = ?",
+        (idea_id,)
+    )
+
+    row = cursor.fetchone()
+    conn.close()
+    if row is None:
+        return None
+
+    return row_to_idea(row)
+
+
+def update_votes(idea_id: int, amount: int):
+    """Adds amount to the votes of the idea"""
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        UPDATE ideas
+        SET votes = votes + ?
+        WHERE id = ?
+    """, (amount, idea_id))
+
+    conn.commit()
+    conn.close()
