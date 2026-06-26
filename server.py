@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify, request, g
 from flask_cors import CORS
+from pydantic import BaseModel, Field, ValidationError
+
 import logging
 from logging.handlers import TimedRotatingFileHandler
 import os
@@ -133,11 +135,78 @@ def log_request(response):
 
     return response
 
+def validate_request(request, requires_content=True):
+    """
+    Validates the request.
+
+    Returns:
+
+    (False, (response, status_code)) if invalid
+    (True, data) if valid
+    
+    request: Request var
+    """
+    if not requires_content:
+        return True, {}
+    # Validate request
+    if not request.content_length:
+        logger.warning(f"Request with no content length received from IP: {request.remote_addr}")
+        logger.debug(f"No content length in request: {request.get_data(as_text=True)[:500]}") # Log the request object for debugging
+        return bool(False), (jsonify({"message": "No content length"}), 400)
+    # Parse JSON
+    data = request.get_json(silent=True)
+    if not data:
+        logger.warning(f"Request with no content received from IP: {request.remote_addr}")
+        logger.debug(f"No content in request: {request.get_data(as_text=True)[:500]}") # Log the request object for debugging
+        return False, (jsonify({"message": "Missing content"}), 400)
+    
+    return True, data
+
+# Handle pydantic validation errors for request data
+@app.errorhandler(ValidationError)
+def handle_validation_error(e):
+    errors = e.errors()
+    # True if every error is a max-length violation
+    only_too_long = all(
+        err.get("type") == "string_too_long"
+        for err in errors
+    )
+    only_too_short = all(
+        err.get("type") == "string_too_short"
+        for err in errors
+    )
+    if only_too_long:
+        return jsonify({"message": "One or more fields are too long", "details": e.errors()}), 413
+    if only_too_short:
+        return jsonify({"message": "One or more fields are too short", "details": e.errors()}), 422
+    return jsonify({"message": "Invalid request data", "details": e.errors()}), 422
+
 @app.route("/")
 def home():
     return render_template("index.html")
 
+# This for the web page
+@app.route("/create-pitch", methods=["GET"])
+def create_pitch_page():
+    return render_template("create-pitch.html")
 
+
+class CreatePitchRequest(BaseModel):
+    title: str = Field(min_length=1, max_length=100)
+    topic: str = Field(min_length=1, max_length=50)
+    description: str = Field(min_length=1, max_length=5000)
+
+# and this for the API functionality
+@app.route("/create-pitch", methods=["PUT"])
+def create_pitch():
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = CreatePitchRequest.model_validate(result) # type: ignore
+
+    db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=0) # set 0 for now, as no real users exist
+    return {}, 200
 
 if __name__ == "__main__":
     db.init_db()
