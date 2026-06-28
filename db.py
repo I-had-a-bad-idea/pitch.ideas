@@ -1,247 +1,192 @@
-import sqlite3
-from dataclasses import dataclass
+import os
 from datetime import datetime
+from sqlalchemy import (
+    create_engine,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    DateTime,
+    func
+)
+from sqlalchemy.orm import (
+    DeclarativeBase,
+    Mapped,
+    mapped_column,
+    relationship,
+    Session
+)
 
-@dataclass
-class User:
-    id: int
-    username: str
-    password_hash: str
+# Check for Vercel Postgres environment variable
+database_url = os.environ.get("DATABASE_URL")
 
-@dataclass
-class Idea:
-    id: int
-    title: str
-    topic: str
-    description: str
-    user_id: int
-    created_at: datetime
-    votes: int
-    comment_count: int
+if database_url:
+    # Fix Vercel/SQLAlchemy compatibility issue
+    if database_url.startswith("postgres://"):
+        database_url = database_url.replace("postgres://", "postgresql://", 1)
+else:
+    database_url = "sqlite:///local_development.db" # Fallback to local SQLite for personal PC   (personal Personal Compputer :) )
 
-@dataclass
-class Comment:
-    id: int
-    idea_id: int
-    user_id: int
-    created_at: datetime
-    content: str
-    votes: int
+engine = create_engine(database_url)
 
-DB_NAME = "pitch-ideas.db"
+class Base(DeclarativeBase):
+    pass
 
-def get_connection():
-    conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row
-    return conn
+class User(Base):
+    __tablename__ = "users"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    username: Mapped[str] = mapped_column(String, unique=True)
+    password_hash: Mapped[str] = mapped_column(String)
+
+    ideas: Mapped[list["Idea"]] = relationship(back_populates="user")
+    comments: Mapped[list["Comment"]] = relationship(back_populates="user")
+
+
+class Idea(Base):
+    __tablename__ = "ideas"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    title: Mapped[str] = mapped_column(String)
+    topic: Mapped[str] = mapped_column(String)
+    description: Mapped[str] = mapped_column(Text)
+
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        server_default=func.now(),
+    )
+
+    votes: Mapped[int] = mapped_column(Integer, default=0)
+
+    user: Mapped["User"] = relationship(back_populates="ideas")
+    comments: Mapped[list["Comment"]] = relationship(
+        back_populates="idea",
+        cascade="all, delete-orphan",
+    )
+
+class Comment(Base):
+    __tablename__ = "comments"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    idea_id: Mapped[int] = mapped_column(ForeignKey("ideas.id"))
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        server_default=func.now(),
+    )
+
+    content: Mapped[str] = mapped_column(Text)
+    votes: Mapped[int] = mapped_column(Integer, default=0)
+
+    idea: Mapped["Idea"] = relationship(back_populates="comments")
+    user: Mapped["User"] = relationship(back_populates="comments")
+
+
+def get_session():
+    return Session(engine)
 
 def init_db():
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT NOT NULL UNIQUE,
-        password_hash TEXT NOT NULL
-    )
-    """)
-
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS ideas (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL,
-        topic TEXT NOT NULL,
-        description TEXT NOT NULL,
-        user_id INTEGER,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        votes INTEGER DEFAULT 0,
-        FOREIGN KEY (user_id) REFERENCES users(id)
-    )
-    """)
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS comments (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        idea_id INTEGER,
-        user_id INTEGER,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        content TEXT NOT NULL,
-        votes INTEGER DEFAULT 0,
-        FOREIGN KEY (user_id) REFERENCES users(id),
-        FOREIGN KEY (idea_Id) REFERENCES ideas(id)
-        
-    )
-    """)
-
-    conn.commit()
-    conn.close()
+    Base.metadata.create_all(engine)
 
     print("Database and tables created!")
 
 def create_user(username: str, password_hash: str):
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "INSERT INTO users (username, password_hash) VALUES (?, ?)",
-        (username, password_hash)
-    )
-
-    conn.commit()
-    conn.close()
+    with get_session() as session:
+        session.add(
+            User(
+                username=username,
+                password_hash=password_hash
+            )
+        )
+        session.commit()
 
 
-def get_user(username: str) -> User:
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "SELECT * FROM users WHERE username = ?",
-        (username,)
-    )
-
-    user = cursor.fetchone()
-    conn.close()
-    return User(id=user["id"], username=user["username"], password_hash=user["password_hash"])
+def get_user(username: str) -> User | None:
+    with get_session() as session:
+        return (
+            session.query(User)
+            .filter_by(username=username)
+            .first()
+        )
 
 
 
 def create_idea(title: str, topic: str, description: str, user_id: int) -> int | None:
     """Creates a pitch, returns id"""
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        INSERT INTO ideas (title, topic, description, user_id)
-        VALUES (?, ?, ?, ?)
-    """, (title, topic, description, user_id))
-
-    id = cursor.lastrowid
-
-    conn.commit()
-    conn.close()
-    return id
-
-def row_to_idea(row: sqlite3.Row) -> Idea:
-    return Idea(
-        id=row["id"],
-        title=row["title"],
-        topic=row["topic"],
-        description=row["description"],
-        user_id=row["user_id"],
-        created_at=datetime.fromisoformat(row["created_at"]),
-        votes=row["votes"],
-        comment_count=get_comment_count(row["id"])
-    )
+    with get_session() as session:
+        idea = Idea(
+            title=title,
+            topic=topic,
+            description=description,
+            user_id=user_id,
+        )
+        session.add(idea)
+        session.commit()
+        session.refresh(idea)
+        return idea.id
 
 def get_all_ideas(limit: int = 20) -> list[Idea]:
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT * FROM ideas
-        ORDER BY created_at DESC
-        LIMIT ?
-    """, (limit,))
-
-    rows = cursor.fetchall()
-    conn.close()
-    return [row_to_idea(row) for row in rows]
+    with get_session() as session:
+        return (
+            session.query(Idea)
+            .order_by(Idea.created_at.desc())
+            .limit(limit)
+            .all()
+        )
 
 
 def get_idea(idea_id: int) -> Idea | None:
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "SELECT * FROM ideas WHERE id = ?",
-        (idea_id,)
-    )
-
-    row = cursor.fetchone()
-    conn.close()
-    if row is None:
-        return None
-
-    return row_to_idea(row)
+    with get_session() as session:
+        return session.get(Idea, idea_id)
 
 
 def update_votes(idea_id: int, amount: int):
     """Adds amount to the votes of the idea"""
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        UPDATE ideas
-        SET votes = votes + ?
-        WHERE id = ?
-    """, (amount, idea_id))
-
-    conn.commit()
-    conn.close()
+    with get_session() as session:
+        idea = session.get(Idea, idea_id)
+        if idea:
+            idea.votes += amount
+            session.commit()
 
 def create_comment(idea_id: int, user_id: int, content: str):
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        INSERT INTO comments (idea_id, user_id, content)
-        VALUES (?, ?, ?)
-    """, (idea_id, user_id, content))
-
-    conn.commit()
-    conn.close()
-
-def row_to_comment(row: sqlite3.Row) -> Comment:
-    return Comment(
-        id=row["id"],
-        idea_id=row["idea_id"],
-        user_id=row["user_id"],
-        created_at=datetime.fromisoformat(row["created_at"]),
-        content=row["content"],
-        votes=row["votes"],
-    )
+    with get_session() as session:
+        session.add(
+            Comment(
+                idea_id=idea_id,
+                user_id=user_id,
+                content=content
+            )
+        )
+        session.commit()
 
 def get_comment_count(idea_id: int) -> int:
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT COUNT(*) as count FROM comments
-        WHERE idea_id = ?
-    """, (idea_id,))
-
-    count = cursor.fetchone()["count"]
-    conn.close()
-    return count
+    with get_session() as session:
+        return (
+            session.query(Comment)
+            .filter_by(idea_id=idea_id)
+            .count()
+        )
 
 def get_comments(idea_id: int, limit: int = 50) -> list[Comment]:
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        SELECT * FROM comments
-        WHERE idea_id = ?
-        ORDER BY created_at ASC
-        LIMIT ?
-    """, (idea_id, limit))
-
-    rows = cursor.fetchall()
-    conn.close()
-    return [row_to_comment(row) for row in rows]
+    with get_session() as session:
+        return (
+            session.query(Comment)
+            .filter_by(idea_id=idea_id)
+            .order_by(Comment.created_at)
+            .limit(limit)
+            .all()
+        )
 
 
 def update_comment_votes(comment_id: int, amount: int):
     """Amount gets added to current comment votes"""
-    conn = get_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        UPDATE comments
-        SET votes = votes + ?
-        WHERE id = ?
-    """, (amount, comment_id))
-
-    conn.commit()
-    conn.close()
+    with get_session() as session:
+        comment = session.get(Comment, comment_id)
+        if comment:
+            comment.votes += amount
+            session.commit()
 
