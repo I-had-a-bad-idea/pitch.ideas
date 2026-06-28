@@ -9,6 +9,8 @@ import time
 
 import db
 
+IS_VERCEL = os.environ.get("VERCEL") == "1"
+
 app = Flask(__name__)
 CORS(app) # Enable CORS for all routes
 # Init the DB
@@ -72,13 +74,14 @@ def setup_logging():
     console_handler.setFormatter(color_formatter)
     logger.addHandler(console_handler)
     
-    # File logging handler
-    log_path = os.path.normpath(os.path.join("logs", 'server.log'))
-    os.makedirs(os.path.dirname(f"../{log_path}"), exist_ok=True) # ensure the logs directory exists
-    file_handler = TimedRotatingFileHandler(f"../{log_path}", when='midnight', interval=1) # create a new file daily at midnight
-    file_handler.setLevel(FILE_LOGGING_LEVEL)
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
+    if not IS_VERCEL: # only log to files locally (Vercel is read-only)
+        # File logging handler
+        log_path = os.path.normpath(os.path.join("logs", 'server.log'))
+        os.makedirs(os.path.dirname(f"{log_path}"), exist_ok=True) # ensure the logs directory exists
+        file_handler = TimedRotatingFileHandler(f"../{log_path}", when='midnight', interval=1) # create a new file daily at midnight
+        file_handler.setLevel(FILE_LOGGING_LEVEL)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
     
     # Flask/werkzeug logs only to console, not to file
     werkzeug_logger = logging.getLogger('werkzeug')
