@@ -36,9 +36,12 @@
                 <h1>{{ idea.title }}</h1>
                 <div class="tag">{{ idea.topic }}</div>
             </div>
+            
+            <div class="pitch-meta">
+                Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}
+            </div>
 
             <p>{{ idea.description }}</p>
-
             <div class="pitch-footer">
                 <span>👍 {{ idea.votes }}</span>
                 <span>💬 {{ idea.comment_count }}</span>
@@ -57,7 +60,7 @@
                 {% for comment in comments %}
                     <li class="comment">
                         <p class="comment-text">{{ comment.content }}</p>
-                        <p class="comment-meta">By {{ comment.user_id }} on {{ comment.created_at }}</p>
+                        <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
                     </li>
                 {% endfor %}
             </ul>

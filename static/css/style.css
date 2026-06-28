@@ -118,6 +118,11 @@ body{
     font-weight:600;
 }
 
+.pitch-meta{
+    font-size:.75rem;
+    color:var(--text);
+}
+
 .tag{
     background:#FFF4D8;
     color:#CC8A00;

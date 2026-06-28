@@ -223,7 +223,7 @@ def get_pitch(idea_id: int):
     idea = db.get_idea_dict(idea_id)
     if not idea:
         return jsonify({"message": "Pitch not found"}), 404
-    return render_template("pitch.html", idea=idea, comments=[comment.to_dict() for comment in db.get_comments(idea_id)])
+    return render_template("pitch.html", idea=idea, comments=db.get_comments_dict(idea_id=idea_id, limit=50))
 
 class AddCommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)

@@ -74,7 +74,9 @@ class Idea(Base):
             "topic": self.topic,
             "description": self.description,
             "user_id": self.user_id,
+            "user_name": self.user.username if self.user else None,
             "created_at": self.created_at.isoformat(),
+            "created_at_pretty": self.created_at.strftime("%d %b %Y, %H:%M"),
             "votes": self.votes,
             "comment_count": len(self.comments),
         }
@@ -98,12 +100,14 @@ class Comment(Base):
     idea: Mapped["Idea"] = relationship(back_populates="comments")
     user: Mapped["User"] = relationship(back_populates="comments")
 
-    def to_dict(self):
+    def to_dict(self) -> dict:
         return {
             "id": self.id,
             "idea_id": self.idea_id,
             "user_id": self.user_id,
+            "user_name": self.user.username if self.user else None,
             "created_at": self.created_at.isoformat(),
+            "created_at_pretty": self.created_at.strftime("%d %b %Y, %H:%M"),
             "content": self.content,
             "votes": self.votes,
         }
@@ -208,16 +212,16 @@ def get_comment_count(idea_id: int) -> int:
             .count()
         )
 
-def get_comments(idea_id: int, limit: int = 50) -> list[Comment]:
+def get_comments_dict(idea_id: int, limit: int = 50) -> list[dict]:
     with get_session() as session:
-        return (
+        comments =  (
             session.query(Comment)
             .filter_by(idea_id=idea_id)
             .order_by(Comment.created_at)
             .limit(limit)
             .all()
         )
-
+        return [comment.to_dict() for comment in comments]
 
 def update_comment_votes(comment_id: int, amount: int):
     """Amount gets added to current comment votes"""
