@@ -56,7 +56,7 @@
             <ul class="comment-list">
                 {% for comment in comments %}
                     <li class="comment">
-                        <p class="comment-text">{{ comment.text }}</p>
+                        <p class="comment-text">{{ comment.content }}</p>
                         <p class="comment-meta">By {{ comment.user_id }} on {{ comment.created_at }}</p>
                     </li>
                 {% endfor %}
@@ -68,11 +68,13 @@
         <!-- Add Comment -->
         <form class="comment-form">
             <textarea
+                id="content"
+                name="content"
                 placeholder="Write a comment..."
                 rows="4"
                 required
             ></textarea>
-            <button class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
                 Post Comment
             </button>
         </form>
@@ -87,6 +89,8 @@
 
     © 2026 Pitch Ideas
 </footer>
+
+<script src="{{ url_for('static', filename='js/pitch.js') }}"></script>
 
 </body>
 </html>

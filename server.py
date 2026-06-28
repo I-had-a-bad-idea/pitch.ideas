@@ -225,6 +225,21 @@ def get_pitch(idea_id: int):
         return jsonify({"message": "Pitch not found"}), 404
     return render_template("pitch.html", idea=idea, comments=[comment.to_dict() for comment in db.get_comments(idea_id)])
 
+class AddCommentRequest(BaseModel):
+    content: str = Field(min_length=1, max_length=1000)
+
+@app.route("/pitches/<int:idea_id>/comment", methods=["POST"])
+def add_comment(idea_id: int):
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = AddCommentRequest.model_validate(result) # type: ignore
+    
+    content = data.content
+    db.create_comment(idea_id=idea_id, content=content, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
+    return {}, 200
+
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
     id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     if id is None: 
