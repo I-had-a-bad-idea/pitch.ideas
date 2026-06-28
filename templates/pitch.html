@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pitch Details</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container">
+
+        <a href="/">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pitch Ideas" class="logo">
+        </a>
+
+        <a href="/create-pitch">
+            <button class="btn btn-primary">
+                Create Pitch
+            </button>
+        </a>
+
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- Pitch -->
+    <section class="pitch-page">
+        {% if idea %}
+            <div class="pitch-header">
+                <h1>{{ idea.title }}</h1>
+                <div class="tag">{{ idea.topic }}</div>
+            </div>
+
+            <p>{{ idea.description }}</p>
+
+            <div class="pitch-footer">
+                <span>👍 {{ idea.votes }}</span>
+                <span>💬 {{ idea.comment_count }}</span>
+            </div>
+        {% else %}
+            <h1>Pitch Not Found</h1>
+            <p>The pitch you are looking for does not exist.</p>
+        {% endif %}
+    </section>
+
+    <!-- Comments -->
+    <section class="comments">
+        <h2>Comments</h2>
+        {% if comments %}
+            <ul class="comment-list">
+                {% for comment in comments %}
+                    <li class="comment">
+                        <p class="comment-text">{{ comment.text }}</p>
+                        <p class="comment-meta">By {{ comment.user_id }} on {{ comment.created_at }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No comments yet. Be the first to comment!</p>
+        {% endif %}
+
+        <!-- Add Comment -->
+        <form class="comment-form">
+            <textarea
+                placeholder="Write a comment..."
+                rows="4"
+                required
+            ></textarea>
+            <button class="btn btn-primary">
+                Post Comment
+            </button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="disclaimer">
+        This is a student project. Content is fictional and for demonstration purposes only.
+        No real investment, funding or user data handling is implied.
+    </div>
+
+    © 2026 Pitch Ideas
+</footer>
+
+</body>
+</html>
