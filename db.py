@@ -42,6 +42,7 @@ class User(Base):
     ideas: Mapped[list["Idea"]] = relationship(back_populates="user")
     comments: Mapped[list["Comment"]] = relationship(back_populates="user")
 
+user : User | None = None
 
 class Idea(Base):
     __tablename__ = "ideas"
@@ -102,23 +103,30 @@ def get_session():
     return Session(engine)
 
 def init_db():
+    global user
     Base.metadata.create_all(engine)
+    
+    _user = get_user("test")
+    if _user is None:
+        _user = create_user("test", "test") # TODO: Remove this if users get added (only for now, where everything gets attributed to user 0)
+
+    user = _user
     print("Database and tables created!")
 
 def idea_count() -> int:
     with get_session() as session:
         return session.query(Idea).count()
 
-def create_user(username: str, password_hash: str):
+def create_user(username: str, password_hash: str) -> User:
     with get_session() as session:
-        session.add(
-            User(
-                username=username,
-                password_hash=password_hash
-            )
+        user = User(
+            username=username,
+            password_hash=password_hash
         )
+        session.add(user)
         session.commit()
-
+        session.refresh(user)
+        return user
 
 def get_user(username: str) -> User | None:
     with get_session() as session:

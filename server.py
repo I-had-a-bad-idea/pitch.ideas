@@ -210,7 +210,7 @@ def create_pitch():
         return response, status
     data = CreatePitchRequest.model_validate(result) # type: ignore
 
-    db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=0) # set 0 for now, as no real users exist
+    db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     return {}, 200
 
 @app.route("/pitches", methods=["GET"])
@@ -219,7 +219,7 @@ def get_pitches():
     return jsonify({"pitches": pitches}), 200
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
-    id = db.create_idea(title=title, topic=topic, description=description, user_id=0) # set 0 for now, as no real users exist
+    id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     if id is None: 
         raise RuntimeError()
     
