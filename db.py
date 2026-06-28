@@ -98,6 +98,16 @@ class Comment(Base):
     idea: Mapped["Idea"] = relationship(back_populates="comments")
     user: Mapped["User"] = relationship(back_populates="comments")
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "idea_id": self.idea_id,
+            "user_id": self.user_id,
+            "created_at": self.created_at.isoformat(),
+            "content": self.content,
+            "votes": self.votes,
+        }
+
 
 def get_session():
     return Session(engine)
@@ -164,9 +174,11 @@ def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
 
 
 
-def get_idea(idea_id: int) -> Idea | None:
+def get_idea_dict(idea_id: int) -> dict | None:
     with get_session() as session:
-        return session.get(Idea, idea_id)
+        idea = session.get(Idea, idea_id)
+        if idea:
+            return idea.to_dict()
 
 
 def update_votes(idea_id: int, amount: int):

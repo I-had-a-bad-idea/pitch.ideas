@@ -218,6 +218,13 @@ def get_pitches():
     pitches = db.get_all_ideas_as_dicts(limit=20)
     return jsonify({"pitches": pitches}), 200
 
+@app.route("/pitches/<int:idea_id>", methods=["GET"])
+def get_pitch(idea_id: int):
+    idea = db.get_idea_dict(idea_id)
+    if not idea:
+        return jsonify({"message": "Pitch not found"}), 404
+    return render_template("pitch.html", idea=idea, comments=[comment.to_dict() for comment in db.get_comments(idea_id)])
+
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
     id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     if id is None: 
