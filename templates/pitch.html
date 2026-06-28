@@ -36,14 +36,14 @@
                 <h1>{{ idea.title }}</h1>
                 <div class="tag">{{ idea.topic }}</div>
             </div>
-            
+
             <div class="pitch-meta">
                 Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}
             </div>
 
             <p>{{ idea.description }}</p>
             <div class="pitch-footer">
-                <span>👍 {{ idea.votes }}</span>
+                <span class="vote-btn">👍 {{ idea.votes }}</span>
                 <span>💬 {{ idea.comment_count }}</span>
             </div>
         {% else %}

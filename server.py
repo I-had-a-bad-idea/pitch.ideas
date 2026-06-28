@@ -225,6 +225,11 @@ def get_pitch(idea_id: int):
         return jsonify({"message": "Pitch not found"}), 404
     return render_template("pitch.html", idea=idea, comments=db.get_comments_dict(idea_id=idea_id, limit=50))
 
+@app.route("/pitches/<int:idea_id>/upvote", methods=["POST"])
+def vote_pitch(idea_id: int):
+    db.update_votes(idea_id=idea_id, amount=1) # currently just upvote by 1
+    return {}, 200
+
 class AddCommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)
 
