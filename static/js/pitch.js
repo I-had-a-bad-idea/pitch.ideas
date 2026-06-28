@@ -20,7 +20,6 @@ form.addEventListener("submit", async (e) => {
     const data = await response.json().catch(() => ({}));
 
     if (response.ok) {
-        alert("Comment added successfully!");
         window.location.reload();
     } else {
         alert(data.message || "Failed to add comment.");

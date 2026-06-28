@@ -21,7 +21,6 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
-            alert("Pitch created successfully!");
             window.location.href = "/";
         } else {
             alert(data.message || "Failed to create pitch.");
