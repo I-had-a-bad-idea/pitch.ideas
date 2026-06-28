@@ -66,6 +66,18 @@ class Idea(Base):
         cascade="all, delete-orphan",
     )
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "title": self.title,
+            "topic": self.topic,
+            "description": self.description,
+            "user_id": self.user_id,
+            "created_at": self.created_at.isoformat(),
+            "votes": self.votes,
+            "comment_count": len(self.comments),
+        }
+
 class Comment(Base):
     __tablename__ = "comments"
 
@@ -91,8 +103,11 @@ def get_session():
 
 def init_db():
     Base.metadata.create_all(engine)
-
     print("Database and tables created!")
+
+def idea_count() -> int:
+    with get_session() as session:
+        return session.query(Idea).count()
 
 def create_user(username: str, password_hash: str):
     with get_session() as session:
@@ -129,14 +144,16 @@ def create_idea(title: str, topic: str, description: str, user_id: int) -> int |
         session.refresh(idea)
         return idea.id
 
-def get_all_ideas(limit: int = 20) -> list[Idea]:
+def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
     with get_session() as session:
-        return (
+        ideas = (
             session.query(Idea)
             .order_by(Idea.created_at.desc())
             .limit(limit)
             .all()
         )
+        return [idea.to_dict() for idea in ideas]
+
 
 
 def get_idea(idea_id: int) -> Idea | None:

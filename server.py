@@ -212,7 +212,7 @@ def create_pitch():
 
 @app.route("/pitches", methods=["GET"])
 def get_pitches():
-    pitches = db.get_all_ideas(limit=20)
+    pitches = db.get_all_ideas_as_dicts(limit=20)
     return jsonify({"pitches": pitches}), 200
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
@@ -244,8 +244,9 @@ def add_test_pitches():
         vote_amount=198
     )
 
-# Add some test data
-add_test_pitches()
+if db.idea_count() == 0:
+    # Add some test data
+    add_test_pitches()
 
 if __name__ == "__main__":
     app.run(host="localhost", port=4000)
