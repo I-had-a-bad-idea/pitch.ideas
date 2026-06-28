@@ -69,6 +69,10 @@ body{
     padding:30px 0;
 }
 
+.small-hero {
+    padding: 60px 0;
+}
+
 .hero h1{
     line-height: 1.2;
     margin-bottom:1rem;
@@ -114,6 +118,11 @@ body{
     font-weight:600;
 }
 
+.pitch-meta{
+    font-size:.75rem;
+    color:var(--text);
+}
+
 .tag{
     background:#FFF4D8;
     color:#CC8A00;
@@ -132,6 +141,88 @@ body{
     gap:1rem;
     color:var(--text);
     font-size:.9rem;
+}
+
+.upload-section {
+    padding: 60px 0;
+}
+
+.pitch-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pitch-form label {
+    font-weight: 600;
+}
+
+.pitch-form input,
+.pitch-form select,
+.pitch-form textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.pitch-form textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+.pitch-form button {
+    align-self: flex-start;
+}
+
+.pitch-page {
+    margin: 40px 0;
+}
+
+.pitch-page .tag {
+    font-size: 0.9rem;
+}
+
+.pitch-page p {
+    font-size: 1.15rem;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.comments {
+    margin: 60px 0;
+}
+
+.comment {
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-meta {
+    font-size: 0.75rem;
+    color: var(--text);
+}
+
+.comment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.comment-form button {
+    align-self: flex-start;
 }
 
 /* FOOTER */

@@ -6,19 +6,24 @@
 
 <title>Pitch Ideas</title>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 <body>
 
 <nav class="navbar">
     <div class="container">
+        
+        <a href="/">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pitch Ideas" class="logo">
+        </a>
+        
+        <a href="/create-pitch">
+            <button class="btn btn-primary">
+                Create Pitch
+            </button>
+        </a>
 
-        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Pitch Ideas" class="logo">
-
-        <button class="btn btn-primary">
-            Create Pitch
-        </button>
 
     </div>
 </nav>
@@ -41,79 +46,20 @@
 
 <section class="feed">
     <div class="container">
-
         <h2>Latest Pitches</h2>
-
-        <div class="pitch">
-            <div class="pitch-header">
-                <div class="pitch-title">
-                    AI Meeting Assistant
-                </div>
-                <div class="tag">AI</div>
-            </div>
-
-            <p>
-                AI that joins meetings, creates summaries,
-                and automatically generates tasks.
-            </p>
-
-            <div class="pitch-footer">
-                <span>👍 421</span>
-                <span>💬 38</span>
-                <span>💰 Seeking Investors</span>
-            </div>
-        </div>
-
-        <div class="pitch">
-            <div class="pitch-header">
-                <div class="pitch-title">
-                    BudgetFlow
-                </div>
-                <div class="tag">FinTech</div>
-            </div>
-
-            <p>
-                Modern financial planning platform
-                built for freelancers and creators.
-            </p>
-
-            <div class="pitch-footer">
-                <span>👍 312</span>
-                <span>💬 22</span>
-                <span>👥 Looking for Co-Founder</span>
-            </div>
-        </div>
-
-        <div class="pitch">
-            <div class="pitch-header">
-                <div class="pitch-title">
-                    MedTrack
-                </div>
-                <div class="tag">HealthTech</div>
-            </div>
-
-            <p>
-                Patient monitoring system that helps clinics
-                reduce administrative work.
-            </p>
-
-            <div class="pitch-footer">
-                <span>👍 198</span>
-                <span>💬 15</span>
-                <span>🚀 MVP Ready</span>
-            </div>
-        </div>
-
+        <!-- Will be filled by JS -->
     </div>
 </section>
 
 <footer>
     <div class="disclaimer">
-        This is a student project. Content is fictional and for demonstartion purposes only.
+        This is a student project. Content is fictional and for demonstration purposes only.
         No real investment, funding or user data handling is implied.
     </div>
     © 2026 Pitch Ideas
 </footer>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 
 </body>
 </html>

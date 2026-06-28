@@ -3,4 +3,3 @@ flask-cors==6.0.2
 pydantic-core==2.41.5
 pydantic==2.12.5
 sqlalchemy==2.0.51
-psycopg2-binary==2.9.12

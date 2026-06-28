@@ -10,7 +10,7 @@ Requires Python installed.
 ```bash
 git clone https://github.com/I-had-a-bad-idea/pitch.ideas.git
 cd pitch.ideas
-pip install -r requirements.txt
+pip install -r local-requirements.txt
 python server.py
 ```
 
