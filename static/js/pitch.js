@@ -54,9 +54,52 @@ voreBtn.addEventListener("click", async (e) => {
     }
 });
 
-const comments = [];
-const authors = [];
-const dates = [];
+function randomDateTime() {
+    const now = new Date();
+
+    // Anywhere from now to 30 minutes ago
+    const date = new Date(now.getTime() - Math.random() * 30 * 60 * 1000);
+
+    const months = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+
+    return `${day} ${month} ${year}, ${hours}:${minutes}`;
+}
+
+const comments = [
+    "This is exactly what I needed!",
+    "Amazing idea 👏",
+    "I'd definitely use this.",
+    "Take my upvote!",
+    "This deserves more attention.",
+    "Really well thought out.",
+    "Love this concept.",
+    "Great work!",
+    "I'd invest in this.",
+    "Fantastic pitch!"
+];
+const authors = [
+    "Alex",
+    "Sarah",
+    "Michael",
+    "Emma",
+    "Noah",
+    "Olivia",
+    "Liam",
+    "Sophia",
+    "Daniel",
+    "Mia",
+    "James",
+    "Ava"
+];
 
 const voteBtn = document.querySelector(".vote-btn");
 var votes = parseInt(voreBtn.textContent.split(" ")[1]);
@@ -71,7 +114,7 @@ async function flood_with_likes_and_comments() {
         await new Promise(resolve => setTimeout(resolve, waitMsBetweenComments)); // wait
         const author = authors[Math.floor(Math.random() * authors.length)];
         const comment = comments[Math.floor(Math.random() * comments.length)];
-        const date = dates[Math.floor(Math.random() * dates.length)];
+        const date = randomDateTime();
 
         const li = document.createElement("li");
         li.className = "comment"
