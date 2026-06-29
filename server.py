@@ -78,7 +78,7 @@ def setup_logging():
         # File logging handler
         log_path = os.path.normpath(os.path.join("logs", 'server.log'))
         os.makedirs(os.path.dirname(f"{log_path}"), exist_ok=True) # ensure the logs directory exists
-        file_handler = TimedRotatingFileHandler(f"../{log_path}", when='midnight', interval=1) # create a new file daily at midnight
+        file_handler = TimedRotatingFileHandler(f"{log_path}", when='midnight', interval=1) # create a new file daily at midnight
         file_handler.setLevel(FILE_LOGGING_LEVEL)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)

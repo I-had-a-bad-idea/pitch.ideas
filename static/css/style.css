@@ -136,6 +136,10 @@ body{
     margin-bottom:1rem;
 }
 
+.description {
+    white-space: pre-wrap;
+}
+
 .pitch-footer{
     display:flex;
     gap:1rem;

@@ -18,7 +18,7 @@ async function loadPitches() {
             <div class="tag">${p.topic}</div>
         </div>
 
-        <p>${p.description}</p>
+        <p class="description">${p.description}</p>
         <div class="pitch-footer">
             <span class="vote-btn">👍 ${p.votes}</span>
             <span>💬 ${p.comment_count}</span>
