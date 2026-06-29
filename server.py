@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, request, g
 from flask_cors import CORS
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field, StringConstraints, ValidationError
+from typing import Annotated
 
 import logging
 from logging.handlers import TimedRotatingFileHandler
@@ -8,6 +9,7 @@ import os
 import time
 
 import db
+import hashing
 
 IS_VERCEL = os.environ.get("VERCEL") == "1"
 
@@ -186,6 +188,9 @@ def handle_validation_error(e):
         return jsonify({"message": "One or more fields are too short", "details": e.errors()}), 422
     return jsonify({"message": "Invalid request data", "details": e.errors()}), 422
 
+Username: Annotated[str, StringConstraints(min_length=1, max_length=100)]
+Password: Annotated[str, StringConstraints(min_length=1, max_length=100)]
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -245,9 +250,9 @@ def add_comment(idea_id: int):
     db.create_comment(idea_id=idea_id, content=content, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     return {}, 200
 
-class LoginRequest(BaseModel):
-    password: str = Field(min_length=1, max_length=50)
-    username: str = Field(min_length=1, max_length=50)
+class AuthRequest(BaseModel):
+    password: Password
+    username: Username
 
 @app.route("/auth/login", methods=["POST"])
 def login():
@@ -255,9 +260,29 @@ def login():
     if not ok:
         response, status = result
         return response, status
-    data = LoginRequest.model_validate(result) # type:ignore
+    data = AuthRequest.model_validate(result) # type:ignore
 
-    return jsonify({"message": "Currently not implemented"}), 503
+    user = db.get_user(data.username)
+    if not user:
+        return jsonify({"message": "Invalid credentials"}), 401
+    
+    correct: bool = hashing.verify_password(data.password, user.password_hash)
+    if not correct:
+        return jsonify({"message": "Invalid credentials"}), 401
+
+    return {}, 200
+
+@app.route("/auth/register", methods=["POST"])
+def register():
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = AuthRequest.model_validate(result) # type:ignore
+
+    user = db.create_user(username=data.username, password_hash=hashing.hash_password(data.password))
+    return {}, 200
+
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
     id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
