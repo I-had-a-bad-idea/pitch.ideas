@@ -245,6 +245,20 @@ def add_comment(idea_id: int):
     db.create_comment(idea_id=idea_id, content=content, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     return {}, 200
 
+class LoginRequest(BaseModel):
+    password: str = Field(min_length=1, max_length=50)
+    username: str = Field(min_length=1, max_length=50)
+
+@app.route("/auth/login", methods=["POST"])
+def login():
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = LoginRequest.model_validate(result) # type:ignore
+
+    return jsonify({"message": "Currently not implemented"}), 503
+
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
     id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
     if id is None: 
