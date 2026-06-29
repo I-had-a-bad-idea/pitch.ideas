@@ -103,6 +103,7 @@ const authors = [
 
 const voteBtn = document.querySelector(".vote-btn");
 var votes = parseInt(voreBtn.textContent.split(" ")[1]);
+const commentList = document.querySelector(".comment-list");
 
 const totalLikes = 150;
 const totalComments = 50; // should always be less then likes 
@@ -121,8 +122,12 @@ async function flood_with_likes_and_comments() {
 
         li.innerHTML = `
         <p class="comment-text">${comment}</p>
-        <p class"comment-meta">By ${author } on ${date}</p>
+        <p class="comment-meta">By ${author } on ${date}</p>
         `;
+
+        commentList.prepend(li);
+        votes += likesPerComment;
+        voteBtn.textContent = `👍 ${votes}`;
     }
 }
 
