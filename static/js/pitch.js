@@ -103,16 +103,18 @@ const authors = [
 
 const voteBtn = document.querySelector(".vote-btn");
 var votes = parseInt(voreBtn.textContent.split(" ")[1]);
+votes = 0;
+const commentCount = document.querySelector(".comment-count");
 const commentList = document.querySelector(".comment-list");
 
 const totalLikes = 150;
 const totalComments = 50; // should always be less then likes 
-const waitMsBetweenComments = 10;
+const waitMsBetweenComments = 100;
 const likesPerComment = totalLikes / totalComments;
 
 async function flood_with_likes_and_comments() {
+    await new Promise(resolve => setTimeout(resolve, waitMsBetweenComments)); // wait before starting
     for (let i = 0; i < totalComments; i++) {
-        await new Promise(resolve => setTimeout(resolve, waitMsBetweenComments)); // wait
         const author = authors[Math.floor(Math.random() * authors.length)];
         const comment = comments[Math.floor(Math.random() * comments.length)];
         const date = randomDateTime();
@@ -128,6 +130,9 @@ async function flood_with_likes_and_comments() {
         commentList.prepend(li);
         votes += likesPerComment;
         voteBtn.textContent = `👍 ${votes}`;
+        commentCount.textContent = `💬 ${i + 1}`;
+
+        await new Promise(resolve => setTimeout(resolve, waitMsBetweenComments)); // wait
     }
 }
 

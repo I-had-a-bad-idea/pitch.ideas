@@ -44,7 +44,7 @@
             <p class="description">{{ idea.description }}</p>
             <div class="pitch-footer">
                 <span class="vote-btn">👍 {{ idea.votes }}</span>
-                <span>💬 {{ idea.comment_count }}</span>
+                <span class="comment-count">💬 {{ idea.comment_count }}</span>
             </div>
         {% else %}
             <h1>Pitch Not Found</h1>
@@ -55,7 +55,6 @@
     <!-- Comments -->
     <section class="comments">
         <h2>Comments</h2>
-        {% if comments %}
             <ul class="comment-list">
                 {% for comment in comments %}
                     <li class="comment">
@@ -64,7 +63,7 @@
                     </li>
                 {% endfor %}
             </ul>
-        {% else %}
+        {% if not comments %}
             <p>No comments yet. Be the first to comment!</p>
         {% endif %}
 
