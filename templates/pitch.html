@@ -40,7 +40,9 @@
 
             <p class="description">{{ idea.description }}</p>
             <div class="pitch-footer">
-                <span class="vote-btn">👍 {{ idea.votes }}</span>
+                <span class="vote-btn {% if voted_by_user %}voted{% endif %}">
+                    👍 <span class="vote-count">{{ idea.votes }}</span>
+                </span>
                 <span>💬 {{ idea.comment_count }}</span>
             </div>
         {% else %}

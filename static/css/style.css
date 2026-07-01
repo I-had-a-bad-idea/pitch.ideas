@@ -135,6 +135,11 @@ body{
     color:var(--text);
 }
 
+.vote-btn.voted {
+    color: #0a7cff;
+    font-weight: bold;
+}
+
 .tag{
     background:#FFF4D8;
     color:#CC8A00;

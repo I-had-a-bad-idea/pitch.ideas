@@ -20,7 +20,9 @@ async function loadPitches() {
 
         <p class="description">${p.description}</p>
         <div class="pitch-footer">
-            <span class="vote-btn">👍 ${p.votes}</span>
+            <span class="vote-btn ${p.voted_by_user ? "" : "voted"}">
+                👍 <span class="vote-count">${p.votes}</span>
+            </span>
             <span>💬 ${p.comment_count}</span>
         </div>
         `;
@@ -36,11 +38,15 @@ async function loadPitches() {
                     method: "POST",
                     credentials: "include",
                 });
-
+                
+                const data = await response.json().catch(() => ({}));
+                
                 if (response.ok) {
-                    p.votes = Number(p.votes);
-                    p.votes += 1; // Increment the vote count locally
-                    voteBtn.textContent = `👍 ${p.votes}`; // Update the button text
+                    // toggle UI state
+                    voteBtn.classList.toggle("voted");
+                    console.log(data.votes);
+                    // update count to what backend returns
+                    voteBtn.querySelector(".vote-count").textContent = data.votes;
                 } else {
                     alert("Failed to upvote pitch.");
                 }

@@ -167,8 +167,8 @@ def get_pitch(idea_id: int):
 @require_auth
 def vote_pitch(idea_id: int):
     user = getattr(request, "user")
-    db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
-    return {}, 200
+    votes = db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
+    return jsonify({"votes": votes}), 200
 
 class AddCommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)

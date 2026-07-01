@@ -227,8 +227,8 @@ def get_idea_dict(idea_id: int) -> dict | None:
         if idea:
             return idea.to_dict()
 
-def vote_idea(idea_id: int, user_id: int, value: int = 1):
-    """Adds amount to the votes of the idea"""
+def vote_idea(idea_id: int, user_id: int, value: int = 1) -> int:
+    """Adds amount to the votes of the idea. Returns new vote value for the idea"""
     with get_db_session() as db_session:
         existing = db_session.query(IdeaVote).filter_by(idea_id=idea_id, user_id=user_id).first()
         if existing:
@@ -241,6 +241,7 @@ def vote_idea(idea_id: int, user_id: int, value: int = 1):
             db_session.add(IdeaVote(idea_id=idea_id, user_id=user_id, value=value))
 
         db_session.commit()
+    return sum(v.value for v in db_session.query(IdeaVote).filter_by(idea_id=idea_id).all()) # votes for idea
 
 def create_comment(idea_id: int, user_id: int, content: str):
     with get_db_session() as db_session:

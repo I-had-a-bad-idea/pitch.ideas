@@ -31,9 +31,9 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-const voreBtn = document.querySelector(".vote-btn");
+const voteBtn = document.querySelector(".vote-btn");
 
-voreBtn.addEventListener("click", async (e) => {
+voteBtn.addEventListener("click", async (e) => {
     e.stopPropagation(); // Prevent the click from propagating to the parent div
 
     const pitchId = window.location.pathname.split("/").pop();
@@ -43,10 +43,15 @@ voreBtn.addEventListener("click", async (e) => {
             method: "POST",
             credentials: "include",
         });
+        
+        const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
-            const currentVotes = parseInt(voreBtn.textContent.split(" ")[1]);
-            voreBtn.textContent = `👍 ${currentVotes + 1}`;
+            // toggle UI state
+            voteBtn.classList.toggle("voted");
+
+            // update count to what backend returns
+            voteBtn.querySelector(".vote-count").textContent = data.votes;
         } else {
             alert("Failed to upvote pitch.");
         }
