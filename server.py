@@ -282,6 +282,12 @@ class AuthRequest(BaseModel):
     password: Password
     username: Username
 
+# This for the web page
+@app.route("/auth/login", methods=["GET"])
+def login_page():
+    return render_template("login.html")
+
+# and this for the API functionality
 @app.route("/auth/login", methods=["POST"])
 def login():
     ok, result = validate_request(request)
@@ -307,7 +313,12 @@ def login():
     )
     return resp
     
+# This for the web page
+@app.route("/auth/register", methods=["GET"])
+def register_page():
+    return render_template("register.html")
 
+# and this for the API functionality
 @app.route("/auth/register", methods=["POST"])
 def register():
     ok, result = validate_request(request)
