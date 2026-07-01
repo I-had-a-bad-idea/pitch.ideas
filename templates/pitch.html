@@ -13,17 +13,14 @@
 
 <nav class="navbar">
     <div class="container">
-
-        <a href="/">
-            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pitch Ideas" class="logo">
-        </a>
-
-        <a href="/create-pitch">
-            <button class="btn btn-primary">
-                Create Pitch
-            </button>
-        </a>
-
+        <div class="nav-left">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pitch Ideas" class="logo">
+            </a>
+        </div>
+        <div class="nav-right">
+           
+        </div>
     </div>
 </nav>
 
@@ -43,7 +40,9 @@
 
             <p class="description">{{ idea.description }}</p>
             <div class="pitch-footer">
-                <span class="vote-btn">👍 {{ idea.votes }}</span>
+                <span class="vote-btn {% if voted_by_user %}voted{% endif %}">
+                    👍 <span class="vote-count">{{ idea.votes }}</span>
+                </span>
                 <span>💬 {{ idea.comment_count }}</span>
             </div>
         {% else %}
