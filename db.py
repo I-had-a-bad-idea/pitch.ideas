@@ -8,7 +8,8 @@ from sqlalchemy import (
     String,
     Text,
     DateTime,
-    func
+    func,
+    UniqueConstraint
 )
 from sqlalchemy.orm import (
     DeclarativeBase,
@@ -60,12 +61,14 @@ class Idea(Base):
         server_default=func.now(),
     )
 
-    votes: Mapped[int] = mapped_column(Integer, default=0)
-
     user: Mapped["User"] = relationship(back_populates="ideas")
     comments: Mapped[list["Comment"]] = relationship(
         back_populates="idea",
         cascade="all, delete-orphan",
+    )
+    vote_records: Mapped[list["IdeaVote"]] = relationship(
+        back_populates="idea",
+        cascade="all, delete-orphan"
     )
 
     def to_dict(self):
@@ -78,9 +81,28 @@ class Idea(Base):
             "user_name": self.user.username if self.user else None,
             "created_at": self.created_at.isoformat(),
             "created_at_pretty": self.created_at.strftime("%d %b %Y, %H:%M"),
-            "votes": self.votes,
+            "votes": sum(v.value for v in self.vote_records),
+            "voted_by_user": {v.user_id: v.value for v in self.vote_records},
             "comment_count": len(self.comments),
         }
+
+class IdeaVote(Base):
+    __tablename__ = "idea_votes"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    idea_id: Mapped[int] = mapped_column(ForeignKey("ideas.id"))
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+
+    # +1 or -1 for upvote/downvote support
+    value: Mapped[int] = mapped_column(Integer, default=1)
+
+    idea: Mapped["Idea"] = relationship(back_populates="vote_records")
+    user: Mapped["User"] = relationship()
+    
+    __table_args__ = (
+        UniqueConstraint("idea_id", "user_id", name="unique_user_idea_vote"),
+    )
 
 class Comment(Base):
     __tablename__ = "comments"
@@ -205,14 +227,20 @@ def get_idea_dict(idea_id: int) -> dict | None:
         if idea:
             return idea.to_dict()
 
-
-def update_votes(idea_id: int, amount: int):
+def vote_idea(idea_id: int, user_id: int, value: int = 1):
     """Adds amount to the votes of the idea"""
     with get_db_session() as db_session:
-        idea = db_session.get(Idea, idea_id)
-        if idea:
-            idea.votes += amount
-            db_session.commit()
+        existing = db_session.query(IdeaVote).filter_by(idea_id=idea_id, user_id=user_id).first()
+        if existing:
+            if existing.value == value:
+                db_session.delete(existing) # undo vote
+            else:
+                existing.value = value # update vote
+        
+        else:
+            db_session.add(IdeaVote(idea_id=idea_id, user_id=user_id, value=value))
+
+        db_session.commit()
 
 def create_comment(idea_id: int, user_id: int, content: str):
     with get_db_session() as db_session:

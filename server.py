@@ -166,7 +166,8 @@ def get_pitch(idea_id: int):
 @app.route("/pitches/<int:idea_id>/upvote", methods=["POST"])
 @require_auth
 def vote_pitch(idea_id: int):
-    db.update_votes(idea_id=idea_id, amount=1) # currently just upvote by 1
+    user = getattr(request, "user")
+    db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
     return {}, 200
 
 class AddCommentRequest(BaseModel):
@@ -290,11 +291,11 @@ def auth_status():
     })
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
-    id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
+    id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # Use test user for adding the stuff
     if id is None: 
         raise RuntimeError()
     
-    db.update_votes(id, amount=vote_amount)
+    db.vote_idea(idea_id=id, user_id=db.user.id, value=vote_amount) # type: ignore
 
 def add_test_pitches():
     add_test_pitch(
