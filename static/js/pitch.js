@@ -14,7 +14,8 @@ form.addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
+            credentials: "include",
         });
     
     const data = await response.json().catch(() => ({}));
@@ -39,7 +40,8 @@ voreBtn.addEventListener("click", async (e) => {
 
     try {
         const response = await fetch(`/pitches/${pitchId}/upvote`, {
-            method: "POST"
+            method: "POST",
+            credentials: "include",
         });
 
         if (response.ok) {
@@ -84,7 +86,7 @@ async function showAuthButtons() {
 }
 
 async function checkAuth() {
-    const res = await fetch("/auth/status");
+    const res = await fetch("/auth/status", {credentials: "include",});
     const data = await res.json();
 
     if (data.logged_in) {

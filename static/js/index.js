@@ -1,5 +1,5 @@
 async function loadPitches() {
-    const res = await fetch("/pitches");
+    const res = await fetch("/pitches", {credentials: "include",});
     const data = await res.json();
 
     const container = document.querySelector(".feed .container");
@@ -33,7 +33,8 @@ async function loadPitches() {
 
             try {
                 const response = await fetch(`/pitches/${p.id}/upvote`, {
-                    method: "POST"
+                    method: "POST",
+                    credentials: "include",
                 });
 
                 if (response.ok) {
@@ -79,7 +80,7 @@ async function showAuthButtons() {
 }
 
 async function checkAuth() {
-    const res = await fetch("/auth/status");
+    const res = await fetch("/auth/status", {credentials: "include",});
     const data = await res.json();
 
     if (data.logged_in) {

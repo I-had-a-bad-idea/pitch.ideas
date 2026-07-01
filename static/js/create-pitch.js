@@ -15,7 +15,8 @@ form.addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
+            credentials: "include",
         });
 
         const data = await response.json().catch(() => ({}));
