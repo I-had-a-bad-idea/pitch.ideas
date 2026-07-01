@@ -7,9 +7,12 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 import os
 import time
+from functools import wraps
 
 import db
 import hashing
+
+SESSION_COOKIE_NAME = "session_id"
 
 IS_VERCEL = os.environ.get("VERCEL") == "1"
 
@@ -94,6 +97,25 @@ def setup_logging():
 
 # logger
 logger = setup_logging() # setup logger
+
+def require_auth(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        session_id = request.cookies.get("session_id")
+
+        if not session_id:
+            return {"error": "unauthorized"}, 401
+
+        user = db.get_user_by_session(session_id)
+
+        if not user:
+            return {"error": "expired"}, 401
+
+        setattr(request, "user", user)
+
+        return f(*args, **kwargs)
+
+    return wrapper
 
 @app.before_request
 def before_request():
@@ -197,6 +219,7 @@ def home():
 
 # This for the web page
 @app.route("/create-pitch", methods=["GET"])
+@require_auth
 def create_pitch_page():
     return render_template("create-pitch.html")
 
@@ -208,14 +231,16 @@ class CreatePitchRequest(BaseModel):
 
 # and this for the API functionality
 @app.route("/create-pitch", methods=["PUT"])
+@require_auth
 def create_pitch():
     ok, result = validate_request(request)
     if not ok:
         response, status = result
         return response, status
     data = CreatePitchRequest.model_validate(result) # type: ignore
+    user = getattr(request, "user")
 
-    db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
+    db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=user.id) # type: ignore 
     return {}, 200
 
 @app.route("/pitches", methods=["GET"])
@@ -231,6 +256,7 @@ def get_pitch(idea_id: int):
     return render_template("pitch.html", idea=idea, comments=db.get_comments_dict(idea_id=idea_id, limit=50))
 
 @app.route("/pitches/<int:idea_id>/upvote", methods=["POST"])
+@require_auth
 def vote_pitch(idea_id: int):
     db.update_votes(idea_id=idea_id, amount=1) # currently just upvote by 1
     return {}, 200
@@ -239,6 +265,7 @@ class AddCommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)
 
 @app.route("/pitches/<int:idea_id>/comment", methods=["POST"])
+@require_auth
 def add_comment(idea_id: int):
     ok, result = validate_request(request)
     if not ok:
@@ -246,8 +273,9 @@ def add_comment(idea_id: int):
         return response, status
     data = AddCommentRequest.model_validate(result) # type: ignore
     
+    user = getattr(request, "user")
     content = data.content
-    db.create_comment(idea_id=idea_id, content=content, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
+    db.create_comment(idea_id=idea_id, content=content, user_id=user.id) # type: ignore
     return {}, 200
 
 class AuthRequest(BaseModel):
