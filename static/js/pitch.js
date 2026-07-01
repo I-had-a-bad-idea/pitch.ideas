@@ -75,16 +75,16 @@ function randomDateTime() {
 }
 
 const comments = [
-    "This is exactly what I needed!",
-    "Amazing idea 👏",
-    "I'd definitely use this.",
-    "Take my upvote!",
-    "This deserves more attention.",
-    "Really well thought out.",
-    "Love this concept.",
-    "Great work!",
-    "I'd invest in this.",
-    "Fantastic pitch!"
+    "Genau das habe ich gesucht!",
+    "Geniale Idee! 👏",
+    "Das würde ich sofort nutzen.",
+    "Nimm mein Upvote!",
+    "Das verdient viel mehr Aufmerksamkeit.",
+    "Wirklich gut durchdacht.",
+    "Ich liebe dieses Konzept.",
+    "Großartige Arbeit!",
+    "Da würde ich sofort investieren.",
+    "Fantastischer Pitch!"
 ];
 const authors = [
     "Alex",
