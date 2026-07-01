@@ -370,8 +370,8 @@ def auth_status():
     return jsonify({
         "logged_in": True,
         "user": {
-            "id": g.user.id,
-            "username": g.user.username
+            "id": user.id,
+            "username": user.username
         }
     })
 
