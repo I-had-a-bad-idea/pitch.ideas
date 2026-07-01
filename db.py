@@ -1,5 +1,6 @@
 import os
-from datetime import datetime
+import uuid
+from datetime import datetime, timedelta
 from sqlalchemy import (
     create_engine,
     ForeignKey,
@@ -14,7 +15,7 @@ from sqlalchemy.orm import (
     Mapped,
     mapped_column,
     relationship,
-    Session
+    Session as DBSession
 )
 
 # Check for Vercel Postgres environment variable
@@ -112,15 +113,30 @@ class Comment(Base):
             "votes": self.votes,
         }
 
+class Session(Base):
+    __tablename__ = "sessions"
 
-def get_session():
-    return Session(engine)
+    id: Mapped[str] = mapped_column(String, primary_key=True)  # session token
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        server_default=func.now()
+    )
+
+    expires_at: Mapped[datetime] = mapped_column(DateTime)
+
+    user: Mapped["User"] = relationship()
+
+
+def get_db_session():
+    return DBSession(engine)
 
 def init_db():
     global user
     Base.metadata.create_all(engine)
     
-    _user = get_user("test")
+    _user = get_user_by_username("test")
     if _user is None:
         _user = create_user("test", "test") # TODO: Remove this if users get added (only for now, where everything gets attributed to user 0)
 
@@ -128,48 +144,53 @@ def init_db():
     print("Database and tables created!")
 
 def idea_count() -> int:
-    with get_session() as session:
-        return session.query(Idea).count()
+    with get_db_session() as db_session:
+        return db_session.query(Idea).count()
 
-def create_user(username: str, password_hash: str) -> User:
-    with get_session() as session:
+def create_user(username: str, password_hash: str) -> User | None:
+    with get_db_session() as db_session:
+        existing = db_session.query(User).filter_by(username=username).first()
+        if existing:
+            return None
         user = User(
             username=username,
             password_hash=password_hash
         )
-        session.add(user)
-        session.commit()
-        session.refresh(user)
+        db_session.add(user)
+        db_session.commit()
+        db_session.refresh(user)
         return user
 
-def get_user(username: str) -> User | None:
-    with get_session() as session:
+def get_user_by_username(username: str) -> User | None:
+    with get_db_session() as db_session:
         return (
-            session.query(User)
+            db_session.query(User)
             .filter_by(username=username)
             .first()
         )
-
-
+    
+def get_user_by_id(user_id: int) -> User | None:
+    with get_db_session() as session:
+        return session.get(User, user_id)
 
 def create_idea(title: str, topic: str, description: str, user_id: int) -> int | None:
     """Creates a pitch, returns id"""
-    with get_session() as session:
+    with get_db_session() as db_session:
         idea = Idea(
             title=title,
             topic=topic,
             description=description,
             user_id=user_id,
         )
-        session.add(idea)
-        session.commit()
-        session.refresh(idea)
+        db_session.add(idea)
+        db_session.commit()
+        db_session.refresh(idea)
         return idea.id
 
 def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
-    with get_session() as session:
+    with get_db_session() as db_session:
         ideas = (
-            session.query(Idea)
+            db_session.query(Idea)
             .order_by(Idea.created_at.desc())
             .limit(limit)
             .all()
@@ -179,43 +200,43 @@ def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
 
 
 def get_idea_dict(idea_id: int) -> dict | None:
-    with get_session() as session:
-        idea = session.get(Idea, idea_id)
+    with get_db_session() as db_session:
+        idea = db_session.get(Idea, idea_id)
         if idea:
             return idea.to_dict()
 
 
 def update_votes(idea_id: int, amount: int):
     """Adds amount to the votes of the idea"""
-    with get_session() as session:
-        idea = session.get(Idea, idea_id)
+    with get_db_session() as db_session:
+        idea = db_session.get(Idea, idea_id)
         if idea:
             idea.votes += amount
-            session.commit()
+            db_session.commit()
 
 def create_comment(idea_id: int, user_id: int, content: str):
-    with get_session() as session:
-        session.add(
+    with get_db_session() as db_session:
+        db_session.add(
             Comment(
                 idea_id=idea_id,
                 user_id=user_id,
                 content=content
             )
         )
-        session.commit()
+        db_session.commit()
 
 def get_comment_count(idea_id: int) -> int:
-    with get_session() as session:
+    with get_db_session() as db_session:
         return (
-            session.query(Comment)
+            db_session.query(Comment)
             .filter_by(idea_id=idea_id)
             .count()
         )
 
 def get_comments_dict(idea_id: int, limit: int = 50) -> list[dict]:
-    with get_session() as session:
+    with get_db_session() as db_session:
         comments =  (
-            session.query(Comment)
+            db_session.query(Comment)
             .filter_by(idea_id=idea_id)
             .order_by(Comment.created_at)
             .limit(limit)
@@ -225,9 +246,50 @@ def get_comments_dict(idea_id: int, limit: int = 50) -> list[dict]:
 
 def update_comment_votes(comment_id: int, amount: int):
     """Amount gets added to current comment votes"""
-    with get_session() as session:
-        comment = session.get(Comment, comment_id)
+    with get_db_session() as db_session:
+        comment = db_session.get(Comment, comment_id)
         if comment:
             comment.votes += amount
+            db_session.commit()
+
+def create_session(user_id: int, days: int = 7) -> str:
+    session_id = str(uuid.uuid4())
+
+    with get_db_session() as db_session:
+        db_session.add(
+            Session(
+                id=session_id,
+                user_id=user_id,
+                expires_at=datetime.now() + timedelta(days=days)
+            )
+        )
+        db_session.commit()
+    
+    return session_id
+
+def get_user_by_session(session_id: str) -> User | None:
+    with get_db_session() as session:
+        sess = session.get(Session, session_id)
+
+        if not sess:
+            return None
+
+        if sess.expires_at < datetime.now():
+            return None
+
+        return session.get(User, sess.user_id)
+    
+def delete_session(session_id: str):
+    with get_db_session() as session:
+        sess = session.get(Session, session_id)
+        if sess:
+            session.delete(sess)
             session.commit()
 
+def cleanup_sessions():
+    with get_db_session() as session:
+        session.query(Session).filter(
+            Session.expires_at < datetime.now()
+        ).delete()
+
+        session.commit()

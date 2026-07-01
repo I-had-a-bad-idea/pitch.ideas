@@ -188,8 +188,8 @@ def handle_validation_error(e):
         return jsonify({"message": "One or more fields are too short", "details": e.errors()}), 422
     return jsonify({"message": "Invalid request data", "details": e.errors()}), 422
 
-Username: Annotated[str, StringConstraints(min_length=1, max_length=100)]
-Password: Annotated[str, StringConstraints(min_length=1, max_length=100)]
+Username = Annotated[str, StringConstraints(min_length=1, max_length=100)]
+Password = Annotated[str, StringConstraints(min_length=1, max_length=100)]
 
 @app.route("/")
 def home():
@@ -262,7 +262,7 @@ def login():
         return response, status
     data = AuthRequest.model_validate(result) # type:ignore
 
-    user = db.get_user(data.username)
+    user = db.get_user_by_username(data.username)
     if not user:
         return jsonify({"message": "Invalid credentials"}), 401
     
@@ -281,6 +281,8 @@ def register():
     data = AuthRequest.model_validate(result) # type:ignore
 
     user = db.create_user(username=data.username, password_hash=hashing.hash_password(data.password))
+    if not user:
+        return jsonify({"message": "Username already exists"}), 409
     return {}, 200
 
 
