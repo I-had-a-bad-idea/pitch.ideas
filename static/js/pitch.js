@@ -107,8 +107,8 @@ votes = 0;
 const commentCount = document.querySelector(".comment-count");
 const commentList = document.querySelector(".comment-list");
 
-const totalLikes = 150;
-const totalComments = 50; // should always be less then likes 
+const totalLikes = 231;
+const totalComments = 57; // should always be less then likes 
 const waitMsBetweenComments = 100;
 const likesPerComment = totalLikes / totalComments;
 
@@ -129,7 +129,7 @@ async function flood_with_likes_and_comments() {
 
         commentList.prepend(li);
         votes += likesPerComment;
-        voteBtn.textContent = `👍 ${votes}`;
+        voteBtn.textContent = `👍 ${Math.round(votes)}`;
         commentCount.textContent = `💬 ${i + 1}`;
 
         await new Promise(resolve => setTimeout(resolve, waitMsBetweenComments)); // wait
