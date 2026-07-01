@@ -333,6 +333,36 @@ def register():
     )
     return resp
 
+@app.route("/auth/logout", methods=["POST"])
+@require_auth
+def logout():
+    session_id = request.cookies.get(SESSION_COOKIE_NAME)
+
+    if session_id:
+        db.delete_session(session_id=session_id)
+
+    resp = jsonify({"message": "logged out"})
+    resp.delete_cookie(SESSION_COOKIE_NAME)
+    return resp
+
+@app.route("/auth/status", methods=["GET"])
+def auth_status():
+    session_id = request.cookies.get(SESSION_COOKIE_NAME)
+    if not session_id:
+        return jsonify({"logged_in": False}), 200
+
+    user = db.get_user_by_session(session_id=session_id)
+    if not user:
+        return jsonify({"logged_in": False}), 200
+    
+
+    return jsonify({
+        "logged_in": True,
+        "user": {
+            "id": g.user.id,
+            "username": g.user.username
+        }
+    })
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
     id = db.create_idea(title=title, topic=topic, description=description, user_id=db.user.id) # type: ignore # set 1 for now, as no real users exist
