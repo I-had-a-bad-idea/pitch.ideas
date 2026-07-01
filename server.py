@@ -13,6 +13,10 @@ IS_VERCEL = os.environ.get("VERCEL") == "1"
 
 app = Flask(__name__)
 CORS(app) # Enable CORS for all routes
+
+app.config["MAX_FORM_PARTS"] = 200 # max. 200 different fields
+app.config['MAX_CONTENT_LENGTH'] = 10 * 1000 * 1000 # 10 MB limit for all requests
+
 # Init the DB
 db.init_db()
 
