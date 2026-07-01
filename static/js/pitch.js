@@ -58,16 +58,19 @@ voreBtn.addEventListener("click", async (e) => {
 
 const nav_right = document.querySelector("nav .nav-right");
 
-async function showCreatePitchButton() {
-    const a = document.createElement("a");
-    a.href = "/create-pitch";
+async function showLoggedInButtons() {
+    const createPitchlink = document.createElement("a");
+    createPitchlink.href = "/create-pitch";
+    createPitchlink.className = "btn btn-primary";
+    createPitchlink.textContent = "Create Pitch";
+    
+    const logoutLink = document.createElement("a");
+    logoutLink.href = "/auth/logout";
+    logoutLink.className = "btn btn-secondary";
+    logoutLink.textContent = "Logout";
 
-    const button = document.createElement("button");
-    button.className = "btn btn-primary";
-    button.textContent = "Create Pitch";
-
-    a.appendChild(button);
-    nav_right.appendChild(a);
+    nav_right.appendChild(createPitchlink);
+    nav_right.appendChild(logoutLink);
 }
 
 async function showAuthButtons() {
@@ -90,7 +93,7 @@ async function checkAuth() {
     const data = await res.json();
 
     if (data.logged_in) {
-        showCreatePitchButton();
+        showLoggedInButtons();
     } else {
         showAuthButtons();
     }

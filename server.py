@@ -344,6 +344,12 @@ def register():
     )
     return resp
 
+# This for the web page
+@app.route("/auth/logout", methods=["GET"])
+def logout_page():
+    return render_template("logout.html")
+
+# and this for the API functionality
 @app.route("/auth/logout", methods=["POST"])
 @require_auth
 def logout():

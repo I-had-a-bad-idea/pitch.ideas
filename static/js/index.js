@@ -56,12 +56,19 @@ async function loadPitches() {
 
 const nav_right = document.querySelector("nav .nav-right");
 
-async function showCreatePitchButton() {
-    const link = document.createElement("a");
-    link.href = "/create-pitch";
-    link.className = "btn btn-primary";
-    link.textContent = "Create Pitch";
-    nav_right.appendChild(link);
+async function showLoggedInButtons() {
+    const createPitchlink = document.createElement("a");
+    createPitchlink.href = "/create-pitch";
+    createPitchlink.className = "btn btn-primary";
+    createPitchlink.textContent = "Create Pitch";
+    
+    const logoutLink = document.createElement("a");
+    logoutLink.href = "/auth/logout";
+    logoutLink.className = "btn btn-secondary";
+    logoutLink.textContent = "Logout";
+
+    nav_right.appendChild(createPitchlink);
+    nav_right.appendChild(logoutLink);
 }
 
 async function showAuthButtons() {
@@ -84,7 +91,7 @@ async function checkAuth() {
     const data = await res.json();
 
     if (data.logged_in) {
-        showCreatePitchButton();
+        showLoggedInButtons();
     } else {
         showAuthButtons();
     }
