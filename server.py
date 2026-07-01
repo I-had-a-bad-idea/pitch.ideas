@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, g
+from flask import Flask, render_template, jsonify, request, g, make_response
 from flask_cors import CORS
 from pydantic import BaseModel, Field, StringConstraints, ValidationError
 from typing import Annotated
@@ -291,14 +291,22 @@ def login():
     data = AuthRequest.model_validate(result) # type:ignore
 
     user = db.get_user_by_username(data.username)
-    if not user:
+    if not user or not hashing.verify_password(data.password, user.password_hash):
         return jsonify({"message": "Invalid credentials"}), 401
     
-    correct: bool = hashing.verify_password(data.password, user.password_hash)
-    if not correct:
-        return jsonify({"message": "Invalid credentials"}), 401
-
-    return {}, 200
+    session_id = db.create_session(user_id=user.id, days=7)
+    
+    resp = make_response({"ok": True})
+    resp.set_cookie(
+        SESSION_COOKIE_NAME,
+        session_id,
+        httponly=True,
+        secure=True,
+        samesite="Lax",
+        max_age=60 * 60 * 24 * 7
+    )
+    return resp
+    
 
 @app.route("/auth/register", methods=["POST"])
 def register():
@@ -311,7 +319,19 @@ def register():
     user = db.create_user(username=data.username, password_hash=hashing.hash_password(data.password))
     if not user:
         return jsonify({"message": "Username already exists"}), 409
-    return {}, 200
+    
+    session_id = db.create_session(user_id=user.id, days=7)
+    
+    resp = make_response({"ok": True})
+    resp.set_cookie(
+        SESSION_COOKIE_NAME,
+        session_id,
+        httponly=True,
+        secure=True,
+        samesite="Lax",
+        max_age=60 * 60 * 24 * 7
+    )
+    return resp
 
 
 def add_test_pitch(title: str, topic: str, description: str, vote_amount: int):
