@@ -40,6 +40,11 @@ body{
     align-items: center;
 }
 
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
 .logo{
     height:80px;
 }

@@ -53,3 +53,45 @@ voreBtn.addEventListener("click", async (e) => {
         alert("Unable to connect to the server.");
     }
 });
+
+const nav_right = document.querySelector("nav .nav-right");
+
+async function showCreatePitchButton() {
+    const a = document.createElement("a");
+    a.href = "/create-pitch";
+
+    const button = document.createElement("button");
+    button.className = "btn btn-primary";
+    button.textContent = "Create Pitch";
+
+    a.appendChild(button);
+    nav_right.appendChild(a);
+}
+
+async function showAuthButtons() {
+    const loginLink = document.createElement("a");
+    loginLink.href = "/auth/login";
+    loginLink.className = "btn btn-primary";
+    loginLink.textContent = "Login";
+
+    const registerLink = document.createElement("a");
+    registerLink.href = "/auth/register";
+    registerLink.className = "btn btn-primary";
+    registerLink.textContent = "Register";
+
+    nav_right.appendChild(loginLink);
+    nav_right.appendChild(registerLink);
+}
+
+async function checkAuth() {
+    const res = await fetch("/auth/status");
+    const data = await res.json();
+
+    if (data.logged_in) {
+        showCreatePitchButton();
+    } else {
+        showAuthButtons();
+    }
+}
+
+checkAuth();

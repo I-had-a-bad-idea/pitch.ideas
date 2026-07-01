@@ -53,4 +53,41 @@ async function loadPitches() {
 
 }
 
+const nav_right = document.querySelector("nav .nav-right");
+
+async function showCreatePitchButton() {
+    const link = document.createElement("a");
+    link.href = "/create-pitch";
+    link.className = "btn btn-primary";
+    link.textContent = "Create Pitch";
+    nav_right.appendChild(link);
+}
+
+async function showAuthButtons() {
+    const loginLink = document.createElement("a");
+    loginLink.href = "/auth/login";
+    loginLink.className = "btn btn-primary";
+    loginLink.textContent = "Login";
+
+    const registerLink = document.createElement("a");
+    registerLink.href = "/auth/register";
+    registerLink.className = "btn btn-primary";
+    registerLink.textContent = "Register";
+
+    nav_right.appendChild(loginLink);
+    nav_right.appendChild(registerLink);
+}
+
+async function checkAuth() {
+    const res = await fetch("/auth/status");
+    const data = await res.json();
+
+    if (data.logged_in) {
+        showCreatePitchButton();
+    } else {
+        showAuthButtons();
+    }
+}
+
+checkAuth();
 loadPitches();
