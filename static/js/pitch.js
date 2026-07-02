@@ -1,5 +1,18 @@
 const form = document.querySelector(".comment-form");
 
+async function checkAuthForComment() {
+    const res = await fetch("/auth/status", {credentials: "include",});
+    const data = await res.json();
+
+    if (data.logged_in) {
+        return;
+    } else {
+        form.style.visibility = "hidden";
+    }
+}
+
+checkAuthForComment();
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
