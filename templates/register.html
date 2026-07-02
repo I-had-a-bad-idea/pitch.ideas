@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register - Pitch Ideas</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-left">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pitch Ideas" class="logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/auth/login" class="btn btn-primary">Login</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+
+    <section class="auth-page">
+
+        <h1>Register</h1>
+        <p class="subtitle">Join pitch.ideas and start sharing your ideas.</p>
+
+        <form class="auth-form">
+
+            <label for="username">Username</label>
+            <input
+                type="username"
+                id="username"
+                name="username"
+                placeholder="FirstnameLastname"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Your password"
+                required
+            >
+
+            <button type="submit" class="btn btn-primary">
+                Register
+            </button>
+        </form>
+
+        <p class="auth-footer">
+            Already have an account?
+            <a href="/auth/login">Login here</a>
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="disclaimer">
+        This is a student project. Content is fictional and for demonstration purposes only.
+    </div>
+
+    © 2026 Pitch Ideas
+</footer>
+
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+</html>

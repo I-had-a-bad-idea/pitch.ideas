@@ -40,6 +40,11 @@ body{
     align-items: center;
 }
 
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
 .logo{
     height:80px;
 }
@@ -57,9 +62,16 @@ body{
     color: white;
 
 }
-
 .btn-primary:hover {
     background: var(--primary);
+}
+
+.btn-secondary {
+    background: var(--primary);
+    color: white;
+}
+.btn-secondary:hover {
+    background: var(--accent);
 }
 
 /* HERO */
@@ -121,6 +133,11 @@ body{
 .pitch-meta{
     font-size:.75rem;
     color:var(--text);
+}
+
+.vote-btn.voted {
+    color: #0a7cff;
+    font-weight: bold;
 }
 
 .tag{
@@ -227,6 +244,93 @@ body{
 
 .comment-form button {
     align-self: flex-start;
+}
+
+.auth-page {
+    max-width: 420px;
+    margin: 60px auto;
+}
+
+.auth-page h1 {
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.auth-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* LOGOUT PAGE LAYOUT */
+.logout-wrapper {
+    min-height: calc(100vh - 140px); /* fills screen minus navbar/footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+/* BIGGER, AIRY CARD */
+.logout-card {
+    width: min(700px, 92%);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 60px 50px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* TYPOGRAPHY SPACING */
+.logout-card h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.logout-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+/* BUTTON LAYOUT */
+.logout-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* MAKE BUTTONS BIGGER */
+.logout-actions .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    min-width: 160px;
 }
 
 /* FOOTER */

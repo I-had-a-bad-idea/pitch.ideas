@@ -1,17 +1,16 @@
-const form = document.querySelector(".pitch-form");
+const form = document.querySelector(".auth-form");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const body = {
-        title: document.getElementById("title").value.trim(),
-        topic: document.getElementById("topic").value,
-        description: document.getElementById("description").value.trim()
+        username: document.getElementById("username").value.trim(),
+        password: document.getElementById("password").value
     };
 
     try {
-        const response = await fetch("/create-pitch", {
-            method: "PUT",
+        const response = await fetch("/auth/login", {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -24,8 +23,9 @@ form.addEventListener("submit", async (e) => {
         if (response.ok) {
             window.location.href = "/";
         } else {
-            alert(data.message || "Failed to create pitch.");
+            alert(data.message || "Login failed.");
         }
+
     } catch (err) {
         console.error(err);
         alert("Unable to connect to the server.");
