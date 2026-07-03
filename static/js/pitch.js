@@ -1,13 +1,12 @@
+import { loggedIn } from "./cookie.js";
+
 const form = document.querySelector(".comment-form");
 
 async function checkAuthForComment() {
-    const res = await fetch("/auth/status", {credentials: "include",});
-    const data = await res.json();
-
-    if (data.logged_in) {
-        return;
+    if (loggedIn()) {
+        form.style.visibility = "visible";
     } else {
-        form.style.visibility = "hidden";
+        return;
     }
 }
 
@@ -107,10 +106,7 @@ async function showAuthButtons() {
 }
 
 async function checkAuth() {
-    const res = await fetch("/auth/status", {credentials: "include",});
-    const data = await res.json();
-
-    if (data.logged_in) {
+    if (loggedIn()) {
         showLoggedInButtons();
     } else {
         showAuthButtons();

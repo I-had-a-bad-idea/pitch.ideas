@@ -68,7 +68,7 @@
         {% endif %}
 
         <!-- Add Comment -->
-        <form class="comment-form">
+        <form class="comment-form" style="visibility: hidden;">
             <textarea
                 id="content"
                 name="content"
@@ -92,7 +92,7 @@
     © 2026 Pitch Ideas
 </footer>
 
-<script src="{{ url_for('static', filename='js/pitch.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/pitch.js') }}"></script>
 
 </body>
 </html>
