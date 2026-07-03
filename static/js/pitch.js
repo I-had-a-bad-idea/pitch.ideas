@@ -4,9 +4,9 @@ const form = document.querySelector(".comment-form");
 
 async function checkAuthForComment() {
     if (loggedIn()) {
-        return;
+        form.style.visibility = "visible";
     } else {
-        form.style.visibility = "hidden";
+        return;
     }
 }
 
