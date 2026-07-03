@@ -1,4 +1,4 @@
-import { loggedIn } from "./cookie";
+import { loggedIn } from "./cookie.js";
 
 const form = document.querySelector(".comment-form");
 

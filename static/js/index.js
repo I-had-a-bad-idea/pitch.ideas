@@ -1,4 +1,4 @@
-import { loggedIn } from "./cookie";
+import { loggedIn } from "./cookie.js";
 
 async function loadPitches() {
     const res = await fetch("/pitches", {credentials: "include",});
