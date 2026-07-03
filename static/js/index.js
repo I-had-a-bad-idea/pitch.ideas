@@ -7,6 +7,12 @@ async function loadPitches() {
     const container = document.querySelector(".feed .container");
 
     data.pitches.forEach(p => {
+        const maxLength = 300;
+        const description =
+        p.description.length > maxLength
+            ? p.description.slice(0, maxLength) + "..."
+            : p.description;
+
         const div = document.createElement("div");
         div.className = "pitch";
 
@@ -20,7 +26,7 @@ async function loadPitches() {
             <div class="tag">${p.topic}</div>
         </div>
 
-        <p class="description">${p.description}</p>
+        <p class="description">${description}</p>
         <div class="pitch-footer">
             <span class="vote-btn ${p.voted_by_user ? "" : "voted"}">
                 👍 <span class="vote-count">${p.votes}</span>
