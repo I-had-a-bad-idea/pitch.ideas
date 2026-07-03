@@ -1,3 +1,5 @@
+import { loggedIn } from "./cookie";
+
 async function loadPitches() {
     const res = await fetch("/pitches", {credentials: "include",});
     const data = await res.json();
@@ -93,10 +95,7 @@ async function showAuthButtons() {
 }
 
 async function checkAuth() {
-    const res = await fetch("/auth/status", {credentials: "include",});
-    const data = await res.json();
-
-    if (data.logged_in) {
+    if (loggedIn()) {
         showLoggedInButtons();
     } else {
         showAuthButtons();
