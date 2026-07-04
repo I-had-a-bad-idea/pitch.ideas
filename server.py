@@ -227,13 +227,13 @@ def login():
         httponly=True,
         secure=True,
         samesite="Lax",
-        max_age=SESSION_LIFETIME.total_seconds()
+        max_age=int(SESSION_LIFETIME.total_seconds())
     )
     resp.set_cookie(
         LOGGED_IN_COOKIE_NAME,
         "True",
         samesite="Lax",
-        max_age=SESSION_LIFETIME.total_seconds()
+        max_age=int(SESSION_LIFETIME.total_seconds())
     )
     return resp
     
@@ -264,13 +264,13 @@ def register():
         httponly=True,
         secure=True,
         samesite="Lax",
-        max_age=60 * 60 * 24 * 7
+        max_age=int(SESSION_LIFETIME.total_seconds())
     )
     resp.set_cookie(
         LOGGED_IN_COOKIE_NAME,
         "True",
         samesite="Lax",
-        max_age=SESSION_LIFETIME.total_seconds()
+        max_age=int(SESSION_LIFETIME.total_seconds())
     )
     return resp
 
