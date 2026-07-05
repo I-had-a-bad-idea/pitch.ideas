@@ -240,8 +240,9 @@ setupCommentEditors();
 if (commentForm) {
     commentForm.addEventListener("submit", async (e) => {
         e.preventDefault();
+        const contentElement = document.getElementById("content");
 
-        const body = { content: document.getElementById("content").value.trim() };
+        const body = { content: contentElement.value.trim() };
         try {
             const response = await fetch(`/pitches/${pitchId}/comments/add`, {
                 method: "POST",
@@ -252,6 +253,7 @@ if (commentForm) {
 
             const data = await response.json().catch(() => ({}));
             if (response.ok) {
+                contentElement.value = ""; // reset 
                 window.location.reload();
             } else {
                 alert(data.message || "Failed to add comment.");
