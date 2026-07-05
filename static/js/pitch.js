@@ -1,10 +1,23 @@
-import { loggedIn } from "./cookie.js";
+import { loggedIn, getUsername } from "./cookie.js";
 
 const form = document.querySelector(".comment-form");
 
 async function checkAuthForComment() {
     if (loggedIn()) {
         form.style.visibility = "visible";
+
+        // For each comment check if username is the same as the logged in user, if so show edit and delete buttons
+        const username = getUsername();
+        const comments = document.querySelectorAll(".comment");
+        comments.forEach(comment => {
+            const commentMeta = comment.querySelector(".comment-meta");
+            if (commentMeta && commentMeta.textContent.includes(`By ${username}`)) {
+                const editButton = comment.querySelector(".edit-comment-btn");
+                const deleteButton = comment.querySelector(".delete-comment-btn");
+                if (editButton) editButton.style.visibility = "visible";
+                if (deleteButton) deleteButton.style.visibility = "visible";
+            }
+        });
     } else {
         return;
     }
@@ -21,7 +34,7 @@ form.addEventListener("submit", async (e) => {
     const pitchId = window.location.pathname.split("/").pop();
 
     try {
-        const response = await fetch(`/pitches/${pitchId}/comment`, {
+        const response = await fetch(`/pitches/${pitchId}/comments/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,7 +57,6 @@ form.addEventListener("submit", async (e) => {
 });
 
 const voteBtn = document.querySelector(".vote-btn");
-
 voteBtn.addEventListener("click", async (e) => {
     e.stopPropagation(); // Prevent the click from propagating to the parent div
 
@@ -72,6 +84,66 @@ voteBtn.addEventListener("click", async (e) => {
         alert("Unable to connect to the server.");
     }
 });
+
+const editCommentButtons = document.querySelectorAll(".edit-comment-btn");
+editCommentButtons.forEach(button => {
+    button.addEventListener("click", async (e) => {
+        const commentId = e.target.dataset.commentId;
+        const newContent = prompt("Edit your comment:");
+
+        if (newContent !== null && newContent.trim() !== "") {
+            try {
+                const response = await fetch(`/pitches/${window.location.pathname.split("/").pop()}/comments/${commentId}/edit`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ content: newContent.trim() }),
+                    credentials: "include",
+                });
+
+                const data = await response.json().catch(() => ({}));
+
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    alert(data.message || "Failed to edit comment.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Unable to connect to the server.");
+            }
+        }
+    });
+});
+
+const deleteCommentButtons = document.querySelectorAll(".delete-comment-btn");
+deleteCommentButtons.forEach(button => {
+    button.addEventListener("click", async (e) => {
+        const commentId = e.target.dataset.commentId;
+
+        if (confirm("Are you sure you want to delete this comment?")) {
+            try {
+                const response = await fetch(`/pitches/${window.location.pathname.split("/").pop()}/comments/${commentId}/delete`, {
+                    method: "DELETE",
+                    credentials: "include",
+                });
+
+                const data = await response.json().catch(() => ({}));
+
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    alert(data.message || "Failed to delete comment.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Unable to connect to the server.");
+            }
+        }
+    });
+});
+
 
 const nav_right = document.querySelector("nav .nav-right");
 

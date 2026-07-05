@@ -15,7 +15,7 @@ from logger import logger
 SESSION_LIFETIME = timedelta(days=7)
 SESSION_COOKIE_NAME = "session_id"
 LOGGED_IN_COOKIE_NAME = "logged_in"
-
+USERNAME_COOKIE_NAME = "username"
 
 IS_VERCEL = os.environ.get("VERCEL") == "1"
 
@@ -260,6 +260,12 @@ def login():
         samesite="Lax",
         max_age=int(SESSION_LIFETIME.total_seconds())
     )
+    resp.set_cookie(
+        USERNAME_COOKIE_NAME,
+        user.username,
+        samesite="Lax",
+        max_age=int(SESSION_LIFETIME.total_seconds())
+    )
     return resp
     
 # This for the web page
@@ -297,6 +303,12 @@ def register():
         samesite="Lax",
         max_age=int(SESSION_LIFETIME.total_seconds())
     )
+    resp.set_cookie(
+        USERNAME_COOKIE_NAME,
+        user.username,
+        samesite="Lax",
+        max_age=int(SESSION_LIFETIME.total_seconds())
+    )
     return resp
 
 # This for the web page
@@ -316,6 +328,7 @@ def logout():
     resp = jsonify({"message": "logged out"})
     resp.delete_cookie(SESSION_COOKIE_NAME)
     resp.delete_cookie(LOGGED_IN_COOKIE_NAME)
+    resp.delete_cookie(USERNAME_COOKIE_NAME)
     return resp
 
 @app.route("/auth/status", methods=["GET"])

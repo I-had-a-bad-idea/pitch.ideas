@@ -59,7 +59,12 @@
                 {% for comment in comments %}
                     <li class="comment">
                         <p class="comment-text">{{ comment.content }}</p>
-                        <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
+                        <div class="comment-meta">
+                            <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
+                            <button class="edit-comment-btn" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Edit</button>
+                            <button class="delete-comment-btn" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Delete</button>
+                        </div>
+                        
                     </li>
                 {% endfor %}
             </ul>
