@@ -220,6 +220,15 @@ def edit_idea(idea_id: int, title: str, topic: str, description: str) -> bool:
         db_session.commit()
         return True
 
+def delete_idea(idea_id: int, user_id: int) -> bool:
+    with get_db_session() as db_session:
+        idea = db_session.get(Idea, idea_id)
+        if not idea or not idea.user_id == user_id:
+            return False
+        db_session.delete(idea)
+        db_session.commit()
+        return True
+
 def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
     with get_db_session() as db_session:
         ideas = (
