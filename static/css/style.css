@@ -161,13 +161,16 @@ body{
     color:var(--text);
     margin-bottom:1rem;
 }
-
 .description {
-    white-space: pre-wrap;
+    font-size: 1.15rem;
+    margin: 20px 0;
+    line-height: 1.3;
 }
+
 
 .pitch-footer{
     display:flex;
+    justify-content: space-between;
     gap:1rem;
     color:var(--text);
     font-size:.9rem;
@@ -212,14 +215,54 @@ body{
     margin: 40px 0;
 }
 
+.pitch-page .pitch-title-input,
+.pitch-page .pitch-topic-input,
+.pitch-page .description-editor,
+.comment-editor {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font: inherit;
+    color: var(--primary);
+    background: var(--bg);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pitch-page .pitch-title-input:focus,
+.pitch-page .pitch-topic-input:focus,
+.pitch-page .description-editor:focus,
+.comment-editor:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 180, 0, 0.16);
+}
+
 .pitch-page .tag {
     font-size: 0.9rem;
 }
 
-.pitch-page p {
-    font-size: 1.15rem;
-    margin: 20px 0;
-    line-height: 1.3;
+.pitch-control-actions,
+.comment-controls,
+.pitch-edit-actions,
+.comment-edit-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pitch-edit-actions,
+.comment-edit-actions {
+    margin-top: 12px;
+}
+
+.control-btn {
+    visibility: hidden;
+}
+
+.control-btn.is-visible {
+    visibility: visible;
 }
 
 .comments {
@@ -228,10 +271,24 @@ body{
 
 .comment {
     padding: 18px 0;
-    border-bottom: 1px solid #ddd;
+}
+
+.comment:hover .control-btn {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comment-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .comment-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.75rem;
     color: var(--text);
 }
