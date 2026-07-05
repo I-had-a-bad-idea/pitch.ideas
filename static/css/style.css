@@ -223,13 +223,18 @@ body{
 .pitch-page .description-editor,
 .comment-editor {
     width: 100%;
+    font-size: 1rem;
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
+    border-radius: 8px;
+    padding: 16px 18px;
     font: inherit;
     color: var(--primary);
     background: var(--bg);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.description-editor {
+    min-height: 40vh; /* 40% of screen height */
 }
 
 .pitch-page .pitch-title-input:focus,
