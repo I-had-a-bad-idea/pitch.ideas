@@ -74,13 +74,16 @@ body{
 }
 
 .btn-subtle {
-    background: var(--bg);
+    background: rgba(15, 27, 61, 0.04); /* faint primary tint instead of plain bg */
     color: var(--primary);
     border: 1px solid var(--border);
+    border-radius: 6px;
 }
+
 .btn-subtle:hover {
-    background: var(--primary);
-    color: white;
+    background: rgba(15, 27, 61, 0.08);
+    border-color: rgba(15, 27, 61, 0.2);
+    transform: translateY(-1px);
 }
 
 /* HERO */
@@ -276,7 +279,6 @@ body{
 .comment:hover .control-btn {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0);
 }
 
 .comment-text {
