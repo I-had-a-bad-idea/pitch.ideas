@@ -46,17 +46,18 @@
             >
 
             <label for="topic">Topic</label>
-            <select id="topic" name="topic" required>
-                <option value="">Select a topic</option>
-                <option>AI</option>
-                <option>FinTech</option>
-                <option>HealthTech</option>
-                <option>EdTech</option>
-                <option>SaaS</option>
-                <option>E-Commerce</option>
-                <option>Cybersecurity</option>
-                <option>Other</option>
-            </select>
+            <input type="text" id="topic" name="topic" list="topic-suggestions" placeholder="Type or select a topic" required>
+                <datalist id="topic-suggestions">
+                    <option value="AI">
+                    <option value="FinTech">
+                    <option value="HealthTech">
+                    <option value="EdTech">
+                    <option value="SaaS">
+                    <option value="E-Commerce">
+                    <option value="Cybersecurity">
+                    <option value="Other">
+                </datalist>
+            </input>
 
             <label for="description">Description</label>
             <textarea

@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch("/create-pitch", {
+        const response = await fetch("/pitches/create", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

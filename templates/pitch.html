@@ -30,20 +30,42 @@
     <section class="pitch-page">
         {% if idea %}
             <div class="pitch-header">
-                <h1>{{ idea.title }}</h1>
-                <div class="tag">{{ idea.topic }}</div>
+                <div class="pitch-title-group">
+                    <h1 class="pitch-title-text">{{ idea.title }}</h1>
+                    <input class="pitch-title-input" type="text" value="{{ idea.title }}" hidden>
+                </div>
+                <div class="pitch-topic-group">
+                    <div class="tag pitch-topic-display">{{ idea.topic }}</div>
+                    <input class="pitch-topic-input" type="text" value="{{ idea.topic }}" hidden>
+                </div>
             </div>
 
             <div class="pitch-meta">
-                Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}
+                <p class="pitch-meta">Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}</p>
             </div>
 
-            <p class="description">{{ idea.description }}</p>
+            <div class="description-block">
+                <p class="description">{{ idea.description }}</p>
+                <textarea class="description-editor" style="display: none;">{{ idea.description }}</textarea>
+            </div>
+
             <div class="pitch-footer">
-                <span class="vote-btn {% if voted_by_user %}voted{% endif %}">
-                    👍 <span class="vote-count">{{ idea.votes }}</span>
-                </span>
-                <span>💬 {{ idea.comment_count }}</span>
+                <div class="pitch-stats">
+                    <span class="vote-btn {% if voted_by_user %}voted{% endif %}">
+                        👍 <span class="vote-count">{{ idea.votes }}</span>
+                    </span>
+                    <span>💬 {{ idea.comment_count }}</span>
+                </div>
+
+                <div class="pitch-control-actions">
+                    <button class="edit-pitch-btn btn-subtle control-btn" type="button">Edit Pitch</button>
+                    <button class="delete-pitch-btn btn-subtle control-btn" type="button">Delete Pitch</button>
+                </div>
+            </div>
+
+            <div class="pitch-edit-actions" style="display: none;">
+                <button type="button" class="btn btn-primary save-pitch-btn">Save changes</button>
+                <button type="button" class="btn btn-secondary cancel-pitch-btn">Cancel</button>
             </div>
         {% else %}
             <h1>Pitch Not Found</h1>
@@ -58,8 +80,21 @@
             <ul class="comment-list">
                 {% for comment in comments %}
                     <li class="comment">
-                        <p class="comment-text">{{ comment.content }}</p>
-                        <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
+                        <div class="comment-body">
+                            <p class="comment-text">{{ comment.content }}</p>
+                            <textarea class="comment-editor" rows="4" style="display: none;">{{ comment.content }}</textarea>
+                        </div>
+                        <div class="comment-meta">
+                            <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
+                            <div class="comment-controls">
+                                <button class="edit-comment-btn btn-subtle control-btn" type="button" data-comment-id="{{ comment.id }}">Edit</button>
+                                <button class="delete-comment-btn btn-subtle control-btn" type="button" data-comment-id="{{ comment.id }}">Delete</button>
+                            </div>
+                        </div>
+                        <div class="comment-edit-actions" style="display: none;">
+                            <button type="button" class="btn btn-primary save-comment-btn" data-comment-id="{{ comment.id }}">Save</button>
+                            <button type="button" class="btn btn-secondary cancel-comment-btn">Cancel</button>
+                        </div>
                     </li>
                 {% endfor %}
             </ul>

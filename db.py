@@ -209,6 +209,26 @@ def create_idea(title: str, topic: str, description: str, user_id: int) -> int |
         db_session.refresh(idea)
         return idea.id
 
+def edit_idea(idea_id: int, title: str, topic: str, description: str, user_id: int) -> bool:
+    with get_db_session() as db_session:
+        idea = db_session.get(Idea, idea_id)
+        if not idea or not idea.user_id == user_id:
+            return False
+        idea.title = title
+        idea.topic = topic
+        idea.description = description
+        db_session.commit()
+        return True
+
+def delete_idea(idea_id: int, user_id: int) -> bool:
+    with get_db_session() as db_session:
+        idea = db_session.get(Idea, idea_id)
+        if not idea or not idea.user_id == user_id:
+            return False
+        db_session.delete(idea)
+        db_session.commit()
+        return True
+
 def get_all_ideas_as_dicts(limit: int = 20) -> list[dict]:
     with get_db_session() as db_session:
         ideas = (
@@ -253,6 +273,24 @@ def create_comment(idea_id: int, user_id: int, content: str):
             )
         )
         db_session.commit()
+
+def edit_comment(comment_id: int, content: str, user_id: int) -> bool:
+    with get_db_session() as db_session:
+        comment = db_session.get(Comment, comment_id)
+        if not comment or not comment.user_id == user_id:
+            return False
+        comment.content = content
+        db_session.commit()
+        return True
+
+def delete_comment(comment_id: int, user_id: int) -> bool:
+    with get_db_session() as db_session:
+        comment = db_session.get(Comment, comment_id)
+        if not comment or not comment.user_id == user_id:
+            return False
+        db_session.delete(comment)
+        db_session.commit()
+        return True
 
 def get_comment_count(idea_id: int) -> int:
     with get_db_session() as db_session:

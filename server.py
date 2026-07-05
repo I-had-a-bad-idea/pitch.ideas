@@ -15,7 +15,7 @@ from logger import logger
 SESSION_LIFETIME = timedelta(days=7)
 SESSION_COOKIE_NAME = "session_id"
 LOGGED_IN_COOKIE_NAME = "logged_in"
-
+USERNAME_COOKIE_NAME = "username"
 
 IS_VERCEL = os.environ.get("VERCEL") == "1"
 
@@ -141,23 +141,47 @@ def create_pitch_page():
     return render_template("create-pitch.html")
 
 
-class CreatePitchRequest(BaseModel):
+class PitchRequest(BaseModel):
     title: str = Field(min_length=1, max_length=100)
     topic: str = Field(min_length=1, max_length=50)
     description: str = Field(min_length=1, max_length=5000)
 
 # and this for the API functionality
-@app.route("/create-pitch", methods=["PUT"])
+@app.route("/pitches/create", methods=["PUT"])
 @require_auth
 def create_pitch():
     ok, result = validate_request(request)
     if not ok:
         response, status = result
         return response, status
-    data = CreatePitchRequest.model_validate(result) # type: ignore
+    data = PitchRequest.model_validate(result) # type: ignore
     user = getattr(request, "user")
 
     db.create_idea(title=data.title, topic=data.topic, description=data.description, user_id=user.id) # type: ignore 
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/edit", methods=["POST"])
+@require_auth
+def edit_pitch(idea_id: int):
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = PitchRequest.model_validate(result) # type: ignore
+    user = getattr(request, "user")
+
+    success = db.edit_idea(idea_id=idea_id, title=data.title, topic=data.topic, description=data.description, user_id=user.id) # type: ignore 
+    if not success:
+        return jsonify({"message": "Pitch not found or you are not the author"}), 404
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/delete", methods=["DELETE"])
+@require_auth
+def delete_pitch(idea_id: int):
+    user = getattr(request, "user")
+    success = db.delete_idea(idea_id=idea_id, user_id=user.id)
+    if not success:
+        return jsonify({"message": "Pitch not found or you are not the author"}), 404
     return {}, 200
 
 @app.route("/pitches", methods=["GET"])
@@ -179,21 +203,46 @@ def vote_pitch(idea_id: int):
     votes = db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
     return jsonify({"votes": votes}), 200
 
-class AddCommentRequest(BaseModel):
+class CommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)
 
-@app.route("/pitches/<int:idea_id>/comment", methods=["POST"])
+@app.route("/pitches/<int:idea_id>/comments/add", methods=["POST"])
 @require_auth
 def add_comment(idea_id: int):
     ok, result = validate_request(request)
     if not ok:
         response, status = result
         return response, status
-    data = AddCommentRequest.model_validate(result) # type: ignore
+    data = CommentRequest.model_validate(result) # type: ignore
     
     user = getattr(request, "user")
     content = data.content
     db.create_comment(idea_id=idea_id, content=content, user_id=user.id) # type: ignore
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/comments/<int:comment_id>/edit", methods=["POST"])
+@require_auth
+def edit_comment(idea_id: int, comment_id: int):
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = CommentRequest.model_validate(result) # type: ignore
+    
+    user = getattr(request, "user")
+    content = data.content
+    success = db.edit_comment(comment_id=comment_id, content=content, user_id=user.id)
+    if not success:
+        return jsonify({"message": "Comment not found or you are not the author"}), 404
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/comments/<int:comment_id>/delete", methods=["DELETE"])
+@require_auth
+def delete_comment(idea_id: int, comment_id: int):
+    user = getattr(request, "user")
+    success = db.delete_comment(comment_id=comment_id, user_id=user.id)
+    if not success:
+        return jsonify({"message": "Comment not found or you are not the author"}), 404
     return {}, 200
 
 class AuthRequest(BaseModel):
@@ -235,6 +284,12 @@ def login():
         samesite="Lax",
         max_age=int(SESSION_LIFETIME.total_seconds())
     )
+    resp.set_cookie(
+        USERNAME_COOKIE_NAME,
+        user.username,
+        samesite="Lax",
+        max_age=int(SESSION_LIFETIME.total_seconds())
+    )
     return resp
     
 # This for the web page
@@ -272,6 +327,12 @@ def register():
         samesite="Lax",
         max_age=int(SESSION_LIFETIME.total_seconds())
     )
+    resp.set_cookie(
+        USERNAME_COOKIE_NAME,
+        user.username,
+        samesite="Lax",
+        max_age=int(SESSION_LIFETIME.total_seconds())
+    )
     return resp
 
 # This for the web page
@@ -291,6 +352,7 @@ def logout():
     resp = jsonify({"message": "logged out"})
     resp.delete_cookie(SESSION_COOKIE_NAME)
     resp.delete_cookie(LOGGED_IN_COOKIE_NAME)
+    resp.delete_cookie(USERNAME_COOKIE_NAME)
     return resp
 
 @app.route("/auth/status", methods=["GET"])
