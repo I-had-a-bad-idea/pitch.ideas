@@ -179,21 +179,46 @@ def vote_pitch(idea_id: int):
     votes = db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
     return jsonify({"votes": votes}), 200
 
-class AddCommentRequest(BaseModel):
+class CommentRequest(BaseModel):
     content: str = Field(min_length=1, max_length=1000)
 
-@app.route("/pitches/<int:idea_id>/comment", methods=["POST"])
+@app.route("/pitches/<int:idea_id>/comments/add", methods=["POST"])
 @require_auth
 def add_comment(idea_id: int):
     ok, result = validate_request(request)
     if not ok:
         response, status = result
         return response, status
-    data = AddCommentRequest.model_validate(result) # type: ignore
+    data = CommentRequest.model_validate(result) # type: ignore
     
     user = getattr(request, "user")
     content = data.content
     db.create_comment(idea_id=idea_id, content=content, user_id=user.id) # type: ignore
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/comments/<int:comment_id>/edit", methods=["POST"])
+@require_auth
+def edit_comment(idea_id: int, comment_id: int):
+    ok, result = validate_request(request)
+    if not ok:
+        response, status = result
+        return response, status
+    data = CommentRequest.model_validate(result) # type: ignore
+    
+    user = getattr(request, "user")
+    content = data.content
+    success = db.edit_comment(comment_id=comment_id, content=content, user_id=user.id)
+    if not success:
+        return jsonify({"message": "Comment not found or you are not the author"}), 404
+    return {}, 200
+
+@app.route("/pitches/<int:idea_id>/comments/<int:comment_id>/delete", methods=["DELETE"])
+@require_auth
+def delete_comment(idea_id: int, comment_id: int):
+    user = getattr(request, "user")
+    success = db.delete_comment(comment_id=comment_id, user_id=user.id)
+    if not success:
+        return jsonify({"message": "Comment not found or you are not the author"}), 404
     return {}, 200
 
 class AuthRequest(BaseModel):
