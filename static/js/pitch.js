@@ -1,29 +1,81 @@
 import { loggedIn, getUsername } from "./cookie.js";
 
+
+const nav_right = document.querySelector("nav .nav-right");
+
+async function showLoggedInButtons() {
+    const createPitchlink = document.createElement("a");
+    createPitchlink.href = "/create-pitch";
+    createPitchlink.className = "btn btn-primary";
+    createPitchlink.textContent = "Create Pitch";
+    
+    const logoutLink = document.createElement("a");
+    logoutLink.href = "/auth/logout";
+    logoutLink.className = "btn btn-secondary";
+    logoutLink.textContent = "Logout";
+
+    nav_right.appendChild(createPitchlink);
+    nav_right.appendChild(logoutLink);
+}
+
+async function showAuthButtons() {
+    const loginLink = document.createElement("a");
+    loginLink.href = "/auth/login";
+    loginLink.className = "btn btn-primary";
+    loginLink.textContent = "Login";
+
+    const registerLink = document.createElement("a");
+    registerLink.href = "/auth/register";
+    registerLink.className = "btn btn-primary";
+    registerLink.textContent = "Register";
+
+    nav_right.appendChild(loginLink);
+    nav_right.appendChild(registerLink);
+}
+
 const form = document.querySelector(".comment-form");
 
-async function checkAuthForComment() {
-    if (loggedIn()) {
-        form.style.visibility = "visible";
+async function showComments() {
+    form.style.visibility = "visible";
 
-        // For each comment check if username is the same as the logged in user, if so show edit and delete buttons
-        const username = getUsername();
-        const comments = document.querySelectorAll(".comment");
-        comments.forEach(comment => {
-            const commentMeta = comment.querySelector(".comment-meta");
-            if (commentMeta && commentMeta.textContent.includes(`By ${username}`)) {
-                const editButton = comment.querySelector(".edit-comment-btn");
-                const deleteButton = comment.querySelector(".delete-comment-btn");
-                if (editButton) editButton.style.visibility = "visible";
-                if (deleteButton) deleteButton.style.visibility = "visible";
-            }
-        });
-    } else {
-        return;
+    // For each comment check if username is the same as the logged in user, if so show edit and delete buttons
+    const username = getUsername();
+    const comments = document.querySelectorAll(".comment");
+    comments.forEach(comment => {
+        const commentMeta = comment.querySelector(".comment-meta");
+        if (commentMeta && commentMeta.textContent.includes(`By ${username}`)) {
+            const editButton = comment.querySelector(".edit-comment-btn");
+            const deleteButton = comment.querySelector(".delete-comment-btn");
+            editButton.style.visibility = "visible";
+            deleteButton.style.visibility = "visible";
+        }
+    });
+}
+
+async function showPitchControls() {
+    const username = getUsername();
+    const pitchMeta = document.querySelector(".pitch-meta")
+    const pitchFooter = document.querySelector(".pitch-footer");
+    if (pitchFooter && pitchMeta && pitchMeta.textContent.includes(`Posted by ${username}`)) {
+        const editPitchButton = pitchFooter.querySelector(".edit-pitch-btn");
+        const deletePitchButton = pitchFooter.querySelector(".delete-pitch-btn");
+        editPitchButton.style.visibility = "visible";
+        deletePitchButton.style.visibility = "visible";
     }
 }
 
-checkAuthForComment();
+async function checkAuth() {
+    if (loggedIn()) {
+        showLoggedInButtons();
+        showComments();
+        showPitchControls();
+    } else {
+        showAuthButtons();
+    }
+}
+
+checkAuth();
+
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -143,46 +195,3 @@ deleteCommentButtons.forEach(button => {
         }
     });
 });
-
-
-const nav_right = document.querySelector("nav .nav-right");
-
-async function showLoggedInButtons() {
-    const createPitchlink = document.createElement("a");
-    createPitchlink.href = "/create-pitch";
-    createPitchlink.className = "btn btn-primary";
-    createPitchlink.textContent = "Create Pitch";
-    
-    const logoutLink = document.createElement("a");
-    logoutLink.href = "/auth/logout";
-    logoutLink.className = "btn btn-secondary";
-    logoutLink.textContent = "Logout";
-
-    nav_right.appendChild(createPitchlink);
-    nav_right.appendChild(logoutLink);
-}
-
-async function showAuthButtons() {
-    const loginLink = document.createElement("a");
-    loginLink.href = "/auth/login";
-    loginLink.className = "btn btn-primary";
-    loginLink.textContent = "Login";
-
-    const registerLink = document.createElement("a");
-    registerLink.href = "/auth/register";
-    registerLink.className = "btn btn-primary";
-    registerLink.textContent = "Register";
-
-    nav_right.appendChild(loginLink);
-    nav_right.appendChild(registerLink);
-}
-
-async function checkAuth() {
-    if (loggedIn()) {
-        showLoggedInButtons();
-    } else {
-        showAuthButtons();
-    }
-}
-
-checkAuth();

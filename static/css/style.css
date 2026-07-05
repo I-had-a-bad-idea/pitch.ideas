@@ -60,7 +60,6 @@ body{
 .btn-primary {
     background: var(--accent);
     color: white;
-
 }
 .btn-primary:hover {
     background: var(--primary);
@@ -72,6 +71,16 @@ body{
 }
 .btn-secondary:hover {
     background: var(--accent);
+}
+
+.btn-subtle {
+    background: var(--bg);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+.btn-subtle:hover {
+    background: var(--primary);
+    color: white;
 }
 
 /* HERO */

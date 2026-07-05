@@ -35,7 +35,7 @@
             </div>
 
             <div class="pitch-meta">
-                Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}
+                <p class="pitch-meta">Posted by {{ idea.user_name }} on {{ idea.created_at_pretty }}</p>
             </div>
 
             <p class="description">{{ idea.description }}</p>
@@ -44,6 +44,8 @@
                     👍 <span class="vote-count">{{ idea.votes }}</span>
                 </span>
                 <span>💬 {{ idea.comment_count }}</span>
+                <button class="delete-pitch-btn btn-subtle" style="visibility: hidden;">Delete Pitch</button>
+                <button class="edit-pitch-btn btn-subtle" style="visibility: hidden;">Edit Pitch</button>
             </div>
         {% else %}
             <h1>Pitch Not Found</h1>
@@ -61,8 +63,8 @@
                         <p class="comment-text">{{ comment.content }}</p>
                         <div class="comment-meta">
                             <p class="comment-meta">By {{ comment.user_name }} on {{ comment.created_at_pretty }}</p>
-                            <button class="edit-comment-btn" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Edit</button>
-                            <button class="delete-comment-btn" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Delete</button>
+                            <button class="edit-comment-btn btn-subtle" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Edit</button>
+                            <button class="delete-comment-btn btn-subtle" style="visibility: hidden;" data-comment-id="{{ comment.id }}">Delete</button>
                         </div>
                         
                     </li>
