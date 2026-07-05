@@ -1,6 +1,6 @@
 import { loggedIn, getUsername } from "./cookie.js";
 
-
+const pitchId = window.location.pathname.split("/").pop();
 const nav_right = document.querySelector("nav .nav-right");
 
 async function showLoggedInButtons() {
@@ -80,61 +80,81 @@ checkAuth();
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const body = {
-        content: document.getElementById("content").value.trim()
-    };
-    const pitchId = window.location.pathname.split("/").pop();
-
+    const body = {content: document.getElementById("content").value.trim()};
     try {
         const response = await fetch(`/pitches/${pitchId}/comments/add`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body),
-            credentials: "include",
-        });
+            credentials: "include",});
     
     const data = await response.json().catch(() => ({}));
-
     if (response.ok) {
         window.location.reload();
     } else {
-        alert(data.message || "Failed to add comment.");
-    }
+        alert(data.message || "Failed to add comment.");}
     } catch (err) {
         console.error(err);
-        alert("Unable to connect to the server.");
-    }
+        alert("Unable to connect to the server.");}
 });
 
 const voteBtn = document.querySelector(".vote-btn");
 voteBtn.addEventListener("click", async (e) => {
     e.stopPropagation(); // Prevent the click from propagating to the parent div
-
-    const pitchId = window.location.pathname.split("/").pop();
-
     try {
         const response = await fetch(`/pitches/${pitchId}/upvote`, {
             method: "POST",
-            credentials: "include",
-        });
+            credentials: "include",});
         
         const data = await response.json().catch(() => ({}));
-
         if (response.ok) {
-            // toggle UI state
-            voteBtn.classList.toggle("voted");
-
-            // update count to what backend returns
-            voteBtn.querySelector(".vote-count").textContent = data.votes;
+            voteBtn.classList.toggle("voted"); // toggle UI state
+            voteBtn.querySelector(".vote-count").textContent = data.votes; // update count to what backend returns
         } else {
-            alert("Failed to upvote pitch.");
-        }
+            alert("Failed to upvote pitch.");}
     } catch (err) {
         console.error(err);
-        alert("Unable to connect to the server.");
-    }
+        alert("Unable to connect to the server.");}
+});
+
+const editPitchButton = document.querySelector(".edit-pitch-btn");
+editPitchButton.addEventListener("click", async (e) => {
+    const newTitle = prompt("New pitch title:").trim();
+    const newDescription= prompt("New pitch description:").trim();
+    const newTopic = prompt("New pitch tag:").trim();
+    if (newTitle && newTopic && newDescription) {
+        try {
+            const response = await fetch(`/pitches/${pitchId}/edit`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({ title: newTitle, description: newDescription, topic: newTopic}),
+                credentials: "include",});
+            const data = await response.json().catch(() => ({}));
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                alert(data.message || "Failed to edit pitch.");}
+        } catch (err) {
+            console.error(err);
+            alert("Unable to connect to the server.");}}
+});
+
+const deletePitchButton = document.querySelector(".delete-pitch-btn");
+deletePitchButton.addEventListener("click", async (e) => {
+    if (confirm("Are you sure you want to delete this pitch?")) {
+        try {
+            const response = await fetch(`/pitches/${pitchId}/delete`, {
+                method: "DELETE",
+                credentials: "include",
+            });
+            const data = await response.json().catch(() => ({}));
+            if (response.ok) {
+                window.location.href = "/";
+            } else {
+                alert(data.message || "Failed to delete pitch.");}
+        } catch (err) {
+            console.error(err);
+            alert("Unable to connect to the server.");}}
 });
 
 const editCommentButtons = document.querySelectorAll(".edit-comment-btn");
@@ -145,27 +165,21 @@ editCommentButtons.forEach(button => {
 
         if (newContent !== null && newContent.trim() !== "") {
             try {
-                const response = await fetch(`/pitches/${window.location.pathname.split("/").pop()}/comments/${commentId}/edit`, {
+                const response = await fetch(`/pitches/${pitchId}/comments/${commentId}/edit`, {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+                    headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({ content: newContent.trim() }),
                     credentials: "include",
                 });
-
                 const data = await response.json().catch(() => ({}));
 
                 if (response.ok) {
                     window.location.reload();
                 } else {
-                    alert(data.message || "Failed to edit comment.");
-                }
+                    alert(data.message || "Failed to edit comment.");}
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");
-            }
-        }
+                alert("Unable to connect to the server.");}}
     });
 });
 
@@ -176,22 +190,16 @@ deleteCommentButtons.forEach(button => {
 
         if (confirm("Are you sure you want to delete this comment?")) {
             try {
-                const response = await fetch(`/pitches/${window.location.pathname.split("/").pop()}/comments/${commentId}/delete`, {
+                const response = await fetch(`/pitches/${pitchId}/comments/${commentId}/delete`, {
                     method: "DELETE",
-                    credentials: "include",
-                });
-
+                    credentials: "include",});
                 const data = await response.json().catch(() => ({}));
-
                 if (response.ok) {
                     window.location.reload();
                 } else {
-                    alert(data.message || "Failed to delete comment.");
-                }
+                    alert(data.message || "Failed to delete comment.");}
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");
-            }
-        }
+                alert("Unable to connect to the server.");}}
     });
 });

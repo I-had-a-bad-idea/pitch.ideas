@@ -209,10 +209,10 @@ def create_idea(title: str, topic: str, description: str, user_id: int) -> int |
         db_session.refresh(idea)
         return idea.id
 
-def edit_idea(idea_id: int, title: str, topic: str, description: str) -> bool:
+def edit_idea(idea_id: int, title: str, topic: str, description: str, user_id: int) -> bool:
     with get_db_session() as db_session:
         idea = db_session.get(Idea, idea_id)
-        if not idea:
+        if not idea or not idea.user_id == user_id:
             return False
         idea.title = title
         idea.topic = topic
