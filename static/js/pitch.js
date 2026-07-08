@@ -6,7 +6,7 @@ const commentForm = document.querySelector(".comment-form");
 
 async function showLoggedInButtons() {
     const createPitchlink = document.createElement("a");
-    createPitchlink.href = "/create-pitch";
+    createPitchlink.href = "/pitches/create";
     createPitchlink.className = "btn btn-primary";
     createPitchlink.textContent = "Create Pitch";
 
