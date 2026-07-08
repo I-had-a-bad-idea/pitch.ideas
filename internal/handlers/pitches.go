@@ -22,6 +22,9 @@ func CreatePitch(w http.ResponseWriter, r *http.Request) {
 func GetPitch(w http.ResponseWriter, r *http.Request) {
 }
 
+func UpvotePitch(w http.ResponseWriter, r *http.Request) {
+}
+
 func EditPitch(w http.ResponseWriter, r *http.Request) {
 }
 

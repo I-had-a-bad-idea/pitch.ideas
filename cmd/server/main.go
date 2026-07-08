@@ -39,9 +39,18 @@ func main() {
 		r.Get("/create", handlers.CreatePitchPage(renderer))
 		r.Put("/create", handlers.CreatePitch)
 
-		r.Get("/{id}", handlers.GetPitch)
-		r.Post("/{id}/edit", handlers.EditPitch)
-		r.Delete("/{id}/delete", handlers.DeletePitch)
+		r.Get("/{idea_id}", handlers.GetPitch)
+		r.Post("/{idea_id}/upvote", handlers.UpvotePitch)
+
+		r.Post("/{idea_id}/edit", handlers.EditPitch)
+		r.Delete("/{idea_id}/delete", handlers.DeletePitch)
+
+		r.Route("/{idea_id}/comments", func(r chi.Router) {
+			r.Post("/add", handlers.AddComment)
+
+			r.Post("/{comment_id}/edit", handlers.EditComment)
+			r.Delete("/{comment_id}/delete", handlers.DeleteComment)
+		})
 	})
 
 	fmt.Println("Server running on http://localhost:3000")
