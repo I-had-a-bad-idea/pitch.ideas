@@ -8,6 +8,7 @@ Find the prod deployment here: https://pitch-ideas-wgg.vercel.app/
   - [Overview](#overview)
   - [Idea](#idea)
   - [Usage](#usage)
+    - [Go](#go)
     - [Locally](#locally)
     - [On Vercel](#on-vercel)
   - [Skipping Vercel deployment](#skipping-vercel-deployment)
@@ -23,6 +24,19 @@ Upvote ideas you like.
 
 
 ## Usage
+
+### Go
+
+```bash
+go run ./cmd/server
+```
+or
+```bash
+go build -o ./server ./cmd/server
+server.exe
+```
+
+
 ### Locally
 Requires Python installed.
 
