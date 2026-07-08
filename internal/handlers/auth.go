@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"pitch.ideas/internal/handlers/views"
+	"pitch.ideas/internal/views"
 )
 
 func LoginPage(renderer *views.Renderer) http.HandlerFunc {
@@ -14,4 +14,15 @@ func LoginPage(renderer *views.Renderer) http.HandlerFunc {
 }
 
 func Login(w http.ResponseWriter, r *http.Request) {
+}
+
+
+func RegisterPage(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Register page"))
+	}
+}
+
+func Register(w http.ResponseWriter, r *http.Request) {
 }

@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"pitch.ideas/internal/handlers/views"
+	"pitch.ideas/internal/views"
 )
 
 

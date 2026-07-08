@@ -10,7 +10,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 
 	"pitch.ideas/internal/handlers"
-	"pitch.ideas/internal/handlers/views"
+	"pitch.ideas/internal/views"
 )
 
 func main() {
@@ -33,6 +33,16 @@ func main() {
 		r.Post("/register", handlers.Register)
 	})
 
+	r.Route("/pitches", func(r chi.Router) {
+		r.Get("/", handlers.ListPitches)
+
+		r.Get("/create", handlers.CreatePitchPage(renderer))
+		r.Put("/create", handlers.CreatePitch)
+
+		r.Get("/{id}", handlers.GetPitch)
+		r.Post("/{id}/edit", handlers.EditPitch)
+		r.Delete("/{id}/delete", handlers.DeletePitch)
+	})
 
 	fmt.Println("Server running on http://localhost:3000")
 	log.Fatal(http.ListenAndServe(":3000", r))
