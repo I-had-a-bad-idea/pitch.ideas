@@ -31,6 +31,11 @@ func main() {
 
 		r.Get("/register", handlers.RegisterPage(renderer))
 		r.Post("/register", handlers.Register)
+
+		r.Get("/logout", handlers.LogoutPage(renderer))
+		r.Post("/logout", handlers.Logout)
+
+		r.Get("/status", handlers.AuthStatus)
 	})
 
 	r.Route("/pitches", func(r chi.Router) {
