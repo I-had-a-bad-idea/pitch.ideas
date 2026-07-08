@@ -1,8 +1,14 @@
 package handlers
 
-import "net/http"
+import (
+	"net/http"
 
-func Home(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("HELLO"))
+	"pitch.ideas/internal/handlers/views"
+)
+
+
+func Home(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		renderer.Render(w, "index.html", "")
+	}
 }
