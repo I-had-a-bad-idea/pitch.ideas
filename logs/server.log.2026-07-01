@@ -1,0 +1,1455 @@
+[2026-07-01 16:34:20,027 root/INFO]: Logging initialized
+[2026-07-01 16:34:42,638 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 16:34:42,890 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 175ms |  | 
+[2026-07-01 16:34:42,892 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:34:42,896 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 168ms |  | 
+[2026-07-01 16:34:42,956 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:34:42,984 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 25ms |  | 
+[2026-07-01 16:35:36,121 root/INFO]: Logging initialized
+[2026-07-01 16:35:37,251 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 16:35:37,375 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 84ms |  | 
+[2026-07-01 16:35:37,377 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:35:37,383 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 78ms |  | 
+[2026-07-01 16:35:37,425 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:35:37,434 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:36:09,328 root/INFO]: 127.0.0.1 - "GET /pitches/4 HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 16:36:09,406 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:36:09,426 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:36:09,446 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:36:09,465 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:09,285 root/INFO]: Logging initialized
+[2026-07-01 16:40:12,954 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 16:40:13,079 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 80ms |  | 
+[2026-07-01 16:40:13,081 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:13,087 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 76ms |  | 
+[2026-07-01 16:40:13,134 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:13,146 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 16:40:16,314 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:16,359 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:16,371 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:16,393 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:16,430 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:16,440 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 16:40:17,098 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 16:40:17,153 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:17,170 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:17,189 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:17,216 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:17,224 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:40:17,774 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:17,808 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:17,824 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:17,848 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:17,889 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:17,902 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 16:40:27,397 root/INFO]: Logging initialized
+[2026-07-01 16:40:28,523 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 16:40:28,629 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 74ms |  | 
+[2026-07-01 16:40:28,631 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:28,638 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 71ms |  | 
+[2026-07-01 16:40:28,681 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:28,691 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 16:40:29,124 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,153 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,167 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,219 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,226 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:29,230 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 16:40:29,365 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,401 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,416 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,430 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,460 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,468 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:40:29,609 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,648 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,664 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,684 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:29,724 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,733 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 16:40:29,824 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,874 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:29,884 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:29,914 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:29,957 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:29,968 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 16:40:30,003 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:30,071 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:30,076 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:40:30,090 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:30,130 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:30,141 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 16:40:30,166 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:30,226 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:30,238 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:30,256 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:40:30,282 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:30,292 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 16:40:37,626 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:37,717 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:37,721 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:37,802 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:40:37,802 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 16:40:37,812 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 16:40:37,871 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 16:41:53,769 root/INFO]: Logging initialized
+[2026-07-01 16:41:56,575 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 16:41:56,774 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 108ms |  | 
+[2026-07-01 16:41:56,777 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:41:56,793 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 115ms |  | 
+[2026-07-01 16:41:56,848 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:41:56,862 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 16:42:03,643 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:03,677 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:03,691 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:03,703 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:03,732 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:03,741 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:42:04,614 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:04,653 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:42:04,664 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:04,684 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:04,716 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:04,724 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:42:05,264 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:05,315 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,326 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,338 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,402 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:05,437 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,450 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,469 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:42:05,501 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:42:05,508 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 16:43:26,180 root/WARNING]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 405 - | 0ms |  | 
+[2026-07-01 16:43:29,230 root/WARNING]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 405 - | 0ms |  | 
+[2026-07-01 16:46:31,659 root/INFO]: Logging initialized
+[2026-07-01 16:46:35,155 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 16:46:35,310 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 101ms |  | 
+[2026-07-01 16:46:35,314 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:58:20,886 root/INFO]: Logging initialized
+[2026-07-01 16:58:22,688 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 16:58:22,814 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 79ms |  | 
+[2026-07-01 16:58:22,817 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 16:58:22,824 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 77ms |  | 
+[2026-07-01 16:58:22,868 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:58:22,882 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 16:58:27,017 root/WARNING]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 405 - | 0ms |  | 
+[2026-07-01 16:59:42,194 root/INFO]: Logging initialized
+[2026-07-01 16:59:43,254 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 16:59:43,392 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 92ms |  | 
+[2026-07-01 16:59:43,394 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 16:59:43,400 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 85ms |  | 
+[2026-07-01 16:59:43,444 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 16:59:43,453 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 16:59:45,171 root/WARNING]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 401 - | 0ms |  | 
+[2026-07-01 16:59:45,217 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 16:59:58,093 root/INFO]: Logging initialized
+[2026-07-01 17:00:01,114 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:00:01,282 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 96ms |  | 
+[2026-07-01 17:00:01,285 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:00:48,807 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:00:48,863 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:00:48,893 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:01:04,602 root/WARNING]: Request with no content received from IP: 127.0.0.1
+[2026-07-01 17:01:04,603 root/DEBUG]: No content in request: username=HelloWorld&password=Password
+[2026-07-01 17:01:04,604 root/WARNING]: 127.0.0.1 - "POST /auth/register HTTP/1.1" - 400 - | 1ms |  | message: Missing content
+[2026-07-01 17:01:04,672 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:01:34,645 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:01:39,870 root/WARNING]: Request with no content received from IP: 127.0.0.1
+[2026-07-01 17:01:39,870 root/DEBUG]: No content in request: username=HelloWorld&password=Password
+[2026-07-01 17:01:39,871 root/WARNING]: 127.0.0.1 - "POST /auth/register HTTP/1.1" - 400 - | 0ms |  | message: Missing content
+[2026-07-01 17:01:39,949 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:07:30,035 root/INFO]: Logging initialized
+[2026-07-01 17:07:32,152 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:07:37,192 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:07:37,397 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 117ms |  | 
+[2026-07-01 17:07:37,399 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:07:51,508 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:07:51,635 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:07:51,648 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:07:51,693 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:07:51,716 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:07:51,731 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:07:53,004 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:07:53,094 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:07:53,122 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:07:58,772 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:07:58,877 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:07:58,902 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:08:47,868 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:08:47,989 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:08:47,997 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:08:48,135 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:08:48,138 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:08:48,149 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:08:51,681 root/INFO]: Logging initialized
+[2026-07-01 17:08:53,551 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:08:53,691 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 78ms |  | 
+[2026-07-01 17:08:53,692 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 80ms |  | 
+[2026-07-01 17:08:53,694 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:08:53,828 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:08:53,839 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:08:53,892 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:08:55,575 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:08:55,655 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:08:55,660 root/INFO]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:08:55,697 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:09:00,631 root/INFO]: 127.0.0.1 - "POST /auth/register HTTP/1.1" - 200 - | 137ms |  | 
+[2026-07-01 17:09:00,683 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:09:00,770 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:09:00,773 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:09:00,810 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:09:00,840 server/ERROR]: Exception on /auth/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Raphael\pitch.ideas\server.py", line 373, in auth_status
+    "id": g.user.id,
+          ^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: user
+[2026-07-01 17:09:00,849 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:09:00,850 root/WARNING]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 500 - | 16ms |  | 
+[2026-07-01 17:09:18,258 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:09:18,331 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:09:18,336 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:09:18,367 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:09:18,395 server/ERROR]: Exception on /auth/status [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Raphael\pitch.ideas\server.py", line 373, in auth_status
+    "id": g.user.id,
+          ^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\ctx.py", line 56, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: user
+[2026-07-01 17:09:18,401 root/WARNING]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 500 - | 10ms |  | 
+[2026-07-01 17:09:18,403 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:09:53,306 root/INFO]: Logging initialized
+[2026-07-01 17:09:54,790 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:09:54,928 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 80ms |  | 
+[2026-07-01 17:09:54,930 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:09:54,932 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 78ms |  | 
+[2026-07-01 17:09:55,023 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:09:55,032 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:09:55,085 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:10:02,785 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:10:02,947 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:02,967 root/INFO]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:10:03,000 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:04,683 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:04,765 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:04,771 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:10:04,799 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:04,839 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:10:04,847 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:10:31,772 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:31,854 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:31,868 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:31,895 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:31,969 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:31,977 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:10:33,730 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:10:33,813 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:33,825 root/INFO]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:33,845 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:36,133 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:10:36,355 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:36,369 root/WARNING]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:36,423 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:42,238 root/INFO]: 127.0.0.1 - "POST /auth/register HTTP/1.1" - 200 - | 101ms |  | 
+[2026-07-01 17:10:42,265 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:42,349 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:42,359 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:42,431 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:10:42,434 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:10:42,443 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:10:48,711 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:48,772 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:48,786 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:48,811 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:48,846 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:10:48,853 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:10:49,146 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:49,278 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:49,289 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:49,442 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:49,447 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:10:49,456 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:10:56,234 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:56,296 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:56,309 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:56,338 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:10:56,374 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:56,384 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:10:57,412 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:10:57,556 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:57,569 root/WARNING]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:57,736 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:10:59,952 root/WARNING]: 127.0.0.1 - "POST /auth/login HTTP/1.1" - 401 - | 2ms |  | message: Invalid credentials
+[2026-07-01 17:11:04,731 root/WARNING]: 127.0.0.1 - "POST /auth/login HTTP/1.1" - 401 - | 1ms |  | message: Invalid credentials
+[2026-07-01 17:11:10,178 root/INFO]: 127.0.0.1 - "POST /auth/login HTTP/1.1" - 200 - | 99ms |  | 
+[2026-07-01 17:11:10,208 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:11:10,288 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:10,302 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:10,381 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:11:10,385 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:11:10,392 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:11:16,114 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:11:16,177 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:16,208 root/WARNING]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:16,241 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:22,062 root/INFO]: 127.0.0.1 - "PUT /create-pitch HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:11:22,087 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:11:22,145 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:22,157 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:22,170 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:22,204 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:11:22,211 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:11:23,310 root/INFO]: 127.0.0.1 - "GET /pitches/5 HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:11:23,378 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:23,392 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:11:23,413 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:23,445 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:11:32,812 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:11:32,873 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:32,893 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:32,922 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:33,036 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:11:33,044 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:11:34,266 root/INFO]: 127.0.0.1 - "GET /pitches/1 HTTP/1.1" - 200 - | 24ms |  | 
+[2026-07-01 17:11:34,341 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:34,360 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:34,377 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:11:34,421 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:11:35,562 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:11:35,641 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:35,655 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:35,668 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:11:35,702 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:11:35,708 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:12:27,651 root/INFO]: Logging initialized
+[2026-07-01 17:12:28,684 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:12:28,818 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 85ms |  | 
+[2026-07-01 17:12:28,821 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:12:28,828 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 80ms |  | 
+[2026-07-01 17:12:28,875 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:12:28,884 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:12:28,932 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:12:30,028 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:12:30,095 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:12:30,117 root/INFO]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:12:30,137 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:12:35,168 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:12:35,289 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:12:35,302 root/WARNING]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:12:35,509 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:12:39,567 root/WARNING]: 127.0.0.1 - "PUT /create-pitch HTTP/1.1" - 401 - | 1ms |  | 
+[2026-07-01 17:14:22,879 root/INFO]: Logging initialized
+[2026-07-01 17:14:24,097 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:14:24,303 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 94ms |  | 
+[2026-07-01 17:14:24,306 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:14:24,307 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 90ms |  | 
+[2026-07-01 17:14:24,450 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:14:24,464 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:14:25,280 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:25,367 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:14:25,374 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:25,406 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:25,442 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:14:25,450 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:14:25,555 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:14:30,008 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:14:30,218 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:14:30,232 root/INFO]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:14:30,286 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:34,281 root/INFO]: 127.0.0.1 - "PUT /create-pitch HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:14:34,311 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:34,377 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:34,390 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:34,404 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:34,439 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:14:34,449 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:14:35,575 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:14:35,631 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:35,650 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:35,672 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:35,700 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:14:36,625 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 17:14:36,799 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:14:36,981 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:14:37,142 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:14:37,335 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:14:37,496 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:14:37,687 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:14:39,255 root/INFO]: 127.0.0.1 - "POST /pitches/6/comment HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 17:14:39,305 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:14:39,355 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:39,373 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:39,393 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:39,428 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:14:40,482 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:14:40,546 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:40,565 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:14:40,580 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:14:40,620 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:14:40,629 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:15:55,984 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:15:56,061 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:15:56,074 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:15:56,098 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:15:56,138 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:15:56,148 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:20:25,993 root/INFO]: Logging initialized
+[2026-07-01 17:20:26,572 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:20:26,756 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 91ms |  | 
+[2026-07-01 17:20:26,758 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:20:26,767 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 82ms |  | 
+[2026-07-01 17:20:26,835 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:20:26,844 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:20:34,042 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:20:34,117 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:20:34,130 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:21:37,896 root/INFO]: Logging initialized
+[2026-07-01 17:21:38,598 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:21:38,723 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 88ms |  | 
+[2026-07-01 17:21:38,725 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:21:38,731 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 84ms |  | 
+[2026-07-01 17:22:06,757 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:06,799 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:22:06,813 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:22:06,831 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:22:07,571 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:07,612 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:07,628 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:07,642 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:07,666 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:22:11,372 root/INFO]: Logging initialized
+[2026-07-01 17:22:12,101 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:22:12,223 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 84ms |  | 
+[2026-07-01 17:22:12,225 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:22:12,229 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 79ms |  | 
+[2026-07-01 17:22:13,106 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:22:13,144 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:22:13,156 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:22:13,179 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:24:24,016 root/INFO]: Logging initialized
+[2026-07-01 17:24:24,791 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:24:24,994 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 104ms |  | 
+[2026-07-01 17:24:24,996 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:24:24,997 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 100ms |  | 
+[2026-07-01 17:24:57,928 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:24:57,980 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:24:57,995 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:24:58,013 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:24:59,254 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:24:59,297 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:24:59,310 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:24:59,326 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:25:00,532 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:00,571 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:00,589 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:00,602 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:00,628 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:25:17,560 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:17,597 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:25:17,612 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:25:17,626 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:25:18,502 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:25:18,556 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:25:18,567 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:18,581 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:25:18,610 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:25:21,851 root/INFO]: Logging initialized
+[2026-07-01 17:25:22,601 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:25:22,711 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 72ms |  | 
+[2026-07-01 17:25:22,713 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:25:22,725 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 74ms |  | 
+[2026-07-01 17:27:02,306 root/INFO]: Logging initialized
+[2026-07-01 17:27:03,675 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:27:03,794 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 73ms |  | 
+[2026-07-01 17:27:03,796 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:03,804 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 68ms |  | 
+[2026-07-01 17:27:17,275 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:17,312 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:17,324 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:17,342 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:17,913 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:17,968 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:17,997 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:18,014 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:18,053 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:18,070 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:18,087 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:19,285 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:19,322 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:19,336 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:19,355 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:19,391 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:27:22,648 root/INFO]: Logging initialized
+[2026-07-01 17:27:23,671 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:27:23,775 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 65ms |  | 
+[2026-07-01 17:27:23,777 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:23,785 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 64ms |  | 
+[2026-07-01 17:27:24,513 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:24,559 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:24,573 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:24,594 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,055 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:25,099 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,113 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,150 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,302 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:25,339 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,358 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,381 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,559 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:25,607 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:25,619 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,632 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,727 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:25,789 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:27:25,802 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:25,818 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:28,076 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,122 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,135 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,150 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,180 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:27:28,587 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:28,673 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,696 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:28,733 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:27:28,767 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:27:33,600 root/INFO]: 127.0.0.1 - "POST /auth/logout HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 17:27:33,642 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:27:33,696 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:33,713 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:33,738 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:27:33,780 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:27:33,796 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:30:56,945 root/INFO]: Logging initialized
+[2026-07-01 17:30:59,353 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:30:59,552 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 159ms |  | 
+[2026-07-01 17:30:59,556 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:30:59,566 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 158ms |  | 
+[2026-07-01 17:30:59,617 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:30:59,644 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 23ms |  | 
+[2026-07-01 17:31:01,558 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:31:01,657 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:31:01,668 root/INFO]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:31:01,701 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:04,670 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:31:04,724 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:04,737 root/WARNING]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:04,754 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:07,351 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:31:07,419 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:07,433 root/INFO]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:31:07,453 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:11,646 root/INFO]: 127.0.0.1 - "POST /auth/login HTTP/1.1" - 200 - | 98ms |  | 
+[2026-07-01 17:31:11,708 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:31:11,783 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:11,809 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:31:11,829 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:11,865 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:31:11,876 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:31:23,110 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:31:23,170 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:31:23,187 root/WARNING]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:31:23,208 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:32:28,338 root/INFO]: Logging initialized
+[2026-07-01 17:33:08,661 root/INFO]: Logging initialized
+[2026-07-01 17:33:11,131 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:33:11,331 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 130ms |  | 
+[2026-07-01 17:33:11,333 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 119ms |  | 
+[2026-07-01 17:33:11,334 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:33:11,399 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:33:11,411 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 17:33:18,094 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,135 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,147 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,162 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,201 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:33:18,210 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:33:18,235 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:33:18,753 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,850 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,866 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,886 root/INFO]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:18,938 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:33:18,945 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:33:18,987 root/WARNING]: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" - 404 - | 0ms |  | 
+[2026-07-01 17:33:19,374 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:19,434 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:19,453 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:19,478 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:33:19,515 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:33:19,524 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:33:24,637 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:24,684 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:33:24,701 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:24,717 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:24,758 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:33:24,768 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:33:27,731 root/INFO]: Logging initialized
+[2026-07-01 17:33:28,437 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:33:28,570 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 68ms |  | 
+[2026-07-01 17:33:28,572 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:28,584 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 63ms |  | 
+[2026-07-01 17:33:28,640 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:33:28,651 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:33:29,144 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:33:29,182 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:29,197 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:33:29,313 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:33:29,314 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:33:29,325 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:34:00,284 root/INFO]: Logging initialized
+[2026-07-01 17:34:02,215 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:34:02,410 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 81ms |  | 
+[2026-07-01 17:34:02,412 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:02,415 root/WARNING]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 304 - | 80ms |  | 
+[2026-07-01 17:34:03,810 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:34:03,868 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:03,884 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:03,908 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:05,192 root/INFO]: 127.0.0.1 - "POST /auth/logout HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:34:05,218 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:34:05,261 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:05,279 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:05,301 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:05,337 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:05,356 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 17:34:07,900 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:34:07,949 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:07,963 root/WARNING]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:07,983 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:10,826 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:34:10,943 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:10,954 root/WARNING]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:11,019 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:11,932 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:11,985 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:12,001 root/WARNING]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:12,015 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:12,446 root/INFO]: 127.0.0.1 - "GET /auth/register HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:34:12,511 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:12,530 root/WARNING]: 127.0.0.1 - "GET /static/js/register.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:12,551 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:15,876 root/INFO]: 127.0.0.1 - "POST /auth/register HTTP/1.1" - 200 - | 87ms |  | 
+[2026-07-01 17:34:15,898 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:15,965 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:15,976 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:15,993 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:16,036 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:34:16,047 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:34:17,266 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:34:17,322 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:17,340 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:17,357 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:17,387 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:34:20,717 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:20,763 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:20,773 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:20,789 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:22,087 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:22,136 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:22,150 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:22,165 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:22,206 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:34:22,215 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:34:23,542 root/INFO]: 127.0.0.1 - "GET /pitches/5 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:34:23,587 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:23,600 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:23,618 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:23,642 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:34:24,687 root/INFO]: 127.0.0.1 - "GET /create-pitch HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:34:24,727 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:24,743 root/WARNING]: 127.0.0.1 - "GET /static/js/create-pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:24,759 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:26,882 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:26,998 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:27,003 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:27,085 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:34:27,089 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:34:27,099 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:34:27,555 root/INFO]: 127.0.0.1 - "GET /pitches/5 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:34:27,608 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:27,622 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:27,646 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:27,668 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:34:28,599 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:28,790 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:34:28,792 root/WARNING]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:34:28,820 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:29,443 root/INFO]: 127.0.0.1 - "POST /auth/logout HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:34:29,470 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:29,556 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:29,565 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:34:29,588 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:34:29,618 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:34:29,631 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:51:32,043 root/INFO]: Logging initialized
+[2026-07-01 17:51:37,107 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:51:37,272 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 121ms |  | 
+[2026-07-01 17:51:37,274 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:37,277 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 109ms |  | 
+[2026-07-01 17:51:37,328 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:51:37,350 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 21ms |  | 
+[2026-07-01 17:51:38,893 root/WARNING]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 401 - | 0ms |  | 
+[2026-07-01 17:51:47,856 root/INFO]: 127.0.0.1 - "GET /auth/login HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:51:47,995 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:47,997 root/WARNING]: 127.0.0.1 - "GET /static/js/login.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:48,067 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:52,301 root/INFO]: 127.0.0.1 - "POST /auth/login HTTP/1.1" - 200 - | 105ms |  | 
+[2026-07-01 17:51:52,327 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:51:52,387 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:52,403 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:52,421 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:51:52,468 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:51:52,487 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 17:51:54,394 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:55,034 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:51:55,868 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 17:51:56,190 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 17:51:56,376 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:51:56,723 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 17:51:56,900 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:57,072 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:57,263 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:51:57,436 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:51:57,612 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:57,785 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:57,962 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:51:58,139 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:51:58,306 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:51:58,493 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:51:58,683 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:51:58,858 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:51:59,025 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:51:59,202 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:51:59,379 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:53:05,965 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:53:06,012 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:06,025 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:06,047 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:06,085 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:53:06,098 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:53:07,051 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 17:53:07,577 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:53:07,623 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:07,642 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:07,665 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:07,721 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:53:07,732 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:53:08,728 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:53:09,021 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:53:09,080 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:09,094 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:09,111 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:09,145 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:53:09,159 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:53:33,826 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 30ms |  | 
+[2026-07-01 17:53:33,904 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:53:33,918 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 17:53:33,935 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:33,962 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:53:37,741 root/INFO]: Logging initialized
+[2026-07-01 17:53:39,279 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 17:53:39,397 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 84ms |  | 
+[2026-07-01 17:53:39,399 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:39,406 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 79ms |  | 
+[2026-07-01 17:53:39,464 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:53:40,642 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 17:53:44,701 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 21ms |  | 
+[2026-07-01 17:53:47,414 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:53:47,455 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:47,467 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:47,484 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:47,518 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:53:48,387 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 32ms |  | 
+[2026-07-01 17:53:49,550 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:53:49,667 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:53:49,675 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:53:49,745 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:53:49,746 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:53:50,598 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:53:52,136 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 17:53:52,215 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:53:52,230 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:53:52,381 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:53:52,382 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:01,220 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:37,587 root/INFO]: Logging initialized
+[2026-07-01 17:54:40,251 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 17:54:40,450 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 131ms |  | 
+[2026-07-01 17:54:40,452 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 118ms |  | 
+[2026-07-01 17:54:40,454 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:54:40,562 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:41,051 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:41,102 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:41,117 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:41,145 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:41,171 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:41,888 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 17:54:41,930 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:41,976 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:41,988 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:42,013 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:42,035 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:42,748 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 17:54:42,789 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:42,845 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:42,859 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:42,884 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:42,911 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:43,371 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:43,428 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:43,516 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:43,527 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:43,561 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:43,581 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:43,932 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:54:43,977 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:44,030 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:44,044 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:44,073 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:44,106 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:44,510 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:54:44,553 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:54:44,611 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:44,625 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:44,651 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:44,688 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:44,980 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:45,030 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:45,091 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:45,106 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:45,134 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:45,168 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:45,486 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:54:45,546 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:54:45,604 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:45,616 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:45,640 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:45,747 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:45,933 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:54:45,983 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:46,038 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,048 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,071 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,093 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:46,315 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:54:46,366 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:54:46,423 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,437 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:46,463 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,496 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:46,713 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:54:46,766 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:46,819 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:46,834 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:46,856 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:46,893 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:47,079 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:47,127 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:47,192 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,206 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,232 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,281 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:47,454 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:54:47,491 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:47,556 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,574 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,602 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:47,630 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:47,868 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 17:54:47,918 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:47,987 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,000 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:48,082 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:48,087 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:48,223 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:48,264 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:48,342 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,360 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,381 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,430 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:48,600 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 17:54:48,639 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:48,713 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,726 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:48,750 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:48,788 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:48,983 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:54:49,066 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:49,137 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:49,150 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:49,186 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:49,249 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:49,379 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:54:49,445 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:49,539 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:49,555 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:49,572 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:49,646 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:49,756 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 17:54:49,818 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:49,904 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:49,918 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:49,953 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:49,974 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:50,149 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:50,189 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:50,249 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:50,263 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:50,306 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:50,330 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:50,787 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:50,832 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:50,892 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:50,907 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:50,922 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:50,955 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:51,482 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:51,521 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:51,583 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:51,598 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:51,627 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:51,657 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:51,997 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:52,038 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:52,103 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:52,106 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:52,173 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:52,177 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:52,380 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:52,422 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 17:54:52,512 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:52,536 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:52,564 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:52,580 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:52,744 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:52,785 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:52,854 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:52,875 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:52,914 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:52,948 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 17:54:53,158 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:54:53,215 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 17:54:53,293 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:53,320 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:53,350 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:53,385 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:53,517 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:53,563 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:53,636 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:53,657 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:53,755 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 17:54:53,756 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:53,949 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 17:54:54,009 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 17:54:54,098 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,117 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:54,148 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,183 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:54,296 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:54,343 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 17:54:54,441 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,468 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,502 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,537 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 17:54:54,762 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 17:54:54,811 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:54,873 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,886 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:54,905 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:54,934 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 17:54:55,055 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 17:54:55,212 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 17:54:55,383 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:55,401 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 17:54:55,418 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 17:54:55,468 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 2ms |  | 
+[2026-07-01 18:06:37,849 root/INFO]: Logging initialized
+[2026-07-01 18:06:40,235 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 18:06:40,470 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 167ms |  | 
+[2026-07-01 18:06:40,472 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:06:40,476 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 157ms |  | 
+[2026-07-01 18:06:40,534 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:06:41,865 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 30ms |  | 
+[2026-07-01 18:06:42,319 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 18:06:42,857 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 18:06:43,858 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:06:45,666 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:06:46,219 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:06:46,554 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 18:06:46,929 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:06:47,250 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 18:06:47,600 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:06:47,910 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 9ms |  | 
+[2026-07-01 18:06:48,223 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:06:48,831 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 18:06:49,037 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:06:49,048 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:06:49,190 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:06:49,197 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:06:49,219 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 18:06:50,093 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 28ms |  | 
+[2026-07-01 18:06:51,286 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 18:06:52,149 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:06:52,252 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:06:52,271 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:06:52,308 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:06:52,331 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:06:53,281 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:06:54,288 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 18:06:54,981 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 18:07:12,877 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:07:13,902 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:08:08,885 root/INFO]: Logging initialized
+[2026-07-01 18:08:09,485 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 18:08:09,746 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 82ms |  | 
+[2026-07-01 18:08:09,758 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 79ms |  | 
+[2026-07-01 18:08:09,851 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:09,870 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 18:08:10,674 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 18:08:11,359 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 18:08:11,890 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:08:12,410 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 18:08:12,735 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:08:13,115 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 24ms |  | 
+[2026-07-01 18:08:13,765 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:13,943 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:13,971 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:14,155 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 18:08:14,160 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 18:08:14,178 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 18:08:14,985 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 18:08:15,118 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:15,150 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:15,350 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:15,355 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:16,194 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:08:16,383 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:16,401 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:16,515 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:16,523 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 18:08:16,543 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:08:17,351 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 18:08:18,079 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 18:08:18,166 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:18,174 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:18,246 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 3ms |  | 
+[2026-07-01 18:08:18,248 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:19,225 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:08:19,436 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:19,441 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:19,555 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 18:08:19,558 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:19,582 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:08:22,467 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 56ms |  | 
+[2026-07-01 18:08:24,716 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 18:08:24,841 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:24,846 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:24,969 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 18:08:24,971 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:25,889 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 18:08:26,642 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 18:08:27,389 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:08:27,593 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:27,598 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:27,696 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 2ms |  | 
+[2026-07-01 18:08:27,698 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 18:08:27,712 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 18:08:49,685 root/INFO]: Logging initialized
+[2026-07-01 18:08:50,430 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 6ms |  | 
+[2026-07-01 18:08:50,587 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 78ms |  | 
+[2026-07-01 18:08:50,591 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 78ms |  | 
+[2026-07-01 18:08:50,593 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:08:50,693 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 5ms |  | 
+[2026-07-01 18:08:50,712 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 22ms |  | 
+[2026-07-01 18:08:51,706 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:08:54,460 root/INFO]: 127.0.0.1 - "GET /pitches/5 HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:08:54,571 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:54,592 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:54,614 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:08:54,656 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 3ms |  | 
+[2026-07-01 18:08:57,023 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 42ms |  | 
+[2026-07-01 18:09:54,079 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:09:59,536 root/INFO]: Logging initialized
+[2026-07-01 18:10:00,223 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 18:10:00,387 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 87ms |  | 
+[2026-07-01 18:10:00,389 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:10:00,392 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 84ms |  | 
+[2026-07-01 18:10:00,463 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 18:10:00,477 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 18:10:02,356 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 18:10:04,527 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 23ms |  | 
+[2026-07-01 18:10:34,952 root/INFO]: Logging initialized
+[2026-07-01 18:10:35,610 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 7ms |  | 
+[2026-07-01 18:10:35,851 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 84ms |  | 
+[2026-07-01 18:10:35,853 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:10:35,857 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 81ms |  | 
+[2026-07-01 18:10:36,025 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 10ms |  | 
+[2026-07-01 18:10:36,044 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 23ms |  | 
+[2026-07-01 18:10:37,342 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 14ms |  | 
+[2026-07-01 18:10:38,498 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:10:38,906 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 18ms |  | 
+[2026-07-01 18:10:39,189 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 23ms |  | 
+[2026-07-01 18:10:39,704 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 13ms |  | 
+[2026-07-01 18:10:40,628 root/INFO]: 127.0.0.1 - "POST /pitches/6/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:10:41,787 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 21ms |  | 
+[2026-07-01 18:10:42,521 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 18:10:43,374 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:10:44,426 root/INFO]: 127.0.0.1 - "POST /pitches/5/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 18:10:45,360 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:10:45,850 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 18:10:46,172 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 20ms |  | 
+[2026-07-01 18:10:46,441 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 18:10:47,904 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 12ms |  | 
+[2026-07-01 18:10:50,277 root/INFO]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 200 - | 1735ms |  | 
+[2026-07-01 18:10:50,283 server/ERROR]: Exception on /pitches/4/upvote [POST]
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: idea_votes.idea_id, idea_votes.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Raphael\pitch.ideas\server.py", line 38, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Raphael\pitch.ideas\server.py", line 170, in vote_pitch
+    votes = db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
+  File "C:\Raphael\pitch.ideas\db.py", line 243, in vote_idea
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2035, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1316, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1290, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 465, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 641, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 94, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1234, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: idea_votes.idea_id, idea_votes.user_id
+[SQL: INSERT INTO idea_votes (idea_id, user_id, value) VALUES (?, ?, ?)]
+[parameters: (4, 3, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2026-07-01 18:10:50,289 server/ERROR]: Exception on /pitches/4/upvote [POST]
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: idea_votes.idea_id, idea_votes.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Raphael\pitch.ideas\server.py", line 38, in wrapper
+    return f(*args, **kwargs)
+  File "C:\Raphael\pitch.ideas\server.py", line 170, in vote_pitch
+    votes = db.vote_idea(idea_id=idea_id, user_id=user.id, value=1) # currently just upvote by 1
+  File "C:\Raphael\pitch.ideas\db.py", line 243, in vote_idea
+    db_session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2035, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1316, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1290, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 122, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 465, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 641, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 94, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1234, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Andreas\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: idea_votes.idea_id, idea_votes.user_id
+[SQL: INSERT INTO idea_votes (idea_id, user_id, value) VALUES (?, ?, ?)]
+[parameters: (4, 3, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2026-07-01 18:10:50,311 root/WARNING]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 500 - | 1026ms |  | 
+[2026-07-01 18:10:50,315 root/WARNING]: 127.0.0.1 - "POST /pitches/4/upvote HTTP/1.1" - 500 - | 60ms |  | 
+[2026-07-01 18:19:24,766 root/INFO]: Logging initialized
+[2026-07-01 18:19:37,934 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 8ms |  | 
+[2026-07-01 18:19:38,157 root/INFO]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 200 - | 157ms |  | 
+[2026-07-01 18:19:38,159 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:19:38,162 root/INFO]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 200 - | 147ms |  | 
+[2026-07-01 18:19:38,227 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 15ms |  | 
+[2026-07-01 18:19:38,262 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 40ms |  | 
+[2026-07-01 18:19:40,542 root/INFO]: 127.0.0.1 - "GET /auth/logout HTTP/1.1" - 200 - | 4ms |  | 
+[2026-07-01 18:19:40,602 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:19:40,635 root/INFO]: 127.0.0.1 - "GET /static/js/logout.js HTTP/1.1" - 200 - | 1ms |  | 
+[2026-07-01 18:19:40,669 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:19:41,469 root/INFO]: 127.0.0.1 - "POST /auth/logout HTTP/1.1" - 200 - | 11ms |  | 
+[2026-07-01 18:19:41,518 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:41,604 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:41,620 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:41,635 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:41,666 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:41,683 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 16ms |  | 
+[2026-07-01 18:19:42,359 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 18:19:42,419 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:19:42,437 root/INFO]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:42,457 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:42,494 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:44,553 root/WARNING]: 127.0.0.1 - "POST /pitches/6/comment HTTP/1.1" - 401 - | 0ms |  | 
+[2026-07-01 18:19:47,631 root/WARNING]: 127.0.0.1 - "POST /pitches/6/comment HTTP/1.1" - 401 - | 0ms |  | 
+[2026-07-01 18:19:49,395 root/INFO]: 127.0.0.1 - "GET / HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:49,447 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:49,461 root/WARNING]: 127.0.0.1 - "GET /static/js/index.js HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:49,482 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:19:49,517 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
+[2026-07-01 18:19:49,537 root/INFO]: 127.0.0.1 - "GET /pitches HTTP/1.1" - 200 - | 17ms |  | 
+[2026-07-01 18:24:17,954 root/INFO]: 127.0.0.1 - "GET /pitches/6 HTTP/1.1" - 200 - | 19ms |  | 
+[2026-07-01 18:24:18,022 root/WARNING]: 127.0.0.1 - "GET /static/css/style.css HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:24:18,047 root/WARNING]: 127.0.0.1 - "GET /static/js/pitch.js HTTP/1.1" - 304 - | 1ms |  | 
+[2026-07-01 18:24:18,068 root/WARNING]: 127.0.0.1 - "GET /static/images/logo.svg HTTP/1.1" - 304 - | 0ms |  | 
+[2026-07-01 18:24:18,091 root/INFO]: 127.0.0.1 - "GET /auth/status HTTP/1.1" - 200 - | 0ms |  | 
