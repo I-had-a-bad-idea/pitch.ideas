@@ -40,6 +40,7 @@ func Migrate() error {
 
 // InitDB initializes the database and creates tables
 func InitDB() error {
+	Init()
 	// Create tables
 	if err := Migrate(); err != nil {
 		return err

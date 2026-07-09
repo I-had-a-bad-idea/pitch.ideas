@@ -36,6 +36,7 @@ func AuthMiddleware(next http.Handler) http.Handler {
 
 func NewRouter() http.Handler {
 	renderer := views.New()
+	database.InitDB()
 
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
