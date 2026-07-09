@@ -45,9 +45,64 @@ func InitDB() error {
 	if err := Migrate(); err != nil {
 		return err
 	}
+	add_test_pitches()
 	fmt.Println("Database and tables created!")
 	return nil
 }
+
+
+func add_test_user() models.User {
+	user, err := CreateUser("testuser", "hashedpassword")
+	if err != nil {
+		panic("Failed to create test user")
+	}
+	return *user
+}
+
+func add_test_pitch(title string, topic string, description string, vote_amount int, user_id uint) {
+	id, err := CreateIdea(title, topic, description, 1)
+	if err != nil || id == nil {
+		panic("Failed to create test pitch")
+	}
+	VoteIdea(*id, user_id, vote_amount)
+}
+
+func add_test_pitches() {
+	count, err := IdeaCount()
+	if err != nil {
+		panic("Failed to count ideas")
+	}
+	if count > 0 {
+		return // only fill if empty
+	}
+	test_user := add_test_user()
+
+	add_test_pitch(
+		"AI Meeting Assistant",
+		"AI",
+		"AI that joins meetings, creates summaries, and automatically generates tasks.",
+		421,
+		test_user.ID,
+	)
+	add_test_pitch(
+        "BudgetFlow",
+        "FinTech",
+        "Modern financial planning platform built for freelancers and creators.",
+        312,
+		test_user.ID,
+    )
+    add_test_pitch(
+        "MedTrack",
+        "HealthTech",
+        "Patient monitoring system that helps clinics reduce administrative work.",
+        198,
+		test_user.ID,
+    )
+}
+
+
+
+
 
 // IdeaCount returns the total number of ideas
 func IdeaCount() (int64, error) {
