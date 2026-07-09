@@ -207,21 +207,3 @@ func AuthStatus(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
-
-
-    // session_id = request.cookies.get(SESSION_COOKIE_NAME)
-    // if not session_id:
-    //     return jsonify({"logged_in": False}), 200
-
-    // user = db.get_user_by_session(session_id=session_id)
-    // if not user:
-    //     return jsonify({"logged_in": False}), 200
-    
-
-    // return jsonify({
-    //     "logged_in": True,
-    //     "user": {
-    //         "id": user.id,
-    //         "username": user.username
-    //     }
-    // })
