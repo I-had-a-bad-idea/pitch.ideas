@@ -11,15 +11,17 @@ func ListPitches(w http.ResponseWriter, r *http.Request) {
 
 func CreatePitchPage(renderer *views.Renderer) http.HandlerFunc {
 	return  func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Login page"))
+		renderer.Render(w, "create-pitch.html", "")
 	}
 }
 
 func CreatePitch(w http.ResponseWriter, r *http.Request) {
 }
 
-func GetPitch(w http.ResponseWriter, r *http.Request) {
+func GetPitchPage(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		renderer.Render(w, "pitch.html", "")
+	}
 }
 
 func UpvotePitch(w http.ResponseWriter, r *http.Request) {

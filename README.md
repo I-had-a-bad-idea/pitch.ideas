@@ -32,7 +32,7 @@ go run ./cmd/server
 ```
 or
 ```bash
-go build -o ./server ./cmd/server
+go build -o ./server.exe ./cmd/server
 server.exe
 ```
 

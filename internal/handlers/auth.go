@@ -66,19 +66,18 @@ func deleteSessionCookies(w http.ResponseWriter) {
 
 func LoginPage(renderer *views.Renderer) http.HandlerFunc {
 	return  func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Login page"))
+		renderer.Render(w, "login.html", "")
 	}
 }
 
 func Login(w http.ResponseWriter, r *http.Request) {
+
 }
 
 
 func RegisterPage(renderer *views.Renderer) http.HandlerFunc {
 	return  func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Register page"))
+		renderer.Render(w, "register.html", "")
 	}
 }
 
@@ -87,8 +86,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 func LogoutPage(renderer *views.Renderer) http.HandlerFunc {
 	return  func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Logout page"))
+		renderer.Render(w, "logout.html", "")
 	}
 }
 

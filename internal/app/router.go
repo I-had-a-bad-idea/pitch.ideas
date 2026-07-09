@@ -42,7 +42,7 @@ func NewRouter() http.Handler {
 		r.Get("/create", handlers.CreatePitchPage(renderer))
 		r.Put("/create", handlers.CreatePitch)
 
-		r.Get("/{idea_id}", handlers.GetPitch)
+		r.Get("/{idea_id}", handlers.GetPitchPage(renderer))
 		r.Post("/{idea_id}/upvote", handlers.UpvotePitch)
 
 		r.Post("/{idea_id}/edit", handlers.EditPitch)
