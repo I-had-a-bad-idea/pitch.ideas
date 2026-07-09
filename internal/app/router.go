@@ -3,13 +3,36 @@ package app
 import (
 
 	"net/http"
+	"context"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
 	"pitch.ideas/internal/handlers"
 	"pitch.ideas/internal/views"
+	"pitch.ideas/internal/database"
 )
+
+const userContextKey string = "user"
+
+func AuthMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		cookie, err := r.Cookie("session_id")
+		if err != nil {
+			http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			return
+		}
+
+		user := database.GetUserBySession(cookie.Value)
+		if user == nil {
+			http.Error(w, "Expired", http.StatusUnauthorized)
+			return
+		}
+
+		ctx := context.WithValue(r.Context(), userContextKey, user)
+		next.ServeHTTP(w, r.WithContext(ctx))
+	})
+}
 
 func NewRouter() http.Handler {
 	renderer := views.New()
@@ -39,20 +62,20 @@ func NewRouter() http.Handler {
 	r.Route("/pitches", func(r chi.Router) {
 		r.Get("/", handlers.ListPitches)
 
-		r.Get("/create", handlers.CreatePitchPage(renderer))
-		r.Put("/create", handlers.CreatePitch)
+		r.With(AuthMiddleware).Get("/create", handlers.CreatePitchPage(renderer))
+		r.With(AuthMiddleware).Put("/create", handlers.CreatePitch)
 
 		r.Get("/{idea_id}", handlers.GetPitchPage(renderer))
-		r.Post("/{idea_id}/upvote", handlers.UpvotePitch)
+		r.With(AuthMiddleware).Post("/{idea_id}/upvote", handlers.UpvotePitch)
 
-		r.Post("/{idea_id}/edit", handlers.EditPitch)
-		r.Delete("/{idea_id}/delete", handlers.DeletePitch)
+		r.With(AuthMiddleware).Post("/{idea_id}/edit", handlers.EditPitch)
+		r.With(AuthMiddleware).Delete("/{idea_id}/delete", handlers.DeletePitch)
 
 		r.Route("/{idea_id}/comments", func(r chi.Router) {
-			r.Post("/add", handlers.AddComment)
+			r.With(AuthMiddleware).Post("/add", handlers.AddComment)
 
-			r.Post("/{comment_id}/edit", handlers.EditComment)
-			r.Delete("/{comment_id}/delete", handlers.DeleteComment)
+			r.With(AuthMiddleware).Post("/{comment_id}/edit", handlers.EditComment)
+			r.With(AuthMiddleware).Delete("/{comment_id}/delete", handlers.DeleteComment)
 		})
 	})
 
