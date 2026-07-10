@@ -300,39 +300,39 @@ func CreateComment(ideaID, userID uint, content string) error {
 }
 
 // EditComment edits an existing comment
-func EditComment(commentID, userID uint, content string) (bool, error) {
+func EditComment(commentID, userID uint, content string) error {
 	var comment models.Comment
 	if err := DB.First(&comment, commentID).Error; err != nil {
-		return false, err
+		return err
 	}
 
 	if comment.UserID != userID {
-		return false, fmt.Errorf("user is not the owner of this comment")
+		return fmt.Errorf("user is not the owner of this comment")
 	}
 
 	if err := DB.Model(&comment).Update("content", content).Error; err != nil {
-		return false, err
+		return err
 	}
 
-	return true, nil
+	return nil
 }
 
 // DeleteComment deletes a comment
-func DeleteComment(commentID, userID uint) (bool, error) {
+func DeleteComment(commentID, userID uint) error {
 	var comment models.Comment
 	if err := DB.First(&comment, commentID).Error; err != nil {
-		return false, err
+		return err
 	}
 
 	if comment.UserID != userID {
-		return false, fmt.Errorf("user is not the owner of this comment")
+		return fmt.Errorf("user is not the owner of this comment")
 	}
 
 	if err := DB.Delete(&comment).Error; err != nil {
-		return false, err
+		return err
 	}
 
-	return true, nil
+	return nil
 }
 
 // GetCommentCount returns the number of comments for an idea
