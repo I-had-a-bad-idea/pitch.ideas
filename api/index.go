@@ -1,5 +1,5 @@
 // Vercel entry point
-package api
+package handler
 
 import (
 	"net/http"
