@@ -3,25 +3,20 @@ package views
 import (
 	"html/template"
 	"net/http"
-	"path/filepath"
-	"os"
+	"embed"
 )
 
 type Renderer struct {
 	templates *template.Template
 }
 
-func New() *Renderer {
-	root, err := os.Getwd()
-	if err != nil {
-		panic(err)
-	}
+//go:embed templates/*.html
+var templates embed.FS
 
+func New() *Renderer {
 	return &Renderer{
 		templates: template.Must(
-			template.ParseGlob(
-				filepath.Join(root, "templates", "*.html"),
-			),
+			template.ParseFS(templates, "templates/*.html"),
 		),
 	}
 }
