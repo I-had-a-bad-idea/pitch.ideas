@@ -4,11 +4,11 @@ import (
 	"log"
 	"net/http"
 
-	"pitch.ideas/internal/app"
+	"pitch.ideas/pkg/server"
 )
 
 func main() {
-	router := app.NewRouter()
+	router := server.NewRouter()
 
 	log.Println("Server running on http://localhost:3000")
 	log.Fatal(http.ListenAndServe(":3000", router))
