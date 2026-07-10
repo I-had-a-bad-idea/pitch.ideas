@@ -23,7 +23,7 @@ func NewRouter() http.Handler {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	fs := http.FileServer(http.Dir("static"))
+	fs := http.FileServer(http.Dir("public"))
 	r.Handle("/static/*", http.StripPrefix("/static/", fs))
 
 	r.Get("/", handlers.Home(renderer))

@@ -3,6 +3,8 @@ package views
 import (
 	"html/template"
 	"net/http"
+	"path/filepath"
+	"os"
 )
 
 type Renderer struct {
@@ -10,9 +12,16 @@ type Renderer struct {
 }
 
 func New() *Renderer {
+	root, err := os.Getwd()
+	if err != nil {
+		panic(err)
+	}
+
 	return &Renderer{
 		templates: template.Must(
-			template.ParseGlob("templates/*.html"),
+			template.ParseGlob(
+				filepath.Join(root, "templates", "*.html"),
+			),
 		),
 	}
 }
