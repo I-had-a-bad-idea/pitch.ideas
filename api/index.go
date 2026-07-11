@@ -3,13 +3,19 @@ package handler
 
 import (
 	"net/http"
+	"fmt"
 
 	"pitch.ideas/pkg/server"
 )
 
+var router http.Handler
 
-var router = server.NewRouter()
+func init() {
+    fmt.Println("Init called")
+	router = server.NewRouter()
+}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	router.ServeHTTP(w,r)
+    fmt.Println("Handler called")
+	router.ServeHTTP(w, r)
 }

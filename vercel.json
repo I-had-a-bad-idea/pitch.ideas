@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/index.go": {
+      "includeFiles": "**/*"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.go"
+    }
+  ]
+}
