@@ -40,10 +40,12 @@ func Migrate() error {
 
 // InitDB initializes the database and creates tables
 func InitDB() error {
-	Init()
+	if err:= Init(); err != nil {
+		return fmt.Errorf("Failed to initialize DB: %w", err)
+	}
 	// Create tables
 	if err := Migrate(); err != nil {
-		return err
+		return fmt.Errorf("Failed to migrate DB: %w", err)
 	}
 	add_test_pitches()
 	fmt.Println("Database and tables created!")

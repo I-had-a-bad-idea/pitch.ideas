@@ -1,23 +1,25 @@
 package server
 
 import (
-
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
 	"pitch.ideas/internal/auth"
+	"pitch.ideas/internal/database"
 	"pitch.ideas/internal/handlers"
 	"pitch.ideas/internal/views"
-	"pitch.ideas/internal/database"
 )
 
 
 
 func NewRouter() http.Handler {
 	renderer := views.New()
-	database.InitDB()
+	if err := database.InitDB(); err != nil {
+		log.Fatalf("DB init failed: %v", err)
+	}
 
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
