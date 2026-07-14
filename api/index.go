@@ -25,6 +25,12 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	wd, _ := os.Getwd()
 	log.Println("Working dir:", wd)
 
+	entries, _ := os.ReadDir(".")
+	for _, e := range entries {
+		log.Println(e.Name())
+	}
+
+	log.Println("Public:")
 	entries, err := os.ReadDir("public")
 	if err != nil {
 		log.Println(err)
