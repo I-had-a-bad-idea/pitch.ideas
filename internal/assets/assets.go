@@ -7,11 +7,11 @@ import (
 )
 
 
-//go:embed public/*
-var publicFs embed.FS
+//go:embed static/*
+var staticFs embed.FS
 
 func Handler() http.Handler {
-	sub, err := fs.Sub(publicFs, "public")
+	sub, err := fs.Sub(staticFs, "static")
 	if err != nil {
 		panic(err)
 	}
