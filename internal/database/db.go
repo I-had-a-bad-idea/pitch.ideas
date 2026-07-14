@@ -16,12 +16,7 @@ import (
 var DB *gorm.DB
 
 func Init() error {
-	fmt.Println("ENV (from DB):")
-	for _, env := range os.Environ() {
-		fmt.Println(env)
-	}
 	url := os.Getenv("DATABASE_URL")
-	fmt.Println("DATABASE_URL:", os.Getenv("DATABASE_URL"))
 
 	var err error
 

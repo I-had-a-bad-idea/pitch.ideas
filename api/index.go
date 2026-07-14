@@ -20,12 +20,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Init called")
 		router = server.NewRouter()
 	})
-	
-	fmt.Println("ENV (from handler):")
-	for _, env := range os.Environ() {
-		fmt.Println(env)
-	}
-	fmt.Println("DATABASE_URL:", os.Getenv("DATABASE_URL"))
 
     fmt.Println("Handler called")
 	router.ServeHTTP(w, r)
