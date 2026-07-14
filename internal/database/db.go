@@ -16,7 +16,7 @@ import (
 var DB *gorm.DB
 
 func Init() error {
-	fmt.Println("ENV:")
+	fmt.Println("ENV (from DB):")
 	for _, env := range os.Environ() {
 		fmt.Println(env)
 	}
