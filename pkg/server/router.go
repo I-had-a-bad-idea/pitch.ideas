@@ -11,9 +11,8 @@ import (
 	"pitch.ideas/internal/database"
 	"pitch.ideas/internal/handlers"
 	"pitch.ideas/internal/views"
+	"pitch.ideas/internal/assets"
 )
-
-
 
 func NewRouter() http.Handler {
 	renderer := views.New()
@@ -25,8 +24,7 @@ func NewRouter() http.Handler {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	fs := http.FileServer(http.Dir("public"))
-	r.Handle("/static/*", http.StripPrefix("/static/", fs))
+	r.Handle("/static/*", http.StripPrefix("/static/", assets.Handler()))
 
 	r.Get("/", handlers.Home(renderer))
 
