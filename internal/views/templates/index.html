@@ -40,9 +40,20 @@
     </div>
 </section>
 
+
 <section class="feed">
     <div class="container">
-        <h2>Latest Pitches</h2>
+        <div class="feed-header">
+            <h2>Latest Pitches</h2>
+            <select class="option-select" id="order_by" name="order-by" onchange="if (this.selectedIndex) loadPitches();"></select>
+                <option value="likes-desc">Likes DESC</option>
+                <option value="likes-asc">Likes ASC</option>
+                <option value="comments-desc">Comments DESC</option>
+                <option value="comments-asc">Comments ASC</option>
+                <option value="creation-desc">Created-at DESC</option>
+                <option value="creation-asc">Created-at ASC</option>
+            </select>
+        </div>
         <!-- Will be filled by JS -->
     </div>
 </section>

@@ -1,7 +1,9 @@
 import { loggedIn } from "./cookie.js";
 
 async function loadPitches() {
-    const res = await fetch("/pitches", {credentials: "include",});
+    const order_by = document.getElementById("order_by").value;
+
+    const res = await fetch(`/pitches${order_by}`, {credentials: "include",});
     const data = await res.json();
 
     const container = document.querySelector(".feed .container");

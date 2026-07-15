@@ -118,9 +118,14 @@ body{
     padding-bottom:4rem;
 }
 
+.feed-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 0.5rem;
+}
+
 .feed h2{
     font-size: 1.25rem; /* 1.5rem is default*/
-    margin-bottom:0.5rem;
 }
 
 .pitch{
@@ -196,7 +201,7 @@ body{
 }
 
 .pitch-form input,
-.pitch-form select,
+.option-select,
 .pitch-form textarea {
     padding: 14px;
     border: 1px solid #ddd;
