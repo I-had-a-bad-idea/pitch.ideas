@@ -72,7 +72,7 @@ const nav_right = document.querySelector("nav .nav-right");
 
 async function showLoggedInButtons() {
     const createPitchlink = document.createElement("a");
-    createPitchlink.href = "/create-pitch";
+    createPitchlink.href = "/pitches/create";
     createPitchlink.className = "btn btn-primary";
     createPitchlink.textContent = "Create Pitch";
     

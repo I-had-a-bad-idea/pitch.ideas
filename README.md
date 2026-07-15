@@ -8,7 +8,7 @@ Find the prod deployment here: https://pitch-ideas-wgg.vercel.app/
   - [Overview](#overview)
   - [Idea](#idea)
   - [Usage](#usage)
-    - [Locally](#locally)
+    - [Go](#go)
     - [On Vercel](#on-vercel)
   - [Skipping Vercel deployment](#skipping-vercel-deployment)
   - [License](#license)
@@ -23,14 +23,20 @@ Upvote ideas you like.
 
 
 ## Usage
-### Locally
-Requires Python installed.
+
+### Go
 
 ```bash
-git clone https://github.com/I-had-a-bad-idea/pitch.ideas.git
-cd pitch.ideas
-pip install -r local-requirements.txt
-python server.py
+make run
+```
+or
+```bash
+make build-and-run
+```
+or
+```bash
+make build
+server.exe
 ```
 
 Then open `http://localhost:4000`

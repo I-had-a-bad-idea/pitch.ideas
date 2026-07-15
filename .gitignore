@@ -1,3 +1,7 @@
 __pycache__/
 *.db
 logs/
+something.txt
+*.exe
+.vercel
+.env*
