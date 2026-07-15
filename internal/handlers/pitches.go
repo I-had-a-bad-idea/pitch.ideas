@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"strconv"
@@ -16,8 +17,11 @@ import (
 func ListPitches(w http.ResponseWriter, r *http.Request) {
     orderBy := r.URL.Query().Get("order_by")
 	ob := database.ParseOrderBy(orderBy)
+	searchQuery := r.URL.Query().Get("search")
 
-	pitches, err := database.GetAllIdeasAsDicts(20, ob)
+	fmt.Println("Search query:", searchQuery)
+
+	pitches, err := database.GetAllIdeasAsDicts(20, ob, searchQuery)
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return

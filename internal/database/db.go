@@ -253,12 +253,16 @@ func (ob OrderBy) String() string {
 }
 
 // GetAllIdeasAsDicts retrieves all ideas as dictionaries
-func GetAllIdeasAsDicts(limit int, orderBy OrderBy) ([]map[string]interface{}, error) {
+func GetAllIdeasAsDicts(limit int, orderBy OrderBy, searchQuery string) ([]map[string]interface{}, error) {
 	query := DB.
 		Model(&models.Idea{}).
 		Preload("User").
 		Preload("Comments").
 		Preload("VoteRecords")
+
+	if searchQuery != "" {
+		query = query.Where("title LIKE ? OR topic LIKE ? OR description LIKE ?", "%"+searchQuery+"%", "%"+searchQuery+"%", "%"+searchQuery+"%")
+	}
 
 	switch orderBy {
 

@@ -5,10 +5,23 @@ orderBy.addEventListener("change", () => {
     loadPitches();
 })
 
+const searchBar = document.querySelector(".search-bar")
+searchBar.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") { // Onl reload on enter
+        loadPitches();
+    }
+})
+
 async function loadPitches() {
     const order_by = orderBy.value;
+    const search_query = searchBar.value.trim();
 
-    const res = await fetch(`/pitches?order_by=${order_by}`, {credentials: "include",});
+    const params = new URLSearchParams({
+        order_by: orderBy,
+        search: search_query
+    });
+
+    const res = await fetch(`/pitches?${params.toString()}`, {credentials: "include",});
     const data = await res.json();
 
     const container = document.querySelector(".feed .container");
