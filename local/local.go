@@ -10,6 +10,6 @@ import (
 func main() {
 	router := server.NewRouter()
 
-	log.Println("Server running on http://localhost:3000")
-	log.Fatal(http.ListenAndServe(":3000", router))
+	log.Println("Server running on http://localhost:4000")
+	log.Fatal(http.ListenAndServe(":4000", router))
 }  
