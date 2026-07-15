@@ -1,20 +1,21 @@
 package handlers
 
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 
 	"strconv"
+
 	"github.com/go-chi/chi/v5"
 
-	"pitch.ideas/internal/views"
-	"pitch.ideas/internal/database"
 	"pitch.ideas/internal/auth"
+	"pitch.ideas/internal/database"
+	"pitch.ideas/internal/views"
 )
 
 func ListPitches(w http.ResponseWriter, r *http.Request) {
-	order_by := chi.URLParam(r, "order_by")
-	ob := database.ParseOrderBy(order_by)
+    orderBy := r.URL.Query().Get("order_by")
+	ob := database.ParseOrderBy(orderBy)
 
 	pitches, err := database.GetAllIdeasAsDicts(20, ob)
 	if err != nil {

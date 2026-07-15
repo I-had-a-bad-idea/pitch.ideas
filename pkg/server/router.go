@@ -42,7 +42,7 @@ func NewRouter() http.Handler {
 	})
 
 	r.Route("/pitches", func(r chi.Router) {
-		r.Get("/{order_by}", handlers.ListPitches)
+		r.Get("/", handlers.ListPitches)
 
 		r.With(auth.AuthMiddleware).Get("/create", handlers.CreatePitchPage(renderer))
 		r.With(auth.AuthMiddleware).Put("/create", handlers.CreatePitch)

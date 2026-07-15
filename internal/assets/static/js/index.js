@@ -1,12 +1,20 @@
 import { loggedIn } from "./cookie.js";
 
-async function loadPitches() {
-    const order_by = document.getElementById("order_by").value;
+const orderBy = document.getElementById("order_by");
+orderBy.addEventListener("change", () => {
+    loadPitches();
+})
 
-    const res = await fetch(`/pitches${order_by}`, {credentials: "include",});
+async function loadPitches() {
+    const order_by = orderBy.value;
+
+    const res = await fetch(`/pitches?order_by=${order_by}`, {credentials: "include",});
     const data = await res.json();
 
     const container = document.querySelector(".feed .container");
+
+    // Remove all pitches
+    container.querySelectorAll(".pitch").forEach(p => p.remove());
 
     data.pitches.forEach(p => {
         const maxLength = 300;
