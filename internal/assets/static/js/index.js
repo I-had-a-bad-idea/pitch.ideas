@@ -1,10 +1,33 @@
 import { loggedIn } from "./cookie.js";
 
+const orderBy = document.getElementById("order_by");
+orderBy.addEventListener("change", () => {
+    loadPitches();
+})
+
+const searchBar = document.querySelector(".search-bar")
+searchBar.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") { // Onl reload on enter
+        loadPitches();
+    }
+})
+
 async function loadPitches() {
-    const res = await fetch("/pitches", {credentials: "include",});
+    const order_by = orderBy.value;
+    const search_query = searchBar.value.trim();
+
+    const params = new URLSearchParams({
+        order_by: orderBy,
+        search: search_query
+    });
+
+    const res = await fetch(`/pitches?${params.toString()}`, {credentials: "include",});
     const data = await res.json();
 
     const container = document.querySelector(".feed .container");
+
+    // Remove all pitches
+    container.querySelectorAll(".pitch").forEach(p => p.remove());
 
     data.pitches.forEach(p => {
         const maxLength = 300;

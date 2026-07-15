@@ -5,7 +5,7 @@
     --accent:#FFB400;
     --bg:#F8F9FC;
     --white:#FFFFFF;
-    --border:#E5EAF3;
+    --border: #C4CEDF;
     --text:#5F6982;
 }
 
@@ -40,8 +40,15 @@ body{
     align-items: center;
 }
 
+.nav-left,
+.nav-center,
+.nav-right {
+    flex: 1;
+}
+
 .nav-right {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -112,15 +119,46 @@ body{
     margin:auto;
 }
 
+.search-bar {
+    display: block;
+    width: 80%;
+    margin: 2rem auto 0;
+    padding: 14px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    font-size: 1rem;
+}
+
+.search-bar:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255,180,0,.18);
+}
+
 /* FEED */
 
 .feed{
     padding-bottom:4rem;
 }
 
+.feed-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 0.5rem;
+}
+
 .feed h2{
     font-size: 1.25rem; /* 1.5rem is default*/
-    margin-bottom:0.5rem;
+}
+
+.option-select {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--primary);
+    font-size: 0.9rem;
 }
 
 .pitch{
@@ -196,7 +234,6 @@ body{
 }
 
 .pitch-form input,
-.pitch-form select,
 .pitch-form textarea {
     padding: 14px;
     border: 1px solid #ddd;

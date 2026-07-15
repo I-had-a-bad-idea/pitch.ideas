@@ -1,20 +1,27 @@
 package handlers
 
 import (
-	"net/http"
 	"encoding/json"
+	"fmt"
+	"net/http"
 
 	"strconv"
+
 	"github.com/go-chi/chi/v5"
 
-	"pitch.ideas/internal/views"
-	"pitch.ideas/internal/database"
 	"pitch.ideas/internal/auth"
+	"pitch.ideas/internal/database"
+	"pitch.ideas/internal/views"
 )
 
 func ListPitches(w http.ResponseWriter, r *http.Request) {
-	pitches, err := database.GetAllIdeasAsDicts(20)
-	
+    orderBy := r.URL.Query().Get("order_by")
+	ob := database.ParseOrderBy(orderBy)
+	searchQuery := r.URL.Query().Get("search")
+
+	fmt.Println("Search query:", searchQuery)
+
+	pitches, err := database.GetAllIdeasAsDicts(20, ob, searchQuery)
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
