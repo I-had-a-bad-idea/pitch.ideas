@@ -5,7 +5,7 @@
     --accent:#FFB400;
     --bg:#F8F9FC;
     --white:#FFFFFF;
-    --border:#E5EAF3;
+    --border: #C4CEDF;
     --text:#5F6982;
 }
 
@@ -40,8 +40,15 @@ body{
     align-items: center;
 }
 
+.nav-left,
+.nav-center,
+.nav-right {
+    flex: 1;
+}
+
 .nav-right {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -110,6 +117,23 @@ body{
     color:var(--text);
     max-width:600px;
     margin:auto;
+}
+
+.search-bar {
+    display: block;
+    width: 80%;
+    margin: 2rem auto 0;
+    padding: 14px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    font-size: 1rem;
+}
+
+.search-bar:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(255,180,0,.18);
 }
 
 /* FEED */
