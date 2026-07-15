@@ -13,8 +13,10 @@ import (
 )
 
 func ListPitches(w http.ResponseWriter, r *http.Request) {
-	pitches, err := database.GetAllIdeasAsDicts(20)
-	
+	order_by := chi.URLParam(r, "order_by")
+	ob := database.ParseOrderBy(order_by)
+
+	pitches, err := database.GetAllIdeasAsDicts(20, ob)
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return

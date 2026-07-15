@@ -219,6 +219,8 @@ const (
 	OrderByLikesASC
 	OrderByCreationDESC
 	OrderByCreationASC
+	OrderByCommentsDESC
+	OrderByCommentsASC
 )
 
 var orderByName = map[OrderBy]string{
@@ -227,7 +229,7 @@ var orderByName = map[OrderBy]string{
 	OrderByCreationDESC: "creation-desc",
 	OrderByCreationASC: "creation-asc",
 	OrderByCommentsDESC: "comments-desc",
-	OrderByCommentsASC: "comments-asc"
+	OrderByCommentsASC: "comments-asc",
 }
 
 var orderByLookup = map[string]OrderBy{
