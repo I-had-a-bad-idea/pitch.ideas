@@ -128,6 +128,15 @@ body{
     font-size: 1.25rem; /* 1.5rem is default*/
 }
 
+.option-select {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
 .pitch{
     background:white;
     border:1px solid var(--border);
@@ -201,7 +210,6 @@ body{
 }
 
 .pitch-form input,
-.option-select,
 .pitch-form textarea {
     padding: 14px;
     border: 1px solid #ddd;
