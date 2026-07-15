@@ -17,7 +17,7 @@ async function loadPitches() {
     const search_query = searchBar.value.trim();
 
     const params = new URLSearchParams({
-        order_by: orderBy,
+        order_by: order_by,
         search: search_query
     });
 
