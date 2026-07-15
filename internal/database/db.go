@@ -212,17 +212,91 @@ func DeleteIdea(ideaID, userID uint) (bool, error) {
 	return true, nil
 }
 
+type OrderBy int
+
+const (
+	OrderByLikesDESC = iota
+	OrderByLikesASC
+	OrderByCreationDESC
+	OrderByCreationASC
+)
+
+var orderByName = map[OrderBy]string{
+	OrderByLikesDESC:  "likes-desc",
+	OrderByLikesASC: "likes-asc",
+	OrderByCreationDESC: "creation-desc",
+	OrderByCreationASC: "creation-asc",
+	OrderByCommentsDESC: "comments-desc",
+	OrderByCommentsASC: "comments-asc"
+}
+
+var orderByLookup = map[string]OrderBy{
+	"likes-desc":    OrderByLikesDESC,
+	"likes-asc":     OrderByLikesASC,
+	"creation-desc": OrderByCreationDESC,
+	"creation-asc":  OrderByCreationASC,
+	"comments-desc": OrderByCommentsDESC,
+	"comments-asc":  OrderByCommentsASC,
+}
+
+func ParseOrderBy(s string) OrderBy {
+	if ob, ok := orderByLookup[s]; ok {
+		return ob
+	}
+	return OrderByCreationDESC
+}
+
+func (ob OrderBy) String() string {
+    return orderByName[ob]
+}
+
 // GetAllIdeasAsDicts retrieves all ideas as dictionaries
-func GetAllIdeasAsDicts(limit int) ([]map[string]interface{}, error) {
+func GetAllIdeasAsDicts(limit int, orderBy OrderBy) ([]map[string]interface{}, error) {
+	query := DB.
+		Model(&models.Idea{}).
+		Preload("User").
+		Preload("Comments").
+		Preload("VoteRecords")
+
+	switch orderBy {
+
+	case OrderByCreationDESC:
+		query = query.Order("created_at DESC")
+
+	case OrderByCreationASC:
+		query = query.Order("created_at ASC")
+
+	case OrderByLikesDESC:
+		query = query.
+			Joins("LEFT JOIN idea_votes ON idea_votes.idea_id = ideas.id").
+			Group("ideas.id").
+			Order("COALESCE(SUM(idea_votes.value),0) DESC")
+
+	case OrderByLikesASC:
+		query = query.
+			Joins("LEFT JOIN idea_votes ON idea_votes.idea_id = ideas.id").
+			Group("ideas.id").
+			Order("COALESCE(SUM(idea_votes.value),0) ASC")
+
+	case OrderByCommentsDESC:
+		query = query.
+			Joins("LEFT JOIN comments ON comments.idea_id = ideas.id").
+			Group("ideas.id").
+			Order("COUNT(comments.id) DESC")
+
+	case OrderByCommentsASC:
+		query = query.
+			Joins("LEFT JOIN comments ON comments.idea_id = ideas.id").
+			Group("ideas.id").
+			Order("COUNT(comments.id) ASC")
+	}
+
 	var ideas []models.Idea
-	if err := DB.Preload("User").Preload("Comments").Preload("VoteRecords").
-		Order("created_at DESC").
-		Limit(limit).
-		Find(&ideas).Error; err != nil {
+	if err := query.Limit(limit).Find(&ideas).Error; err != nil {
 		return nil, err
 	}
 
-	var result []map[string]interface{}
+	result := make([]map[string]interface{}, 0, len(ideas))
 	for _, idea := range ideas {
 		result = append(result, idea.ToDict())
 	}
