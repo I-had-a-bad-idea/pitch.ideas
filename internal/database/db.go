@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"strings"
 
 	"github.com/google/uuid"
 	"gorm.io/driver/postgres"
@@ -261,7 +262,11 @@ func GetAllIdeasAsDicts(limit int, orderBy OrderBy, searchQuery string) ([]map[s
 		Preload("VoteRecords")
 
 	if searchQuery != "" {
-		query = query.Where("title LIKE ? OR topic LIKE ? OR description LIKE ?", "%"+searchQuery+"%", "%"+searchQuery+"%", "%"+searchQuery+"%")
+    	search := "%" + strings.ToLower(searchQuery) + "%"
+    	query = query.Where(
+        	"LOWER(title) LIKE ? OR LOWER(topic) LIKE ? OR LOWER(description) LIKE ?",
+        	search, search, search,
+    	)
 	}
 
 	switch orderBy {
