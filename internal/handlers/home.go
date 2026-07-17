@@ -18,3 +18,9 @@ func About(renderer *views.Renderer) http.HandlerFunc {
 		renderer.Render(w, "about.html", "")
 	}
 }
+
+func ToS(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		renderer.Render(w, "tos.html", "")
+	}
+}
