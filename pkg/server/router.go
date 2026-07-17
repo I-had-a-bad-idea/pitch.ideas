@@ -27,6 +27,7 @@ func NewRouter() http.Handler {
 	r.Handle("/static/*", http.StripPrefix("/static/", assets.Handler()))
 
 	r.Get("/", handlers.Home(renderer))
+	r.Get("/about", handlers.About(renderer))
 
 	r.Route("/auth", func(r chi.Router) {
 		r.Get("/login", handlers.LoginPage(renderer))

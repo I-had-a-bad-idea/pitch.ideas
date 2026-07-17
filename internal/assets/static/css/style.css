@@ -52,6 +52,14 @@ body{
     gap: 10px;
 }
 
+.nav-bar-link {
+    background: var(--bg);
+}
+
+.nav-bar-link:hover {
+    background: var(--border);
+}
+
 .logo{
     height:80px;
 }
