@@ -24,3 +24,9 @@ func ToS(renderer *views.Renderer) http.HandlerFunc {
 		renderer.Render(w, "tos.html", "")
 	}
 }
+
+func NotFound(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		renderer.Render(w, "not-found.html", "")
+	}
+}

@@ -24,6 +24,12 @@ func NewRouter() http.Handler {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
+	// 404 handler
+	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusNotFound)
+		handlers.NotFound(renderer)(w, r)
+	})
+
 	r.Handle("/static/*", http.StripPrefix("/static/", assets.Handler()))
 
 	r.Get("/", handlers.Home(renderer))
