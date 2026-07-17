@@ -8,52 +8,65 @@ function injectToastStyles() {
     style.textContent = `
         #toast-container {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            right: 24px;
 
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
 
             z-index: 9999;
         }
 
-        .toast {
-            min-width: 250px;
-            max-width: 400px;
+        .pitch-toast {
+            min-width: 280px;
+            max-width: 420px;
 
             padding: 14px 18px;
-            border-radius: 8px;
 
-            color: white;
-            font-family: sans-serif;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+
+            background: var(--white);
+            color: var(--primary);
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            box-shadow: 0 8px 25px rgba(15, 27, 61, 0.12);
 
             opacity: 0;
             transform: translateY(20px);
 
-            transition: opacity 0.25s ease,
-                        transform 0.25s ease;
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
         }
 
-        .toast.show {
+        .pitch-toast.show {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .toast.success {
-            background: #16a34a;
+        .pitch-toast.success {
+            border-left: 5px solid #16a34a;
         }
 
-        .toast.error {
-            background: #dc2626;
+        .pitch-toast.error {
+            border-left: 5px solid #dc2626;
         }
 
-        .toast.warning {
-            background: #d97706;
+        .pitch-toast.warning {
+            border-left: 5px solid var(--accent);
         }
 
-        .toast.info {
-            background: #2563eb;
+        .pitch-toast.info {
+            border-left: 5px solid #2563eb;
         }
     `;
 
@@ -78,7 +91,7 @@ class Toast {
         }
 
         const toast = document.createElement("div");
-        toast.className = `toast ${type}`;
+        toast.className = `pitch-toast ${type}`;
         toast.textContent = message;
 
         container.appendChild(toast);
