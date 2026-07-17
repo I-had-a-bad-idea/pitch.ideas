@@ -24,7 +24,9 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
-            window.location.href = "/";
+            Toast.success("Pitch created!");
+            await new Promise(resolve => setTimeout(resolve, 250));
+            window.location.href = `/pitches/${data.idea_id}`;
         } else {
             Toast.error(data.message || "Failed to create pitch.");
         }

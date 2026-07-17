@@ -61,10 +61,16 @@ func CreatePitch(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-
-	_, err := database.CreateIdea(req.Title, req.Topic, req.Description, user.ID)
+	ideaID, err := database.CreateIdea(req.Title, req.Topic, req.Description, user.ID)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+
+	if err := json.NewEncoder(w).Encode(map[string]any{
+		"idea_id": ideaID,
+	}); err != nil {
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
 	}
 }
 

@@ -23,6 +23,8 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
+            Toast.success("Logged in!");
+            await new Promise(resolve => setTimeout(resolve, 250));
             window.location.href = "/";
         } else {
             Toast.error(data.message || "Login failed.");

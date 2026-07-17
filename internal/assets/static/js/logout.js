@@ -10,6 +10,8 @@ logoutButton.addEventListener('click', async () => {
         });
     
         if (response.ok) {
+            Toast.success("Logged out!");
+            await new Promise(resolve => setTimeout(resolve, 250));
             window.location.href = '/';
         } else {
             Toast.error('Logout failed.');

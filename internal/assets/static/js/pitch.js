@@ -156,6 +156,8 @@ function setupPitchEditor() {
                 credentials: "include",});
             const data = await response.json().catch(() => ({}));
             if (response.ok) {
+                Toast.success("Edited pitch");
+                await new Promise(resolve => setTimeout(resolve, 250));
                 window.location.reload();
             } else {
                 Toast.error(data.message || "Failed to edit pitch.");}
@@ -223,6 +225,7 @@ function setupCommentEditors() {
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
                     window.location.reload();
+                    Toast.success("Edited comment");
                 } else {
                     Toast.error(data.message || "Failed to edit comment.");
                 }
@@ -254,6 +257,8 @@ if (commentForm) {
 
             const data = await response.json().catch(() => ({}));
             if (response.ok) {
+                Toast.success("Added comment!");
+                await new Promise(resolve => setTimeout(resolve, 250));
                 contentElement.value = ""; // reset 
                 window.location.reload();
             } else {
@@ -301,6 +306,8 @@ if (deletePitchButton) {
                 });
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
+                    Toast.success("Deleted pitch!");
+                    await new Promise(resolve => setTimeout(resolve, 250));
                     window.location.href = "/";
                 } else {
                     Toast.error(data.message || "Failed to delete pitch.");
@@ -325,6 +332,8 @@ deleteCommentButtons.forEach((button) => {
                     credentials: "include",});
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
+                    Toast.success("Deleted comment!");
+                    await new Promise(resolve => setTimeout(resolve, 250));
                     window.location.reload();
                 } else {
                     Toast.error(data.message || "Failed to delete comment.");}
