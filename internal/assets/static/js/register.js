@@ -1,3 +1,5 @@
+import Toast from "./toast.js";
+
 const form = document.querySelector(".auth-form");
 
 form.addEventListener("submit", async (e) => {
@@ -23,11 +25,11 @@ form.addEventListener("submit", async (e) => {
         if (response.ok) {
             window.location.href = "/";
         } else {
-            alert(data.message || "Registration failed.");
+            Toast.error(data.message || "Registration failed.");
         }
 
     } catch (err) {
         console.error(err);
-        alert("Unable to connect to the server.");
+        Toast.error("Unable to connect to the server.");
     }
 });

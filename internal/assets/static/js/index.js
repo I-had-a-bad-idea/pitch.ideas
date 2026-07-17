@@ -1,4 +1,5 @@
 import { loggedIn } from "./cookie.js";
+import Toast from "./toast.js";
 
 const orderBy = document.getElementById("order_by");
 orderBy.addEventListener("change", () => {
@@ -79,11 +80,11 @@ async function loadPitches() {
                     // update count to what backend returns
                     voteBtn.querySelector(".vote-count").textContent = data.votes;
                 } else {
-                    alert("Failed to upvote pitch.");
+                    Toast.error("Failed to upvote pitch.");
                 }
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");
+                Toast.error("Unable to connect to the server.");
             }
         });
     });

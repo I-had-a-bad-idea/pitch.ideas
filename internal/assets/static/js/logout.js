@@ -1,3 +1,5 @@
+import Toast from "./toast.js";
+
 const logoutButton = document.getElementById('logout-button');
 
 logoutButton.addEventListener('click', async () => {
@@ -10,10 +12,10 @@ logoutButton.addEventListener('click', async () => {
         if (response.ok) {
             window.location.href = '/';
         } else {
-            alert('Logout failed.');
+            Toast.error('Logout failed.');
         }
     } catch (err) {
         console.error(err);
-        alert('Unable to connect to the server.');
+        Toast.error('Unable to connect to the server.');
     }
 });
