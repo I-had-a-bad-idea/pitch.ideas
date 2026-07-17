@@ -69,6 +69,12 @@ body{
     color: var(--primary);
 }
 
+.h3 {
+    padding: 10px 16px;
+    margin-bottom: .5rem;
+    margin-top: .05rem;
+}
+
 .logo{
     height:80px;
 }
