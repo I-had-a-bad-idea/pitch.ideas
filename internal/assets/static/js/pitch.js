@@ -1,4 +1,5 @@
 import { loggedIn, getUsername } from "./cookie.js";
+import Toast from "./toast.js";
 
 const pitchId = window.location.pathname.split("/").pop();
 const nav_right = document.querySelector("nav .nav-right");
@@ -143,7 +144,7 @@ function setupPitchEditor() {
         const newTopic = topicInput?.value.trim() || "";
 
         if (!newTitle || !newDescription || !newTopic) {
-            alert("Please fill out the title, topic, and description.");
+            Toast.error("Please fill out the title, topic, and description.");
             return;
         }
 
@@ -155,12 +156,14 @@ function setupPitchEditor() {
                 credentials: "include",});
             const data = await response.json().catch(() => ({}));
             if (response.ok) {
+                Toast.success("Edited pitch");
+                await new Promise(resolve => setTimeout(resolve, 250));
                 window.location.reload();
             } else {
-                alert(data.message || "Failed to edit pitch.");}
+                Toast.error(data.message || "Failed to edit pitch.");}
         } catch (err) {
             console.error(err);
-            alert("Unable to connect to the server.");}
+            Toast.error("Unable to connect to the server.");}
     });
 }
 
@@ -208,7 +211,7 @@ function setupCommentEditors() {
         saveButton.addEventListener("click", async () => {
             const newContent = commentEditor.value.trim();
             if (!newContent) {
-                alert("Comment cannot be empty.");
+                Toast.error("Comment cannot be empty.");
                 return;
             }
 
@@ -222,12 +225,13 @@ function setupCommentEditors() {
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
                     window.location.reload();
+                    Toast.success("Edited comment");
                 } else {
-                    alert(data.message || "Failed to edit comment.");
+                    Toast.error(data.message || "Failed to edit comment.");
                 }
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");
+                Toast.error("Unable to connect to the server.");
             }
         });
     });
@@ -253,14 +257,16 @@ if (commentForm) {
 
             const data = await response.json().catch(() => ({}));
             if (response.ok) {
+                Toast.success("Added comment!");
+                await new Promise(resolve => setTimeout(resolve, 250));
                 contentElement.value = ""; // reset 
                 window.location.reload();
             } else {
-                alert(data.message || "Failed to add comment.");
+                Toast.error(data.message || "Failed to add comment.");
             }
         } catch (err) {
             console.error(err);
-            alert("Unable to connect to the server.");
+            Toast.error("Unable to connect to the server.");
         }
     });
 }
@@ -280,11 +286,11 @@ if (voteBtn) {
                 voteBtn.classList.toggle("voted");
                 voteBtn.querySelector(".vote-count").textContent = data.votes;
             } else {
-                alert("Failed to upvote pitch.");
+                Toast.error("Failed to upvote pitch.");
             }
         } catch (err) {
             console.error(err);
-            alert("Unable to connect to the server.");
+            Toast.error("Unable to connect to the server.");
         }
     });
 }
@@ -300,13 +306,15 @@ if (deletePitchButton) {
                 });
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
+                    Toast.success("Deleted pitch!");
+                    await new Promise(resolve => setTimeout(resolve, 250));
                     window.location.href = "/";
                 } else {
-                    alert(data.message || "Failed to delete pitch.");
+                    Toast.error(data.message || "Failed to delete pitch.");
                 }
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");
+                Toast.error("Unable to connect to the server.");
             }
         }
     });
@@ -324,11 +332,13 @@ deleteCommentButtons.forEach((button) => {
                     credentials: "include",});
                 const data = await response.json().catch(() => ({}));
                 if (response.ok) {
+                    Toast.success("Deleted comment!");
+                    await new Promise(resolve => setTimeout(resolve, 250));
                     window.location.reload();
                 } else {
-                    alert(data.message || "Failed to delete comment.");}
+                    Toast.error(data.message || "Failed to delete comment.");}
             } catch (err) {
                 console.error(err);
-                alert("Unable to connect to the server.");}}
+                Toast.error("Unable to connect to the server.");}}
     });
 });

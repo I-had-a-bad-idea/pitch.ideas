@@ -1,3 +1,5 @@
+import Toast from "./toast.js";
+
 const form = document.querySelector(".pitch-form");
 
 form.addEventListener("submit", async (e) => {
@@ -22,12 +24,14 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json().catch(() => ({}));
 
         if (response.ok) {
-            window.location.href = "/";
+            Toast.success("Pitch created!");
+            await new Promise(resolve => setTimeout(resolve, 250));
+            window.location.href = `/pitches/${data.idea_id}`;
         } else {
-            alert(data.message || "Failed to create pitch.");
+            Toast.error(data.message || "Failed to create pitch.");
         }
     } catch (err) {
         console.error(err);
-        alert("Unable to connect to the server.");
+        Toast.error("Unable to connect to the server.");
     }
 });
