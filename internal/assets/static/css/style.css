@@ -197,6 +197,11 @@ h3 {
     margin-bottom:.75rem;
 }
 
+.pitch:hover {
+    border:2.5px solid var(--border);
+    transform: translateY(-1px);
+}
+
 .pitch-header{
     display:flex;
     justify-content:space-between;
