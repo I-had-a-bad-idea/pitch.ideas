@@ -189,6 +189,21 @@ h3 {
     font-size: 1.25rem; /* 1.5rem is default*/
 }
 
+.feed-ad {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: .75rem;
+    text-align: center;
+}
+
+.feed-ad img {
+    width: min(200px, 100%);
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .option-select {
     padding: 6px 10px;
     border: 1px solid var(--border);
@@ -491,4 +506,37 @@ footer{
     text-align:center;
     padding:2rem;
     color:var(--text);
+}
+
+/* CATS */
+.cats {
+    padding: 4rem 0;
+}
+
+.cats h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cat-section {
+    margin-bottom: 4rem;
+}
+
+.cat-section h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gallery img {
+    width: min(320px, 100%);
+    height: auto;
+    border-radius: 12px;
+    display: block;
 }

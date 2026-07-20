@@ -1,6 +1,9 @@
 import { loggedIn } from "./cookie.js";
 import Toast from "./toast.js";
 
+const AD_INTERVAL = 3;
+let adCount = 0;
+
 const orderBy = document.getElementById("order_by");
 orderBy.addEventListener("change", () => {
     loadPitches();
@@ -46,9 +49,9 @@ async function loadPitches() {
     const container = document.querySelector(".feed .container");
 
     // Remove all pitches
-    container.querySelectorAll(".pitch").forEach(p => p.remove());
+    container.querySelectorAll(".pitch .feed-ad").forEach(p => p.remove());
 
-    data.pitches.forEach(p => {
+    data.pitches.forEach((p, index) => {
         const maxLength = 300;
         const description =
         p.description.length > maxLength
@@ -81,6 +84,18 @@ async function loadPitches() {
 
         container.appendChild(div);
 
+        if ((index + 1) % AD_INTERVAL === 0) {
+            adCount++;
+            const ad = document.createElement("div");
+            ad.className = "feed-ad";
+
+            ad.innerHTML = `
+                <img src="/cat?${Date.now()}-${adCount}" alt="Ad placeholder">
+            `; // cache-busting parameter
+            
+            container.appendChild(ad);
+        }
+
         const voteBtn = div.querySelector(".vote-btn");
         voteBtn.addEventListener("click", async (e) => {
             e.stopPropagation(); // Prevent the click from propagating to the parent div
@@ -108,8 +123,6 @@ async function loadPitches() {
             }
         });
     });
-
-
 }
 
 const nav_right = document.querySelector("nav .nav-right");
