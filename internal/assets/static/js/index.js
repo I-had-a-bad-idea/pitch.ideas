@@ -52,10 +52,12 @@ async function loadPitches() {
 
         <p class="description">${description}</p>
         <div class="pitch-footer">
-            <span class="vote-btn ${p.voted_by_user ? "" : "voted"}">
-                👍 <span class="vote-count">${p.votes}</span>
-            </span>
-            <span>💬 ${p.comment_count}</span>
+        <div class="pitch-stats">
+                <span class="vote-btn ${p.voted_by_user ? "" : "voted"}">
+                    👍 <span class="vote-count">${p.votes}</span>
+                </span>
+                <span>💬 ${p.comment_count}</span>
+            </div>
         </div>
         `;
 
