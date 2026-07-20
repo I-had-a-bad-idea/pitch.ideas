@@ -43,8 +43,8 @@ func NewRouter() http.Handler {
 		r.Get("/register", handlers.RegisterPage(renderer))
 		r.Post("/register", handlers.Register)
 
-		r.Get("/logout", handlers.LogoutPage(renderer))
-		r.Post("/logout", handlers.Logout)
+		r.With(auth.AuthMiddleware).Get("/logout", handlers.LogoutPage(renderer))
+		r.With(auth.AuthMiddleware).Post("/logout", handlers.Logout)
 
 		r.Get("/status", handlers.AuthStatus)
 	})
