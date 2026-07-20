@@ -8,10 +8,10 @@ import (
 
 
 //go:embed static/*
-var staticFs embed.FS
+var StaticFs embed.FS
 
 func Handler() http.Handler {
-	sub, err := fs.Sub(staticFs, "static")
+	sub, err := fs.Sub(StaticFs, "static")
 	if err != nil {
 		panic(err)
 	}

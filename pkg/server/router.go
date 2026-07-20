@@ -31,6 +31,7 @@ func NewRouter() http.Handler {
 	})
 
 	r.Handle("/static/*", http.StripPrefix("/static/", assets.Handler()))
+	r.Get("/cat", handlers.RandomCat(assets.StaticFs))
 
 	r.Get("/", handlers.Home(renderer))
 	r.Get("/about", handlers.About(renderer))
