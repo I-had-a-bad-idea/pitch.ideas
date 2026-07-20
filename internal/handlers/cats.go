@@ -8,6 +8,8 @@ import (
 	"net/http"
 	"path/filepath"
 	"strings"
+
+	"pitch.ideas/internal/views"
 )
 
 func RandomCat(staticFS embed.FS) http.HandlerFunc {
@@ -32,12 +34,19 @@ func RandomCat(staticFS embed.FS) http.HandlerFunc {
 	})
 
 	return func(w http.ResponseWriter, r *http.Request) {
-		if len(images) != 0 {
+		if len(images) == 0 {
 			http.NotFound(w, r)
 			return
 		}
 
 		img := images[rand.Intn(len(images))]
 		http.Redirect(w, r, "/static/"+img, http.StatusFound)
+	}
+}
+
+
+func Cats(renderer *views.Renderer) http.HandlerFunc {
+	return  func(w http.ResponseWriter, r *http.Request) {
+		renderer.Render(w, "cats.html", "")
 	}
 }

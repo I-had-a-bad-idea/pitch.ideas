@@ -31,11 +31,13 @@ func NewRouter() http.Handler {
 	})
 
 	r.Handle("/static/*", http.StripPrefix("/static/", assets.Handler()))
-	r.Get("/cat", handlers.RandomCat(assets.StaticFs))
 
 	r.Get("/", handlers.Home(renderer))
 	r.Get("/about", handlers.About(renderer))
 	r.Get("/tos", handlers.ToS(renderer))
+
+	r.Get("/cat", handlers.RandomCat(assets.StaticFs))
+	r.Get("/cats", handlers.Cats(renderer))
 
 	r.Route("/auth", func(r chi.Router) {
 		r.Get("/login", handlers.LoginPage(renderer))
