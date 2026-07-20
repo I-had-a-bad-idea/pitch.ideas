@@ -493,26 +493,35 @@ footer{
     color:var(--text);
 }
 
-
+/* CATS */
 .cats {
     padding: 4rem 0;
 }
 
 .cats h1 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cat-section {
+    margin-bottom: 4rem;
+}
+
+.cat-section h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .gallery img {
-    width: 100%;
-    display: block;
+    width: min(320px, 100%);
+    height: auto;
     border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: block;
 }
