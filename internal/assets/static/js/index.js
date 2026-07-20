@@ -1,7 +1,8 @@
 import { loggedIn } from "./cookie.js";
 import Toast from "./toast.js";
 
-const AD_INTERVAL = 5;
+const AD_INTERVAL = 3;
+let adCount = 0;
 
 const orderBy = document.getElementById("order_by");
 orderBy.addEventListener("change", () => {
@@ -64,12 +65,13 @@ async function loadPitches() {
         container.appendChild(div);
 
         if ((index + 1) % AD_INTERVAL === 0) {
+            adCount++;
             const ad = document.createElement("div");
             ad.className = "feed-ad";
 
             ad.innerHTML = `
-                <img src="/static/images/cats/Coco/Lying-on-ground.jpg" alt="Ad placeholder">
-            `;
+                <img src="/cat?${Date.now()}-${adCount}" alt="Ad placeholder">
+            `; // cache-busting parameter
             
             container.appendChild(ad);
         }
