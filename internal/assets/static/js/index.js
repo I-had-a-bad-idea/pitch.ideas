@@ -13,6 +13,21 @@ searchBar.addEventListener("keypress", (event) => {
     }
 })
 
+// Read URL params first
+const urlParams = new URLSearchParams(window.location.search);
+
+const initialOrderBy = urlParams.get("order_by");
+const initialSearch = urlParams.get("search");
+
+// Set UI values from URL if present
+if (initialOrderBy) {
+    orderBy.value = initialOrderBy;
+}
+
+if (initialSearch) {
+    searchBar.value = initialSearch;
+}
+
 async function loadPitches() {
     const order_by = orderBy.value;
     const search_query = searchBar.value.trim();
@@ -22,6 +37,9 @@ async function loadPitches() {
         search: search_query
     });
 
+    const newURL = `${window.location.pathname}?${params.toString()}`;
+    window.history.pushState({}, "", newURL);
+    
     const res = await fetch(`/pitches?${params.toString()}`, {credentials: "include",});
     const data = await res.json();
 
