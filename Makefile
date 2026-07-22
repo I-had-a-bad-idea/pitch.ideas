@@ -1,9 +1,9 @@
 build:
-	go build -o ./server.exe local/local.go
+	go build -ldflags "-s -w" -o ./server.exe local/local.go
 
 run:
 	go run local/local.go
 
 build-and-run:
-	go build -o ./server.exe local/local.go
+	go build -ldflags "-s -w" -o ./server.exe local/local.go
 	server.exe
