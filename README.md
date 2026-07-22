@@ -7,9 +7,12 @@ Find the prod deployment here: https://pitch-ideas-wgg.vercel.app/
 - [pitch.ideas](#pitchideas)
   - [Overview](#overview)
   - [Idea](#idea)
+  - [Features](#features)
+  - [Requirements](#requirements)
   - [Usage](#usage)
     - [Go](#go)
     - [On Vercel](#on-vercel)
+      - [Env variables](#env-variables)
   - [Skipping Vercel deployment](#skipping-vercel-deployment)
   - [License](#license)
   - [Disclaimer](#disclaimer)
@@ -18,9 +21,23 @@ Find the prod deployment here: https://pitch-ideas-wgg.vercel.app/
 ## Idea
 Pitch your business idea, get feedback and find investors easily.
 View ideas or create a pitch for your own idea.
-Comment on other ideas and recieve feedback on your own.
+Comment on other ideas and receive feedback on your own.
 Upvote ideas you like.
 
+## Features
+
+- Create business pitches
+- Browse pitches
+- Search and sort pitches
+- Upvote pitches
+- Leave comments
+- User authentication
+- Edit/Delete comments & pitches
+
+
+## Requirements
+- Go
+- Make (optional)
 
 ## Usage
 
@@ -46,8 +63,14 @@ Then open `http://localhost:4000`
 2. Create a PostgreSQL DB (Neon is recommended) and set it up
 3. Deploy like normal
 
+#### Env variables
+
+| Variable | Description |
+| -------- | ----------- |
+| DATABASE_URL | PostgreSQL connection string |
+
 ## Skipping Vercel deployment
-If you dont want to trigger a Vercel deploy add `[skip vercel]` to your commit message.
+If you don't want to trigger a Vercel deploy add `[skip vercel]` to your commit message.
 
 ## License
 This project is not licensed under any open-source or source-available license. All rights are reserved.
