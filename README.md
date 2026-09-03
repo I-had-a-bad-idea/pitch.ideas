@@ -17,6 +17,8 @@ Find the prod deployment here: https://pitch-ideas-wgg.vercel.app/
   - [License](#license)
   - [Disclaimer](#disclaimer)
 
+<img src="images/main-page.png" alt="Main page" width="700" height="400">
+<img src="images/pitch-page.png" alt="Pitch page" width="700" height="400">
 
 ## Idea
 Pitch your business idea, get feedback and find investors easily.
